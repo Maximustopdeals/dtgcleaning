@@ -125,7 +125,6 @@ export default function SchoonmaakdienstenPage() {
           </div>
         </section>
 
-        {/* WAAROM D.T.G. CLEANING - Nieuwe sectie met 5 blokken */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -137,7 +136,6 @@ export default function SchoonmaakdienstenPage() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Blok 1 - Streeploos resultaat */}
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Sparkles className="w-7 h-7 text-white" />
@@ -147,7 +145,6 @@ export default function SchoonmaakdienstenPage() {
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
-              {/* Blok 2 - Veilig & efficiënt */}
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Shield className="w-7 h-7 text-white" />
@@ -157,7 +154,6 @@ export default function SchoonmaakdienstenPage() {
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
-              {/* Blok 3 - Vaste planning */}
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Calendar className="w-7 h-7 text-white" />
@@ -167,7 +163,6 @@ export default function SchoonmaakdienstenPage() {
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
-              {/* Blok 4 - Volledig verzekerd */}
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <TrendingUp className="w-7 h-7 text-white" />
@@ -177,7 +172,6 @@ export default function SchoonmaakdienstenPage() {
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
-              {/* Blok 5 - Flexibel voor thuis */}
               <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
                 <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center mb-6">
                   <Sun className="w-7 h-7 text-white" />
@@ -195,6 +189,4 @@ export default function SchoonmaakdienstenPage() {
       <BackToTop />
     </>
   );
-}
-;
 }
