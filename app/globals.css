@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dtg-blue: #1a3a52;
+  --dtg-light-blue: #2c4a66;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1a3a52 0%, #243b55 50%, #2c4a66 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #128C7E;
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
