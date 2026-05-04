@@ -41,7 +41,7 @@ const diensten = [
     icon: Sun, title: "Zonnepanelen Reinigen", subtitle: "Maximaal rendement",
     description: "Houd uw zonnepanelen schoon voor optimaal rendement. Vuil en stof kunnen de opbrengst met 10-20% verminderen.",
     features: ["Rendementsverbetering", "Veilige reinigingsmethode", "Osmosewater techniek", "Periodiek onderhoud", "Schadepreventie"],
-    image: "/images/image(7).png",
+    image: "/images/zonnepanelen.jpg",
   },
   {
     icon: Droplets, title: "Dakgootreiniging", subtitle: "Voorkom waterschade",
