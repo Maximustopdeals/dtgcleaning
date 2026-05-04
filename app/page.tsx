@@ -13,8 +13,45 @@ const GreenCheck = () => (
 );
 
 export default function Home() {
+  // JSON-LD structured data voor Google (aangepast naar dtgcleaning.nl)
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "D.T.G. Cleaning",
+    "image": "https://dtgcleaning.nl/images/image.png",
+    "telephone": "+31 6 34683019",
+    "email": "info@dtgcleaning.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nijkerk",
+      "addressRegion": "Gelderland",
+      "addressCountry": "NL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.2233,
+      "longitude": 5.4868
+    },
+    "url": "https://dtgcleaning.nl",
+    "priceRange": "€",
+    "openingHours": "Mo-Fr 07:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/dtgcleaning",
+      "https://www.instagram.com/dtgcleaning"
+    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Nijkerk"
+    }
+  };
+
   return (
     <>
+      {/* JSON-LD structured data voor Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       <main>
         {/* Hero */}
