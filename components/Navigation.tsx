@@ -13,8 +13,6 @@ export default function Navigation() {
   const navLinks = [
     { path: "/", label: "HOME" },
     { path: "/schoonmaakdiensten", label: "SCHOONMAAKDIENSTEN" },
-    { path: "/over-mij", label: "OVER MIJ" },
-    { path: "/contact", label: "CONTACT" },
     { 
       label: "WERKGEBIED", 
       isDropdown: true,
@@ -27,6 +25,8 @@ export default function Navigation() {
         { path: "/werkgebied/voorthuizen", label: "Voorthuizen" },
       ]
     },
+    { path: "/over-mij", label: "OVER MIJ" },
+    { path: "/contact", label: "CONTACT" },
   ];
 
   // Controleer of een subpagina actief is
