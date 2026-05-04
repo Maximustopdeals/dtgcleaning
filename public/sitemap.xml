@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dtgcleaning-website.vercel.app/</loc>
+    <loc>https://dtgcleaning.nl/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dtgcleaning-website.vercel.app/schoonmaakdiensten</loc>
+    <loc>https://dtgcleaning.nl/schoonmaakdiensten</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dtgcleaning-website.vercel.app/over-mij</loc>
+    <loc>https://dtgcleaning.nl/over-mij</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dtgcleaning-website.vercel.app/contact</loc>
+    <loc>https://dtgcleaning.nl/contact</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
