@@ -103,7 +103,7 @@ export default function Home() {
 
             <div className="prose prose-lg text-gray-600 mx-auto space-y-6">
               <p>
-                <strong>D.T.G. Cleaning</strong> is uw specialist voor glasbewassing in <strong>Nijkerk, Putten, Harderwijk en heel Gelderland</strong>. 
+                <strong>D.T.G. Cleaning</strong> is uw specialist voor glasbewassing in <strong>Nijkerk, Putten, Harderwijk en omliggende gebieden</strong>. 
                 Met jarenlange ervaring zorgen wij ervoor dat uw ramen, gevels en zonnepanelen weer stralen. 
                 Of u nu een <strong>particulier</strong> bent die zijn woning wil laten stralen of een <strong>bedrijf</strong> dat op zoek is naar een betrouwbare glazenwasser met SLA (Service Level Agreement), wij bieden de oplossing.
               </p>
