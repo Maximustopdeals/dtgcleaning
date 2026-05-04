@@ -90,6 +90,74 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Extra content sectie - Uitleg over glasbewassing */}
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Inleiding */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
+                Professionele glasbewassing in Nijkerk & omgeving
+              </h2>
+              <div className="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+
+            <div className="prose prose-lg text-gray-600 mx-auto space-y-6">
+              <p>
+                <strong>D.T.G. Cleaning</strong> is uw specialist voor glasbewassing in <strong>Nijkerk, Putten, Harderwijk en heel Gelderland</strong>. 
+                Met jarenlange ervaring zorgen wij ervoor dat uw ramen, gevels en zonnepanelen weer stralen. 
+                Of u nu een <strong>particulier</strong> bent die zijn woning wil laten stralen of een <strong>bedrijf</strong> dat op zoek is naar een betrouwbare glazenwasser met SLA (Service Level Agreement), wij bieden de oplossing.
+              </p>
+
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Waarom kiezen voor osmosewater-techniek?</h3>
+              <p>
+                Traditionele glasbewassing gebruikt vaak chemicaliën die schadelijk kunnen zijn voor het milieu. 
+                Bij D.T.G. Cleaning werken we uitsluitend met <strong>osmosewater</strong>. Dit is gedemineraliseerd water 
+                dat geen vlekken of strepen achterlaat. Het resultaat is <strong>streeploos schoon glas</strong> dat langer mooi blijft. 
+                Daarnaast is het volledig <strong>milieuvriendelijk</strong> en veilig voor mens en dier.
+              </p>
+
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Voor wie werken wij?</h3>
+              <div className="grid md:grid-cols-2 gap-6 mt-4">
+                <div className="bg-gray-50 rounded-xl p-5">
+                  <h4 className="font-bold text-[#1a3a52] mb-2">🏢 Bedrijven & VvE's</h4>
+                  <p className="text-gray-600 text-sm">
+                    Representatieve uitstraling is essentieel voor uw bedrijf. Wij bieden vaste contracten met SLA, 
+                    zodat uw ramen en gevels er altijd professioneel uitzien. Geen zorgen, wij plannen, reinigen en rapporteren.
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-5">
+                  <h4 className="font-bold text-[#1a3a52] mb-2">🏠 Particulieren</h4>
+                  <p className="text-gray-600 text-sm">
+                    Ook voor woningen staan wij klaar. Flexibele planning, betaalbare prijzen en een vast aanspreekpunt. 
+                    Geniet van helder zicht door streeploos schone ramen, zonder gedoe.
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Hoe vaak moet u uw ramen laten wassen?</h3>
+              <p>
+                De frequentie hangt af van uw situatie. Voor de meeste <strong>woningen</strong> adviseren wij <strong>4 tot 6 keer per jaar</strong>. 
+                Voor <strong>bedrijfspanden</strong> raden we een frequentie van <strong>6 tot 8 weken</strong> aan, afhankelijk van de ligging 
+                (nabijheid van bomen, drukke weg, etc.). Met een vast contract bent u verzekerd van een vaste dag en vaste glazenwasser, 
+                en bespaart u tot 20% ten opzichte van losse afspraken.
+              </p>
+
+              <div className="bg-green-50 border-l-4 border-green-500 rounded-r-xl p-5 mt-8">
+                <p className="text-gray-700 font-medium">
+                  💡 <strong>Wist u dat?</strong> Regelmatig glasbewassing voorkomt dat vuil en kalk zich ophopen. 
+                  Dit verlengt de levensduur van uw ramen en bespaart u op de lange termijn dure vervangingskosten.
+                </p>
+              </div>
+
+              <div className="text-center mt-8">
+                <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-3 font-semibold hover:bg-[#2c4a66] transition-all">
+                  Vraag vrijblijvend een offerte aan <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Waarom */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
