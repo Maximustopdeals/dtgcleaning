@@ -281,6 +281,27 @@ export default function ContactPage() {
                     </select>
                   </div>
 
+                  {/* Nieuw veld: Hoe bent u bij mij terechtgekomen? */}
+                  <div>
+                    <label
+                      htmlFor="foundVia"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Hoe bent u bij mij terechtgekomen? *
+                    </label>
+                    <select
+                      id="foundVia"
+                      name="foundVia"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a3a52] focus:border-transparent transition-all"
+                    >
+                      <option value="">--- Selecteer keuze ---</option>
+                      <option value="Google">Google</option>
+                      <option value="Referentie">Referentie</option>
+                      <option value="Andere manier">Andere manier</option>
+                    </select>
+                  </div>
+
                   <div>
                     <label
                       htmlFor="message"
