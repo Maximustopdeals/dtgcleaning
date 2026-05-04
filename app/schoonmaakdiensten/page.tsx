@@ -281,21 +281,7 @@ export default function SchoonmaakdienstenPage() {
           </div>
         </section>
 
-        {/* CTA Sectie */}
-        <section className="py-20 bg-[#1a3a52]">
-          <div className="max-w-4xl mx-auto px-4 text-center text-white">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Klaar voor een schone omgeving?</h2>
-            <p className="text-lg text-white/80 mb-8">Vraag vandaag nog een vrijblijvende offerte aan.</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="bg-white text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-gray-100 flex items-center justify-center">
-                <Mail className="w-5 h-5 mr-2" /> Vrijblijvend voorstel aanvragen
-              </Link>
-              <a href="tel:0634683019" className="border-2 border-white text-white rounded-full px-8 py-4 font-semibold hover:bg-white/10 flex items-center justify-center">
-                <Phone className="w-5 h-5 mr-2" /> Bel direct voor advies
-              </a>
-            </div>
-          </div>
-        </section>
+        
       </main>
       <Footer />
       <WhatsAppButton />
