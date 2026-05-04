@@ -181,18 +181,18 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map */}
-              <div className="mt-8 rounded-xl overflow-hidden shadow-lg h-64 bg-gray-200">
+              {/* Map - Nieuwe mooiere versie */}
+              <div className="mt-8 rounded-xl overflow-hidden shadow-lg h-80 bg-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.1234567890123!2d5.4868!3d52.2233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c64f1234567890%3A0x1234567890abcdef!2sNijkerk!5e0!3m2!1snl!2snl!4v1234567890123"
+                  title="Locatie D.T.G. Cleaning - Nijkerk en Putten"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen
                   loading="lazy"
+                  allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Locatie D.T.G. Cleaning"
-                />
+                  src="https://www.google.com/maps/embed/v1/place?q=Nijkerk+Putten+Netherlands&zoom=12"
+                ></iframe>
               </div>
             </div>
 
