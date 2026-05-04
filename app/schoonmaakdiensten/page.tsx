@@ -29,7 +29,7 @@ const diensten = [
     icon: Sparkles, title: "Glasbewassing", subtitle: "Zakelijk & Particulier",
     description: "Professionele glasbewassing voor bedrijven en woningen. Met onze telewash-techniek kunnen we tot 13,5 meter hoogte werken zonder steiger.",
     features: ["Telewash systeem tot 13,5 meter", "Osmosewater techniek - streeploos resultaat", "Zonder chemicaliën - milieuvriendelijk", "Vaste planning mogelijk", "Ook voor VvE's en scholen"],
-    image: "/images/image(7).png",
+    image: "/images/glasbewassing.jpg",
   },
   {
     icon: Building2, title: "Gevelreiniging", subtitle: "Voor elk pandtype",
