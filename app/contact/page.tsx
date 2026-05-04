@@ -182,25 +182,17 @@ export default function ContactPage() {
               </div>
 
               {/* Map - Statische afbeelding met link naar Google Maps */}
-<div className="mt-8 rounded-xl overflow-hidden shadow-lg bg-gray-100">
-  <a
-    href="https://www.google.com/maps/dir//Nijkerk,+Netherlands/@52.2233,5.4868,12z"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block hover:opacity-90 transition-opacity"
-  >
-    <img
-      src="https://maps.googleapis.com/maps/api/staticmap?center=52.2233,5.4868&zoom=12&size=600x300&maptype=roadmap&markers=color:red%7C52.2233,5.4868&key=AIzaSyB4JcLDT2cYrXzTzMqF5tN0vBXkZqQw1K0"
-      alt="Kaart van Nijkerk en Putten"
-      width="100%"
-      height="300"
-      style={{ objectFit: "cover", width: "100%", height: "300px" }}
-      className="pointer-events-none"
-    />
-    <div className="p-2 text-center text-sm text-gray-500 bg-white border-t border-gray-100">
-      Bekijk op Google Maps →
-    </div>
-  </a>
+<div className="mt-8 rounded-xl overflow-hidden shadow-lg h-80 bg-gray-100">
+  <iframe
+    title="Locatie D.T.G. Cleaning - Nijkerk, Putten en omgeving"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB4JcLDT2cYrXzTzMqF5tN0vBXkZqQw1K0&center=52.2233,5.4868&zoom=12&maptype=roadmap"
+  ></iframe>
 </div>
 
             {/* Contact Form */}
