@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { Check, ArrowRight, Phone, Sparkles, Building2, Sun, Droplets, Shield, Calendar, TrendingUp, Clock, ThumbsUp, Award, Users, Droplet, Ruler, Recycle, Zap, Home, Building, Leaf, Settings, HelpCircle } from "lucide-react";
+import { 
+  Check, ArrowRight, Phone, Sparkles, Building2, Sun, Droplets, 
+  Shield, Calendar, TrendingUp, Clock, ThumbsUp, Award, Home, 
+  Mail, HelpCircle, MapPin 
+} from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -56,68 +60,8 @@ const diensten = [
 ];
 
 export default function SchoonmaakdienstenPage() {
-  // JSON-LD structured data voor Google
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Schoonmaakdiensten",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "D.T.G. Cleaning",
-      "url": "https://dtgcleaning.nl",
-      "telephone": "+31 6 34683019"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Nijkerk"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Schoonmaakdiensten",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Glasbewassing",
-            "description": "Professionele glasbewassing voor bedrijven en woningen"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Gevelreiniging",
-            "description": "Professionele gevelreiniging voor elk pandtype"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Zonnepanelen Reinigen",
-            "description": "Reiniging van zonnepanelen voor maximaal rendement"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Dakgootreiniging",
-            "description": "Professionele dakgootreiniging voorkomt waterschade"
-          }
-        }
-      ]
-    }
-  };
-
   return (
     <>
-      {/* JSON-LD structured data voor Google */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Navigation />
       <main>
         {/* Hero */}
@@ -194,7 +138,7 @@ export default function SchoonmaakdienstenPage() {
           </div>
         </section>
 
-        {/* Diensten secties met uitgebreide content */}
+        {/* Diensten secties */}
         {diensten.map((d, i) => (
           <section key={i} className={`py-20 ${i % 2 === 1 ? "bg-gray-50" : "bg-white"}`}>
             <div className="max-w-7xl mx-auto px-4">
@@ -238,7 +182,7 @@ export default function SchoonmaakdienstenPage() {
           <div className="max-w-5xl mx-auto px-4 text-center">
             <div className="bg-white rounded-2xl py-8 px-6 md:py-10 md:px-10 shadow-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a3a52] rounded-full mb-6">
-                <Droplet className="w-8 h-8 text-white" />
+                <Droplets className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-[#1a3a52] mb-4">Wat is osmosewater en waarom is het beter?</h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
