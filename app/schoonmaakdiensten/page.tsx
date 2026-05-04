@@ -35,7 +35,7 @@ const diensten = [
     icon: Building2, title: "Gevelreiniging", subtitle: "Voor elk pandtype",
     description: "Herstel de uitstraling van uw pand met professionele gevelreiniging. We verwijderen algen, mos, vuil en graffiti.",
     features: ["Hogedruk reiniging", "Algen en mos verwijderen", "Graffiti verwijdering", "Alle geveltypes", "Duurzaam resultaat"],
-    image: "/images/image(4).png",
+    image: "/images/Gevelreiniging.webp",
   },
   {
     icon: Sun, title: "Zonnepanelen Reinigen", subtitle: "Maximaal rendement",
