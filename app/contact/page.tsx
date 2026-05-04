@@ -174,7 +174,7 @@ export default function ContactPage() {
                     </h3>
                     <div className="text-gray-600 space-y-1">
                       <p>Maandag - Vrijdag: 07:00 - 18:00</p>
-                      <p>Zaterdag: 09:00 - 14:00</p>
+                      <p>Zaterdag: Gesloten</p>
                       <p>Zondag: Gesloten</p>
                     </div>
                   </div>
@@ -195,7 +195,6 @@ export default function ContactPage() {
                 />
               </div>
             </div>
-
 
             {/* Contact Form */}
             <div>
@@ -255,7 +254,7 @@ export default function ContactPage() {
                       id="phone"
                       name="phone"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a3a52] focus:border-transparent transition-all"
-                      placeholder="06 34683019"
+                      placeholder="Uw telefoonnummer"
                     />
                   </div>
 
