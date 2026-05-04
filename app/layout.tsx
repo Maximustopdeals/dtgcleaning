@@ -5,6 +5,37 @@ export const metadata: Metadata = {
   title: "D.T.G. Cleaning - Glazenwasser Nijkerk & Putten | Streeploos Schoon",
   description: "Glazenwasser in Nijkerk nodig? Professionele glasbewassing voor bedrijven en woningen. Streeploos schoon, vaste planning en minimale overlast. Bel 06-34683019.",
   keywords: "glazenwasser nijkerk, glazenwasser putten, ramen wassen nijkerk, glasbewassing, schoonmaakbedrijf nijkerk",
+  metadataBase: new URL("https://dtgcleaning-website.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "D.T.G. Cleaning - Glazenwasser Nijkerk & Putten",
+    description: "Professionele glasbewassing voor bedrijven en woningen. Streeploos schoon, vaste planning en minimale overlast.",
+    url: "https://dtgcleaning-website.vercel.app",
+    siteName: "D.T.G. Cleaning",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "D.T.G. Cleaning - Glazenwasser Nijkerk",
+      },
+    ],
+    locale: "nl_NL",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   verification: {
     google: "_5VljJ5qUTa9pPBmb4_0XYJROkyX7ijddcGqp535XJE",
   },
@@ -28,6 +59,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/images/image.png" />
         <link rel="shortcut icon" type="image/png" href="/images/image.png" />
         <link rel="apple-touch-icon" href="/images/image.png" />
+        <link rel="canonical" href="https://dtgcleaning-website.vercel.app" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
