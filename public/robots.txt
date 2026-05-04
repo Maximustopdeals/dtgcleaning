@@ -1,0 +1,6 @@
+# Alle robots toestaan om de site te crawlen
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://dtgcleaning.nl/sitemap.xml
