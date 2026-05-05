@@ -264,7 +264,7 @@ export default function GlazenwasserVoorthuizen() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-                Voor wie werken wij in Voorthuizen?
+                Onze diensten in Voorthuizen zijn geschikt voor?
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Van de dorpskern tot de recreatieparken - D.T.G. Cleaning biedt maatwerkoplossingen 
