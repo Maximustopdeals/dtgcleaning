@@ -268,7 +268,7 @@ export default function GlazenwasserPutten() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-                Voor wie werken wij in Putten?
+                Onze diensten in Putten zijn geschikt voor
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Van de dorpskern tot de landelijke gebieden - D.T.G. Cleaning biedt maatwerkoplossingen 
