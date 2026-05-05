@@ -267,7 +267,7 @@ export default function GlazenwasserBarneveld() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-                Voor wie werken wij in Barneveld?
+                Onze diensten in Barneveld zijn geschikt voor
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Van de binnenstad tot de industrieterreinen - D.T.G. Cleaning biedt maatwerkoplossingen 
