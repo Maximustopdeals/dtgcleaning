@@ -285,7 +285,7 @@ export default function GlazenwasserBarneveld() {
                   <h3 className="text-2xl font-bold text-[#1a3a52]">Bedrijven & Industrie</h3>
                 </div>
                 <ul className="space-y-3">
-                  <li className="flex items-start"><Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span><strong>Industrieterreinen Harselaar & Veller</strong> - Ook geschikt voor bedrijfspanden</span></li>
+                  <li className="flex items-start"><Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span><strong>Industrieterreinen</strong> - Ook geschikt voor bedrijfspanden</span></li>
                   <li className="flex items-start"><Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span><strong>Winkels & Retail</strong> - Uitnodigende etalages</span></li>
                   <li className="flex items-start"><Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span><strong>Kantoren</strong> - Representatief voor klanten</span></li>
                   <li className="flex items-start"><Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /><span><strong>Agrarische bedrijven</strong> - Schuren, loodsen en stallen</span></li>
