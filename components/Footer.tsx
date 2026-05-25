@@ -76,13 +76,53 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Onderste gedeelte met links en gecentreerd copyright */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">© 2026 D.T.G. Cleaning | Alle rechten voorbehouden</p>
-          <div className="flex items-center space-x-6">
-            <a href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Algemene-Voorwaarden.pdf" target="_blank" className="text-white/60 hover:text-white text-sm">Algemene voorwaarden</a>
-            <a href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Privacy-Verklaring.pdf" target="_blank" className="text-white/60 hover:text-white text-sm">Privacy verklaring</a>
-            <a href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Disclaimer.pdf" target="_blank" className="text-white/60 hover:text-white text-sm">Disclaimer</a>
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          {/* Linkjes (algemene voorwaarden, privacy, disclaimer) - gecentreerd op mobiel, uitgelijnd op desktop */}
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-4">
+            <a
+              href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Algemene-Voorwaarden.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white text-sm transition-colors"
+            >
+              Algemene voorwaarden
+            </a>
+            <a
+              href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Privacy-Verklaring.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white text-sm transition-colors"
+            >
+              Privacy verklaring
+            </a>
+            <a
+              href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Disclaimer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white text-sm transition-colors"
+            >
+              Disclaimer
+            </a>
+          </div>
+
+          {/* Gecentreerd copyright + Webboostpartner */}
+          <div className="text-center">
+            <p className="text-white/60 text-sm">
+              © 2026 D.T.G. Cleaning | Alle rechten voorbehouden
+            </p>
+            <p className="text-white/60 text-sm mt-1">
+              Webdesign door{" "}
+              <a
+                href="https://www.webboostpartner.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white underline transition-colors"
+              >
+                Webboostpartner
+              </a>
+            </p>
           </div>
         </div>
       </div>
