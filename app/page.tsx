@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";  // 🔥 Toegevoegd voor optimized images
 import { Phone, Check, Droplets, Building2, Sun, Home as HomeIcon, TrendingDown, Award, UserCheck, Leaf, Settings, Mail, MapPin, HelpCircle, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -54,36 +55,60 @@ export default function Home() {
       />
       <Navigation />
       <main>
-        {/* Hero */}
-        <section className="relative min-h-screen flex items-center hero-gradient pt-20">
-          <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-28">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="text-white">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Glazenwasser Nijkerk</h1>
-                <p className="text-xl text-white/90 mb-4">Streeploos, Betrouwbaar & Snel</p>
-                <p className="text-lg text-white/80 mb-8">
-                  Glazenwasser in Nijkerk nodig? Professionele glasbewassing voor bedrijven en woningen.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center">
-                    <Check className="w-5 h-5 mr-2" /> Gratis offerte
-                  </Link>
-                  <a href="tel:0634683019" className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 py-4 font-semibold flex items-center justify-center">
-                    <Phone className="w-5 h-5 mr-2" /> 06-34683019
-                  </a>
+        {/* ═══════ HERO – GEOPTIMALISEERD VOOR LCP ═══════ */}
+        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+          {/* Achtergrondafbeelding met priority voor snelle LCP */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero-bg.jpg"  // 🔥 VERVANG DOOR JOUW HERO AFBEELDING
+              alt="D.T.G. Cleaning glazenwasser Nijkerk"
+              fill
+              priority  // 🔥 CRUCIAL – forceert snelle LCP!
+              sizes="100vw"
+              quality={85}
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+            {/* Donkere overlay voor betere leesbaarheid tekst */}
+            <div className="absolute inset-0 bg-black/50 z-10" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-20 w-full">
+            <div className="max-w-7xl mx-auto px-4 py-20 lg:py-28">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="text-white">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Glazenwasser Nijkerk</h1>
+                  <p className="text-xl text-white/90 mb-4">Streeploos, Betrouwbaar & Snel</p>
+                  <p className="text-lg text-white/80 mb-8">
+                    Glazenwasser in Nijkerk nodig? Professionele glasbewassing voor bedrijven en woningen.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link
+                      href="/contact"
+                      className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-all"
+                    >
+                      <Check className="w-5 h-5 mr-2" /> Gratis offerte
+                    </Link>
+                    <a
+                      href="tel:0634683019"
+                      className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-all"
+                    >
+                      <Phone className="w-5 h-5 mr-2" /> 06-34683019
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="hidden lg:block glass-effect rounded-3xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Waarom D.T.G. Cleaning?</h3>
-                <div className="space-y-4">
-                  {["Vaste planning", "Streeploos gegarandeerd", "Aansprakelijkheidsverzekerd"].map((item, i) => (
-                    <div key={i} className="flex items-center">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                        <Check className="w-3 h-3 text-white" />
+                <div className="hidden lg:block glass-effect rounded-3xl p-8">
+                  <h3 className="text-xl font-semibold text-white mb-6">Waarom D.T.G. Cleaning?</h3>
+                  <div className="space-y-4">
+                    {["Vaste planning", "Streeploos gegarandeerd", "Aansprakelijkheidsverzekerd"].map((item, i) => (
+                      <div key={i} className="flex items-center">
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                          <Check className="w-3 h-3 text-white" />
+                        </div>
+                        <p className="text-white font-semibold">{item}</p>
                       </div>
-                      <p className="text-white font-semibold">{item}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,7 +118,6 @@ export default function Home() {
         {/* Extra content sectie - Uitleg over glasbewassing */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Inleiding */}
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
                 Professionele glasbewassing in Nijkerk & omgeving
@@ -173,7 +197,7 @@ export default function Home() {
                 { icon: Sun, title: "Vaste planning & SLA", desc: "Vaste glazenwasser, vaste dag en SLA op maat.", tag: "Zakelijk" },
                 { icon: HomeIcon, title: "Flexibel & betaalbaar voor thuis", desc: "Schonere ramen voor jouw woning.", tag: "Particulier" },
               ].map((f, i) => (
-                <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-lg">
+                <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-lg transition-all">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#1a3a52]/10 rounded-xl flex items-center justify-center mr-4">
                       <f.icon className="w-6 h-6 text-[#1a3a52]" />
@@ -208,7 +232,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/schoonmaakdiensten" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66]">
+                <Link href="/schoonmaakdiensten" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-all">
                   Bekijk al mijn diensten <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
@@ -233,7 +257,7 @@ export default function Home() {
                 { icon: UserCheck, title: "Volledige ontzorging", desc: "Ik plan, reinig en rapporteer altijd volgens afspraak." },
                 { icon: Leaf, title: "Milieuvriendelijk", desc: "Uitsluitend osmosewater, geen chemicaliën." },
               ].map((v, i) => (
-                <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg">
+                <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all">
                   <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
                     <v.icon className="w-6 h-6 text-white" />
                   </div>
@@ -243,7 +267,7 @@ export default function Home() {
               ))}
             </div>
             <div className="flex justify-center">
-              <div className="bg-gray-50 rounded-2xl p-6 max-w-sm">
+              <div className="bg-gray-50 rounded-2xl p-6 max-w-sm hover:shadow-lg transition-all">
                 <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
                   <Settings className="w-6 h-6 text-white" />
                 </div>
@@ -263,10 +287,10 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Klaar voor structurele reiniging?</h2>
             <p className="text-lg text-gray-600 mb-10">Vraag vrijblijvend een voorstel op maat aan.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] flex items-center justify-center">
+              <Link href="/contact" className="bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] flex items-center justify-center transition-all">
                 <Mail className="w-5 h-5 mr-2" /> Vrijblijvend voorstel aanvragen
               </Link>
-              <a href="tel:0634683019" className="border-2 border-[#1a3a52] text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-[#1a3a52] hover:text-white flex items-center justify-center">
+              <a href="tel:0634683019" className="border-2 border-[#1a3a52] text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-[#1a3a52] hover:text-white flex items-center justify-center transition-all">
                 <Phone className="w-5 h-5 mr-2" /> Bel direct voor advies
               </a>
             </div>
@@ -303,7 +327,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66]">
+              <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-all">
                 <Mail className="w-5 h-5 mr-2" /> Contact opnemen <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
