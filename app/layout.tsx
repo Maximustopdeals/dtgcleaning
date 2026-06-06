@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,10 +41,7 @@ export const metadata: Metadata = {
     google: "_5VljJ5qUTa9pPBmb4_0XYJROkyX7ijddcGqp535XJE",
   },
   icons: {
-    icon: [
-      { url: "/images/image.png", type: "image/png" },
-    ],
-    shortcut: "/images/image.png",
+    icon: "/images/image.png",
     apple: "/images/image.png",
   },
 };
@@ -56,11 +54,16 @@ export default function RootLayout({
   return (
     <html lang="nl-NL">
       <head>
-        <link rel="icon" type="image/png" href="/images/image.png" />
-        <link rel="shortcut icon" type="image/png" href="/images/image.png" />
-        <link rel="apple-touch-icon" href="/images/image.png" />
+        {/* Canonical alleen hier is voldoende (metadata doet al het werk, maar voor de zekerheid) */}
         <link rel="canonical" href="https://dtgcleaning.nl" />
-        <script
+      </head>
+      <body className="antialiased">
+        {children}
+
+        {/* Google Tag Manager - afterInteractive voor betere performance */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -69,8 +72,15 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WVKPZTJ3');`,
           }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07JRRQ6PBH"></script>
-        <script
+
+        {/* Google Analytics - afterInteractive */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-07JRRQ6PBH"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -78,8 +88,8 @@ export default function RootLayout({
             gtag('config', 'G-07JRRQ6PBH');`,
           }}
         />
-      </head>
-      <body className="antialiased">
+
+        {/* noscript fallback voor GTM */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WVKPZTJ3"
@@ -88,7 +98,6 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {children}
       </body>
     </html>
   );
