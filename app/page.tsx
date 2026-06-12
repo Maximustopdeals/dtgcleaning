@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Check, Droplets, Building2, Sun, Home as HomeIcon, TrendingDown, Award, UserCheck, Leaf, Settings, Mail, MapPin, HelpCircle, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -93,7 +94,6 @@ export default function Home() {
         {/* Extra content sectie - Uitleg over glasbewassing */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Inleiding */}
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
                 Professionele glasbewassing in Nijkerk & omgeving
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Ons Werk */}
+        {/* Ons Werk - HIER IS DE AANPASSING */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -213,7 +213,15 @@ export default function Home() {
                 </Link>
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="/images/bedrijfspand.png" alt="Bedrijfspand" className="w-full h-auto" />
+                <Image
+                  src="/images/bedrijfspand.webp"
+                  alt="Bedrijfspand D.T.G. Cleaning"
+                  width={800}
+                  height={600}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </div>
