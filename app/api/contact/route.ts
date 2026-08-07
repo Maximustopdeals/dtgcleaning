@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 
+// Dit zorgt dat de API route niet gecached wordt en op Node.js draait
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkoppjdk";
 
 export async function POST(request: Request) {
