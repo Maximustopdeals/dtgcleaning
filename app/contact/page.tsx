@@ -49,8 +49,11 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero */}
-      <section className="bg-primary text-white py-16 md:py-24">
+      {/* Hero — expliciete kleur toegepast */}
+      <section
+        className="text-white py-16 md:py-24"
+        style={{ backgroundColor: "#0e304d" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact</h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
@@ -65,35 +68,45 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-primary mb-6">Contactgegevens</h2>
+              <h2
+                className="text-2xl font-bold mb-6"
+                style={{ color: "#0e304d" }}
+              >
+                Contactgegevens
+              </h2>
               <div className="space-y-4">
                 <a
                   href="tel:+31634683019"
-                  className="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-gray-700 hover:text-[#0e304d] transition-colors"
                 >
-                  <Phone className="w-5 h-5 text-primary" />
+                  <Phone className="w-5 h-5" style={{ color: "#0e304d" }} />
                   <span>+31 6 34683019</span>
                 </a>
                 <a
                   href="mailto:info@dtgcleaning.nl"
-                  className="flex items-center gap-3 text-gray-700 hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-gray-700 hover:text-[#0e304d] transition-colors"
                 >
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Mail className="w-5 h-5" style={{ color: "#0e304d" }} />
                   <span>info@dtgcleaning.nl</span>
                 </a>
                 <div className="flex items-center gap-3 text-gray-700">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPin className="w-5 h-5" style={{ color: "#0e304d" }} />
                   <span>Nijkerk & Putten, Gelderland</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-700">
-                  <Clock className="w-5 h-5 text-primary" />
+                  <Clock className="w-5 h-5" style={{ color: "#0e304d" }} />
                   <span>Ma - Vr: 07:00 - 18:00</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-semibold text-primary mb-3">Werkgebied</h3>
+              <h3
+                className="font-semibold mb-3"
+                style={{ color: "#0e304d" }}
+              >
+                Werkgebied
+              </h3>
               <p className="text-gray-600 text-sm">
                 Nijkerk, Putten, Ermelo, Harderwijk, Barneveld, Voorthuizen, Leusden, Amersfoort
               </p>
@@ -102,7 +115,12 @@ export default function ContactPage() {
 
           {/* Formulier */}
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-bold text-primary mb-6">Stuur een bericht</h2>
+            <h2
+              className="text-2xl font-bold mb-6"
+              style={{ color: "#0e304d" }}
+            >
+              Stuur een bericht
+            </h2>
 
             {status === "success" && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
@@ -136,7 +154,8 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all"
+                  style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
                   placeholder="Uw naam"
                 />
               </div>
@@ -153,7 +172,8 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all"
+                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
                     placeholder="uw@email.nl"
                   />
                 </div>
@@ -167,7 +187,8 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all"
+                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
                     placeholder="06-12345678"
                   />
                 </div>
@@ -182,7 +203,8 @@ export default function ContactPage() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white"
+                  style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
                 >
                   <option value="">Selecteer een dienst</option>
                   <option value="glasbewassing">Glasbewassing</option>
@@ -205,7 +227,8 @@ export default function ContactPage() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all resize-none"
+                  style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
                   placeholder="Vertel kort wat u nodig heeft..."
                 />
               </div>
@@ -213,7 +236,8 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                style={{ backgroundColor: "#0e304d" }}
               >
                 {status === "loading" ? (
                   <>
