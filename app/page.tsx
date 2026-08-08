@@ -14,7 +14,7 @@ const GreenCheck = () => (
 );
 
 export default function Home() {
-  // JSON-LD structured data voor Google (aangepast naar dtgcleaning.nl)
+  // JSON-LD structured data voor Google
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -55,31 +55,32 @@ export default function Home() {
       />
       <Navigation />
       <main>
-        {/* Hero */}
+        {/* Hero - SEO: zoekwoorden in H1 en eerste alinea */}
         <section className="relative min-h-screen flex items-center hero-gradient pt-20">
           <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-28">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Glazenwasser Nijkerk</h1>
-                <p className="text-xl text-white/90 mb-4">Streeploos, Betrouwbaar & Snel</p>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Glazenwasser Nijkerk – Uw ramen streeploos schoon</h1>
+                <p className="text-xl text-white/90 mb-4">Professionele glasbewassing in Nijkerk en omgeving</p>
                 <p className="text-lg text-white/80 mb-8">
-                  Glazenwasser in Nijkerk nodig? Professionele glasbewassing voor bedrijven en woningen.
+                  Op zoek naar een betrouwbare glazenwasser in Nijkerk? Wij zorgen voor stralend schone ramen, 
+                  gevels en zonnepanelen. <strong>Vrijblijvend offerte</strong> – u betaalt pas na uitvoering.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center">
-                    <Check className="w-5 h-5 mr-2" /> Gratis offerte
+                  <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors">
+                    <Check className="w-5 h-5 mr-2" /> Gratis offerte aanvragen
                   </Link>
-                  <a href="tel:0634683019" className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 py-4 font-semibold flex items-center justify-center">
+                  <a href="tel:0634683019" className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors">
                     <Phone className="w-5 h-5 mr-2" /> 06-34683019
                   </a>
                 </div>
               </div>
               <div className="hidden lg:block glass-effect rounded-3xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Waarom D.T.G. Cleaning?</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Waarom klanten voor ons kiezen</h3>
                 <div className="space-y-4">
-                  {["Vaste planning", "Streeploos gegarandeerd", "Aansprakelijkheidsverzekerd"].map((item, i) => (
+                  {["Vaste glazenwasser – altijd hetzelfde gezicht", "Streeploos resultaat gegarandeerd", "Volledig verzekerd voor uw gemoedsrust"].map((item, i) => (
                     <div key={i} className="flex items-center">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                         <Check className="w-3 h-3 text-white" />
                       </div>
                       <p className="text-white font-semibold">{item}</p>
@@ -91,91 +92,93 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Extra content sectie - Uitleg over glasbewassing */}
+        {/* Extra content sectie - SEO: beantwoordt vraag "waarom glasbewassing?" */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-                Professionele glasbewassing in Nijkerk & omgeving
+                Glasbewassing in Nijkerk – voor een stralende uitstraling
               </h2>
               <div className="w-20 h-1 bg-green-500 mx-auto"></div>
             </div>
 
             <div className="prose prose-lg text-gray-600 mx-auto space-y-6">
               <p>
-                <strong>D.T.G. Cleaning</strong> is uw specialist voor glasbewassing in <strong>Nijkerk, Putten, Harderwijk en omliggende gebieden</strong>. 
-                Met jarenlange ervaring zorgen wij ervoor dat uw ramen, gevels en zonnepanelen weer stralen. 
-                Of u nu een <strong>particulier</strong> bent die zijn woning wil laten stralen of een <strong>bedrijf</strong> dat op zoek is naar een betrouwbare glazenwasser met SLA (Service Level Agreement), wij bieden de oplossing.
+                <strong>D.T.G. Cleaning</strong> is uw specialist voor <strong>glasbewassing in Nijkerk, Putten, Harderwijk en omgeving</strong>. 
+                Of u nu <strong>ramen laten wassen</strong> voor uw woning of bedrijfspand – wij zorgen voor een <strong>streeploos resultaat</strong>.
               </p>
 
-              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Waarom kiezen voor osmosewater-techniek?</h3>
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Waarom kiezen voor professionele glasbewassing?</h3>
               <p>
-                Traditionele glasbewassing gebruikt vaak chemicaliën die schadelijk kunnen zijn voor het milieu. 
-                Bij D.T.G. Cleaning werken we uitsluitend met <strong>osmosewater</strong>. Dit is gedemineraliseerd water 
-                dat geen vlekken of strepen achterlaat. Het resultaat is <strong>streeploos schoon glas</strong> dat langer mooi blijft. 
-                Daarnaast is het volledig <strong>milieuvriendelijk</strong> en veilig voor mens en dier.
+                Schone ramen laten uw pand stralen. Het is het visitekaartje van uw woning of bedrijf. 
+                Bij D.T.G. Cleaning gebruiken wij <strong>osmosewater-techniek</strong>. Dit betekent: 
+                <strong>geen strepen, geen vlekken en geen chemicaliën</strong>. Uw ramen blijven langer schoon 
+                en het is nog <strong>milieuvriendelijk</strong> ook.
               </p>
 
-              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Voor wie werken wij?</h3>
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Voor wie doen wij glasbewassing?</h3>
               <div className="grid md:grid-cols-2 gap-6 mt-4">
                 <div className="bg-gray-50 rounded-xl p-5">
                   <h4 className="font-bold text-[#1a3a52] mb-2">🏢 Bedrijven & VvE's</h4>
                   <p className="text-gray-600 text-sm">
-                    Representatieve uitstraling is essentieel voor uw bedrijf. Wij bieden vaste contracten met SLA, 
-                    zodat uw ramen en gevels er altijd professioneel uitzien. Geen zorgen, wij plannen, reinigen en rapporteren.
+                    Een representatieve uitstraling is essentieel. Wij bieden <strong>vaste onderhoudscontracten</strong> 
+                    met vaste planning. Uw ramen en gevels zijn altijd in topconditie – zonder dat u eromkijkt.
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-5">
                   <h4 className="font-bold text-[#1a3a52] mb-2">🏠 Particulieren</h4>
                   <p className="text-gray-600 text-sm">
-                    Ook voor woningen staan wij klaar. Flexibele planning, betaalbare prijzen en een vast aanspreekpunt. 
-                    Geniet van helder zicht door streeploos schone ramen, zonder gedoe.
+                    Ook voor uw woning staan wij klaar. <strong>Flexibele planning</strong>, duidelijke prijzen 
+                    en een vast aanspreekpunt. Geniet van helder zicht door <strong>streeploos schone ramen</strong>.
                   </p>
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Hoe vaak moet u uw ramen laten wassen?</h3>
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Hoe vaak uw ramen laten wassen?</h3>
               <p>
-                De frequentie hangt af van uw situatie. Voor de meeste <strong>woningen</strong> adviseren wij <strong>4 tot 6 keer per jaar</strong>. 
-                Voor <strong>bedrijfspanden</strong> raden we een frequentie van <strong>6 tot 8 weken</strong> aan, afhankelijk van de ligging 
-                (nabijheid van bomen, drukke weg, etc.). Met een vast contract bent u verzekerd van een vaste dag en vaste glazenwasser, 
-                en bespaart u tot 20% ten opzichte van losse afspraken.
+                Voor de meeste <strong>woningen</strong> adviseren wij <strong>4 tot 6 keer per jaar</strong>. 
+                Voor <strong>bedrijfspanden</strong> is dat vaker: elke <strong>6 tot 8 weken</strong>. 
+                Dit hangt af van de ligging (bijvoorbeeld nabij bomen of een drukke weg). 
+                Met een <strong>vast contract</strong> bespaart u tot 20% en bent u verzekerd van een vaste glazenwasser.
               </p>
 
               <div className="bg-green-50 border-l-4 border-green-500 rounded-r-xl p-5 mt-8">
                 <p className="text-gray-700 font-medium">
                   💡 <strong>Wist u dat?</strong> Regelmatig glasbewassing voorkomt dat vuil en kalk zich ophopen. 
-                  Dit verlengt de levensduur van uw ramen en bespaart u op de lange termijn dure vervangingskosten.
+                  Dit verlengt de levensduur van uw ramen en bespaart u op de lange termijn kosten.
                 </p>
               </div>
 
               <div className="text-center mt-8">
-                <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-3 font-semibold hover:bg-[#2c4a66] transition-all">
-                  Vraag vrijblijvend een offerte aan <ArrowRight className="w-5 h-5 ml-2" />
+                <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-3 font-semibold hover:bg-[#2c4a66] transition-colors">
+                  Vrijblijvend offerte aanvragen <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Waarom */}
+        {/* Waarom - SEO: sociale bewijsvoering */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                Waarom <span className="text-[#1a3a52]">bedrijven én particulieren</span> voor D.T.G. Cleaning kiezen
+                Waarom <span className="text-[#1a3a52]">bedrijven en particulieren</span> voor D.T.G. Cleaning kiezen
               </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Uw ramen laten wassen in Nijkerk? Dit zijn de voordelen van onze glasbewassing.
+              </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { icon: Droplets, title: "Kristalhelder resultaat", desc: "Osmose-techniek voor streeploos, chemievrij glas.", tag: "Zakelijk" },
-                { icon: Building2, title: "Veilig & efficiënt op hoogte", desc: "Telewash-systemen tot 13,5 meter hoogte.", tag: "Zakelijk" },
-                { icon: Sun, title: "Vaste planning & SLA", desc: "Vaste glazenwasser, vaste dag en SLA op maat.", tag: "Zakelijk" },
-                { icon: HomeIcon, title: "Flexibel & betaalbaar voor thuis", desc: "Schonere ramen voor jouw woning.", tag: "Particulier" },
+                { icon: Droplets, title: "Streeploos schoon glas", desc: "Osmosewater-techniek voor een vlekkeloos en chemievrij resultaat.", tag: "Zakelijk" },
+                { icon: Building2, title: "Ook op hoogte veilig", desc: "Wij wassen uw ramen tot 13,5 meter hoogte – veilig en efficiënt.", tag: "Zakelijk" },
+                { icon: Sun, title: "Vaste planning & contract", desc: "Vaste glazenwasser, vaste dag. Geen gedoe, wel resultaat.", tag: "Zakelijk" },
+                { icon: HomeIcon, title: "Flexibel voor thuis", desc: "Woning laten wassen? Wij plannen op uw gewenste dag en tijd.", tag: "Particulier" },
               ].map((f, i) => (
                 <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-[#1a3a52]/10 rounded-xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-[#1a3a52]/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                       <f.icon className="w-6 h-6 text-[#1a3a52]" />
                     </div>
                     <div>
@@ -196,26 +199,27 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="inline-block bg-gray-100 rounded-full px-4 py-2 text-sm font-semibold mb-6">ONS WERK</span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Van glasbewassing tot gevelreiniging</h2>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Van glasbewassing tot gevelreiniging in Nijkerk</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Of het nu gaat om het periodiek reinigen van uw ramen, het herstellen van uw gevel of het onderhoud van uw zonnepanelen.
+                  Of u nu uw <strong>ramen wilt laten wassen</strong>, uw gevel wilt reinigen of uw zonnepanelen wilt laten onderhouden – 
+                  wij bieden het allemaal.
                 </p>
                 <ul className="space-y-4 mb-10">
-                  {["Glasbewassing met osmosewater — streeploos", "Gevelreiniging op hoogte met hoogwerker", "Zonnepanelen reinigen voor optimaal rendement", "Dakgootreiniging tegen waterschade"].map((item, i) => (
-                    <li key={i} className="flex items-center">
-                      <GreenCheck />
+                  {["Glasbewassing met osmosewater – streeploos en chemievrij", "Gevelreiniging op hoogte – ook met hoogwerker", "Zonnepanelen reinigen – voor maximaal rendement", "Dakgootreiniging – tegen waterschade"].map((item, i) => (
+                  <li key={i} className="flex items-center">
+                    <GreenCheck />
                       <span className="text-gray-700 ml-3">{item}</span>
                     </li>
                   ))}
                 </ul>
                 <Link href="/schoonmaakdiensten" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors">
-                  Bekijk al mijn diensten <ArrowRight className="w-5 h-5 ml-2" />
+                  Bekijk al onze diensten <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/bedrijfspand.webp"
-                  alt="Bedrijfspand D.T.G. Cleaning"
+                  alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
                   width={768}
                   height={576}
                   loading="lazy"
@@ -232,14 +236,17 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">VASTE CONTRACTEN</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Waarom een abonnement voor uw bedrijf loont</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Waarom een glasbewassingscontract loont</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Vaste afspraken = vaste kwaliteit, lagere kosten en geen omkijken meer.
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {[
-                { icon: TrendingDown, title: "Tot 20% kostenbesparing", desc: "Lagere tarieven door vaste afspraken." },
-                { icon: Award, title: "Altijd representatief", desc: "Structureel schoon glas is uw visitekaartje." },
-                { icon: UserCheck, title: "Volledige ontzorging", desc: "Ik plan, reinig en rapporteer altijd volgens afspraak." },
-                { icon: Leaf, title: "Milieuvriendelijk", desc: "Uitsluitend osmosewater, geen chemicaliën." },
+                { icon: TrendingDown, title: "Tot 20% kostenbesparing", desc: "Vaste contracten zijn voordeliger dan losse afspraken." },
+                { icon: Award, title: "Altijd representatief", desc: "Schone ramen zijn het visitekaartje van uw bedrijf." },
+                { icon: UserCheck, title: "Vaste glazenwasser", desc: "Altijd hetzelfde gezicht en dezelfde kwaliteit." },
+                { icon: Leaf, title: "Milieuvriendelijk", desc: "Wij wassen alleen met osmosewater – geen chemicaliën." },
               ].map((v, i) => (
                 <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow">
                   <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
@@ -256,7 +263,7 @@ export default function Home() {
                   <Settings className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Flexibel & op maat</h3>
-                <p className="text-gray-600 text-sm">Uw bedrijf is uniek. Ik stem frequentie en diensten af op uw wensen.</p>
+                <p className="text-gray-600 text-sm">Ieder bedrijf is uniek. Wij stemmen de frequentie en diensten af op uw wensen.</p>
               </div>
             </div>
           </div>
@@ -268,11 +275,11 @@ export default function Home() {
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8">
               <Mail className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Klaar voor structurele reiniging?</h2>
-            <p className="text-lg text-gray-600 mb-10">Vraag vrijblijvend een voorstel op maat aan.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ramen laten wassen in Nijkerk?</h2>
+            <p className="text-lg text-gray-600 mb-10">Vraag vrijblijvend een offerte aan – u betaalt pas na uitvoering.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact" className="bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors flex items-center justify-center">
-                <Mail className="w-5 h-5 mr-2" /> Vrijblijvend voorstel aanvragen
+                <Mail className="w-5 h-5 mr-2" /> Vrijblijvend offerte aanvragen
               </Link>
               <a href="tel:0634683019" className="border-2 border-[#1a3a52] text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-[#1a3a52] hover:text-white transition-colors flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" /> Bel direct voor advies
@@ -285,15 +292,18 @@ export default function Home() {
         <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <div className="text-center mb-12">
-              <span className="inline-block bg-gray-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">ONZE REGIO</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Actief in <span className="text-[#1a3a52]">Gelderland</span></h2>
+              <span className="inline-block bg-gray-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">WERKGEBIED</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Glasbewassing in <span className="text-[#1a3a52]">Gelderland</span></h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Wij zijn uw glazenwasser in Nijkerk en omgeving. Ook actief in deze plaatsen:
+              </p>
             </div>
             <div className="border border-gray-200 rounded-3xl p-8 lg:p-10 mb-8">
               <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
-                <div className="w-12 h-12 bg-[#1a3a52] rounded-full flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-[#1a3a52] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold">Gelderland</h3>
+                <h3 className="text-2xl font-bold">Onze regio</h3>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {["Nijkerk", "Putten", "Ermelo", "Harderwijk", "Barneveld", "Voorthuizen", "Leusden", "Amersfoort"].map((loc, i) => (
@@ -306,13 +316,13 @@ export default function Home() {
             </div>
             <div className="text-center mb-8">
               <div className="inline-flex items-center text-gray-600">
-                <HelpCircle className="w-5 h-5 mr-2 text-[#1a3a52]" />
-                <span>Staat uw gebied er niet bij? Neem dan contact met ons op.</span>
+                <HelpCircle className="w-5 h-5 mr-2 text-[#1a3a52] flex-shrink-0" />
+                <span>Woont u buiten deze regio? Neem dan contact op – we komen graag in overleg.</span>
               </div>
             </div>
             <div className="text-center">
               <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors">
-                <Mail className="w-5 h-5 mr-2" /> Contact opnemen <ArrowRight className="w-5 h-5 ml-2" />
+                <Mail className="w-5 h-5 mr-2" /> Vrijblijvend offerte aanvragen <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>
