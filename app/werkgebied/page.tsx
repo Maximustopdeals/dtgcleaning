@@ -15,7 +15,7 @@ const GreenCheck = () => (
   </div>
 );
 
-// FAQ data - vernieuwd en klantgericht (zelfde als contactpagina)
+// ✅ JUISTE FAQ - Vernieuwd en klantgericht (exact gelijk aan contactpagina)
 const faqs = [
   { 
     question: "Bij welk weer kan glasbewassing niet doorgaan?", 
@@ -270,7 +270,7 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* FAQ - vernieuwd en identiek aan contactpagina */}
+        {/* ✅ JUISTE FAQ - nu met de vernieuwde antwoorden */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -309,10 +309,10 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* CTA - witte achtergrond met blauwe banner */}
-        <section className="py-20 bg-white border-t border-gray-100">
+        {/* ✅ AANGEPASTE CTA - Lichte achtergrond voor duidelijke scheiding met footer */}
+        <section className="py-20 bg-gray-50 border-t border-gray-200">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-[#1a3a52] rounded-3xl p-8 md:p-12 text-center">
+            <div className="bg-[#1a3a52] rounded-3xl p-8 md:p-12 text-center shadow-xl">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                 Ook glazenwasser bij u in de buurt?
               </h2>
