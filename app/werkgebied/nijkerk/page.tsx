@@ -55,7 +55,7 @@ export default function GlazenwasserNijkerk() {
     },
     {
       question: "Werkt u ook op zaterdag in Nijkerk?",
-      answer: "Ja, in overleg kunnen wij ook op zaterdag komen. Dit is ideaal voor bedrijven die doordeweeks geen overlast willen en particulieren die niet thuis zijn."
+      answer: "Nee, in het weekend zijn wij gesloten. Voor spoed kunt u ons uiteraard wel bereiken via telefoon of e-mail. Wij reageren binnen 24 uur."
     },
     {
       question: "Gebruikt u chemicaliën voor glasbewassing?",
