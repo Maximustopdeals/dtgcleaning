@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "D.T.G. Cleaning - Glazenwasser Nijkerk & Putten | Streeploos Schoon",
@@ -53,14 +54,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl-NL">
-      <head>
-        {/* Canonical alleen hier is voldoende (metadata doet al het werk, maar voor de zekerheid) */}
-        <link rel="canonical" href="https://dtgcleaning.nl" />
-      </head>
-      <body className="antialiased">
-        {children}
+      <body className="antialiased pt-20">
+        {/* Navigatie */}
+        <Navigation />
 
-        {/* Google Tag Manager - afterInteractive voor betere performance */}
+        {/* Hoofdcontent */}
+        <main>{children}</main>
+
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -73,7 +74,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics - afterInteractive */}
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-07JRRQ6PBH"
           strategy="afterInteractive"
