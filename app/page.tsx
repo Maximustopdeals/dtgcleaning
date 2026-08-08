@@ -173,7 +173,7 @@ export default function Home() {
                 { icon: Sun, title: "Vaste planning & SLA", desc: "Vaste glazenwasser, vaste dag en SLA op maat.", tag: "Zakelijk" },
                 { icon: HomeIcon, title: "Flexibel & betaalbaar voor thuis", desc: "Schonere ramen voor jouw woning.", tag: "Particulier" },
               ].map((f, i) => (
-                <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-lg">
+                <div key={i} className="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#1a3a52]/10 rounded-xl flex items-center justify-center mr-4">
                       <f.icon className="w-6 h-6 text-[#1a3a52]" />
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Ons Werk - HIER IS DE AANPASSING */}
+        {/* Ons Werk - GEOPTIMALISEERDE AFBEELDING */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -208,7 +208,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/schoonmaakdiensten" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66]">
+                <Link href="/schoonmaakdiensten" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors">
                   Bekijk al mijn diensten <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
@@ -216,10 +216,10 @@ export default function Home() {
                 <Image
                   src="/images/bedrijfspand.webp"
                   alt="Bedrijfspand D.T.G. Cleaning"
-                  width={800}
-                  height={600}
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={768}
+                  height={576}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="w-full h-auto"
                 />
               </div>
@@ -241,7 +241,7 @@ export default function Home() {
                 { icon: UserCheck, title: "Volledige ontzorging", desc: "Ik plan, reinig en rapporteer altijd volgens afspraak." },
                 { icon: Leaf, title: "Milieuvriendelijk", desc: "Uitsluitend osmosewater, geen chemicaliën." },
               ].map((v, i) => (
-                <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg">
+                <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow">
                   <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
                     <v.icon className="w-6 h-6 text-white" />
                   </div>
@@ -251,7 +251,7 @@ export default function Home() {
               ))}
             </div>
             <div className="flex justify-center">
-              <div className="bg-gray-50 rounded-2xl p-6 max-w-sm">
+              <div className="bg-gray-50 rounded-2xl p-6 max-w-sm hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
                   <Settings className="w-6 h-6 text-white" />
                 </div>
@@ -271,10 +271,10 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Klaar voor structurele reiniging?</h2>
             <p className="text-lg text-gray-600 mb-10">Vraag vrijblijvend een voorstel op maat aan.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] flex items-center justify-center">
+              <Link href="/contact" className="bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors flex items-center justify-center">
                 <Mail className="w-5 h-5 mr-2" /> Vrijblijvend voorstel aanvragen
               </Link>
-              <a href="tel:0634683019" className="border-2 border-[#1a3a52] text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-[#1a3a52] hover:text-white flex items-center justify-center">
+              <a href="tel:0634683019" className="border-2 border-[#1a3a52] text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-[#1a3a52] hover:text-white transition-colors flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" /> Bel direct voor advies
               </a>
             </div>
@@ -311,7 +311,7 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66]">
+              <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors">
                 <Mail className="w-5 h-5 mr-2" /> Contact opnemen <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
