@@ -15,7 +15,7 @@ const GreenCheck = () => (
   </div>
 );
 
-// ✅ JUISTE FAQ - Vernieuwd en klantgericht (exact gelijk aan contactpagina)
+// ✅ JUISTE FAQ - Exact zoals op de contactpagina
 const faqs = [
   { 
     question: "Bij welk weer kan glasbewassing niet doorgaan?", 
@@ -270,7 +270,7 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* ✅ JUISTE FAQ - nu met de vernieuwde antwoorden */}
+        {/* ✅ JUISTE FAQ - Exact zoals op de contactpagina */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -309,41 +309,41 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* ✅ AANGEPASTE CTA - Lichte achtergrond voor duidelijke scheiding met footer */}
-        <section className="py-20 bg-gray-50 border-t border-gray-200">
+        {/* ✅ AANGEPASTE CTA - Compacte banner met duidelijke witruimte */}
+        <section className="pt-8 pb-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-[#1a3a52] rounded-3xl p-8 md:p-12 text-center shadow-xl">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+            <div className="bg-[#1a3a52] rounded-3xl p-6 md:p-10 text-center shadow-xl">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Ook glazenwasser bij u in de buurt?
               </h2>
-              <p className="text-white/80 mb-6">
+              <p className="text-white/80 text-sm mb-5">
                 Vraag vrijblijvend een offerte aan – wij komen graag langs voor een kennismaking.
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-3">
                 <Link 
                   href="/contact" 
-                  className="bg-white text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                  className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
                 >
-                  <Mail className="w-5 h-5 mr-2" /> Vrijblijvend offerte aanvragen
+                  <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
                 </Link>
                 <a 
                   href="tel:0634683019" 
-                  className="border-2 border-white text-white rounded-full px-8 py-4 font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
+                  className="border-2 border-white text-white rounded-full px-6 py-3 font-semibold hover:bg-white/10 transition-colors flex items-center justify-center text-sm"
                 >
-                  <Phone className="w-5 h-5 mr-2" /> 06-34683019
+                  <Phone className="w-4 h-4 mr-2" /> 06-34683019
                 </a>
               </div>
 
-              <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-white/70">
+              <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs text-white/70">
                 <span className="flex items-center gap-1">
-                  <Check className="w-4 h-4 text-green-400" /> Vrijblijvend
+                  <Check className="w-3 h-3 text-green-400" /> Vrijblijvend
                 </span>
                 <span className="flex items-center gap-1">
-                  <Check className="w-4 h-4 text-green-400" /> Geen verplichtingen
+                  <Check className="w-3 h-3 text-green-400" /> Geen verplichtingen
                 </span>
                 <span className="flex items-center gap-1">
-                  <Check className="w-4 h-4 text-green-400" /> Snelle reactie
+                  <Check className="w-3 h-3 text-green-400" /> Snelle reactie
                 </span>
               </div>
             </div>
