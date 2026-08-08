@@ -11,7 +11,7 @@ const faqs = [
   { question: "Bij welk weer kan glasbewassing niet doorgaan?", answer: "Glasbewassing kan niet doorgaan bij extreme weersomstandigheden zoals zware regenval, stormachtige wind (windkracht 6 of hoger), of onweer. Veiligheid staat altijd voorop." },
   { question: "Wat doet vorst met glasbewassing?", answer: "Bij temperaturen onder de -2°C werk ik niet meer. De schoonmaakmiddelen bevriezen op het glas en ladders worden glad." },
   { question: "Hoe vaak moet ik mijn ramen laten wassen?", answer: "Voor woningen 4 tot 6 keer per jaar. Voor bedrijfspanden elke 4 tot 8 weken, afhankelijk van de locatie." },
-  { question: "Werkt u ook in het weekend?", answer: "Ja, ik ben flexibel en werk ook op zaterdag. Op aanvraag is zondagwerk ook mogelijk." },
+  { question: "Werkt u ook in het weekend?", answer: "Nee, in het weekend zijn wij gesloten." },
   { question: "Hoe kan ik een offerte aanvragen?", answer: "Via het contactformulier, e-mail of telefoon. Ik kom graag vrijblijvend bij u langs." },
   { question: "Wat zijn uw betaalvoorwaarden?", answer: "Na uitvoering ontvangt u een factuur met 14 dagen betalingstermijn. Bij vaste contracten per maand of kwartaal." },
 ];
