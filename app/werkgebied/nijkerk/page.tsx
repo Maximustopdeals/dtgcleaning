@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { 
   Phone, Check, MapPin, Clock, Mail, Sparkles, Building2, Sun, Droplets, 
-  Shield, Calendar, Users, Home, ArrowRight, Star, ThumbsUp, MessageCircle 
+  Shield, Calendar, Users, Home, ArrowRight, Star, ThumbsUp, MessageCircle,
+  ChevronDown 
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
