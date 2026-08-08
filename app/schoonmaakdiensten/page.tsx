@@ -26,35 +26,67 @@ const GreenCheckLabel = ({ label }: { label: string }) => (
   </div>
 );
 
-const benefits = ["Vaste planning & SLA", "Streeploos gegarandeerd", "Aansprakelijkheidsverzekerd", "Duurzame reiniging"];
+const benefits = ["Vaste planning & contract", "Streeploos resultaat gegarandeerd", "Volledig verzekerd", "Milieuvriendelijke reiniging"];
 
 const diensten = [
   {
-    icon: Sparkles, title: "Glasbewassing", subtitle: "Zakelijk & Particulier",
-    description: "Professionele glasbewassing voor bedrijven en woningen. Met onze telewash-techniek kunnen we tot 13,5 meter hoogte werken zonder steiger.",
-    extendedDescription: "Onze glasbewassing gaat verder dan alleen een doekje over het raam. We gebruiken een geavanceerd telewash-systeem dat tot 13,5 meter hoogte kan reiken, waardoor we ook moeilijk bereikbare ramen vlekkeloos reinigen. Het osmosewater dat we gebruiken is 100% gedemineraliseerd, wat betekent dat er geen kalk- of minerale resten achterblijven. Het resultaat is kristalhelder glas dat dagenlang streeploos blijft. Of u nu een winkelpand, kantoorgebouw of woonhuis heeft, wij zorgen voor een stralend resultaat dat uw uitstraling verbetert.",
-    features: ["Telewash systeem tot 13,5 meter", "Osmosewater techniek - streeploos resultaat", "Zonder chemicaliën - milieuvriendelijk", "Vaste planning mogelijk", "Ook voor VvE's en scholen"],
+    icon: Sparkles, 
+    title: "Ramen laten wassen", 
+    subtitle: "Voor bedrijven & particulieren",
+    description: "Streeploos schone ramen voor uw woning, kantoor of winkelpand. Wij bereiken ook de hoogste ramen – veilig en zonder steiger.",
+    extendedDescription: "Schone ramen maken een wereld van verschil. Het laat zien dat u oog heeft voor detail en uw pand met trots presenteert. Wij gebruiken een geavanceerd telewash-systeem dat ook de ramen op de bovenste verdiepingen haalt. En het beste? Geen chemicaliën, geen strepen, geen kalkaanslag. Alleen kristalhelder glas dat er wekenlang perfect uitziet. Of u nu een winkelpand, kantoorgebouw of woonhuis heeft – wij zorgen voor een stralend resultaat dat direct opvalt.",
+    features: [
+      "Ook ramen op hoogte – veilig bereikt",
+      "Streeploos resultaat met osmosewater",
+      "Geen chemicaliën – veilig voor mens en dier",
+      "Vaste planning mogelijk – altijd dezelfde glazenwasser",
+      "Ook voor VvE's, scholen en zorginstellingen"
+    ],
     image: "/images/glasbewassing.jpg",
   },
   {
-    icon: Building2, title: "Gevelreiniging", subtitle: "Voor elk pandtype",
-    description: "Herstel de uitstraling van uw pand met professionele gevelreiniging. We verwijderen algen, mos, vuil en graffiti.",
-    extendedDescription: "Een schone gevel is het visitekaartje van uw bedrijf of woning. Na verloop van tijd verzamelt zich vuil, algen, mos en zelfs graffiti op uw gevel, wat niet alleen lelijk is maar ook de levensduur van uw gevelmateriaal kan verkorten. Onze gevelreiniging maakt gebruik van de juiste technieken voor elk type gevel: van zachte borsteltechniek voor kwetsbare oppervlakken tot hogedruk voor harde materialen. Wij herstellen de oorspronkelijke staat van uw gevel, waardoor uw pand er als nieuw uitziet. Bovendien voorkomen we schade door onze reinigingsmethoden nauwkeurig af te stemmen op uw specifieke geveltype.",
-    features: ["Hogedruk reiniging", "Algen en mos verwijderen", "Graffiti verwijdering", "Alle geveltypes", "Duurzaam resultaat"],
+    icon: Building2, 
+    title: "Gevel reinigen", 
+    subtitle: "Voor elk pandtype",
+    description: "Uw gevel is het visitekaartje van uw pand. Wij verwijderen algen, mos, vuil en graffiti – uw pand ziet er weer als nieuw uit.",
+    extendedDescription: "Een schone gevel doet meer dan u denkt. Het trekt klanten aan, verhoogt de waarde van uw pand en voorkomt dat vuil zich blijft ophopen. Na verloop van tijd verzamelen algen, mos en vuil zich op uw gevel – niet alleen lelijk, maar ook schadelijk voor het materiaal. Wij gebruiken de juiste techniek voor elk type gevel: zacht voor kwetsbare oppervlakken, krachtig voor harde materialen. Het resultaat? Een gevel die er weer uitziet als de dag dat hij werd opgeleverd. En met ons onderhoudscontract blijft hij ook zo.",
+    features: [
+      "Algen, mos en vuil grondig verwijderd",
+      "Graffiti vrij – ook lastige vlekken",
+      "Schadevrij reinigen – afgestemd op uw gevel",
+      "Duurzaam resultaat – langer mooi",
+      "Ook voor monumentale en kwetsbare gevels"
+    ],
     image: "/images/Gevelreiniging.webp",
   },
   {
-    icon: Sun, title: "Zonnepanelen Reinigen", subtitle: "Maximaal rendement",
-    description: "Houd uw zonnepanelen schoon voor optimaal rendement. Vuil en stof kunnen de opbrengst met 10-20% verminderen.",
-    extendedDescription: "Wist u dat vervuilde zonnepanelen tot 20% minder energie opwekken? Stof, vogelpoep, bladeren en pollen vormen een isolerende laag op uw panelen, waardoor ze minder efficiënt worden. Onze reiniging maakt gebruik van osmosewater en zachte borstels die de panelen niet beschadigen. U merkt het verschil direct in uw energieopbrengst. Regelmatig onderhoud verlengt bovendien de levensduur van uw investering. Wij werken veilig op hoogte met onze telewash-techniek, zodat ook panelen op moeilijk bereikbare plaatsen grondig gereinigd worden.",
-    features: ["Rendementsverbetering", "Veilige reinigingsmethode", "Osmosewater techniek", "Periodiek onderhoud", "Schadepreventie"],
+    icon: Sun, 
+    title: "Zonnepanelen reinigen", 
+    subtitle: "Voor maximaal rendement",
+    description: "Wist u dat vuile zonnepanelen tot 20% minder opleveren? Wij maken ze weer schoon, zodat u weer optimaal profiteert van uw investering.",
+    extendedDescription: "U heeft geïnvesteerd in zonnepanelen om te besparen op uw energierekening. Maar wanneer vuil, vogelpoep, bladeren en pollen zich ophopen, daalt de opbrengst. Soms wel met 20%. Dat is geld dat u misloopt. Wij reinigen uw zonnepanelen grondig met osmosewater en zachte borstels – zonder krassen of beschadigingen. U ziet het verschil direct op uw energierekening. Bovendien verlengt regelmatig onderhoud de levensduur van uw panelen. Een kleine investering met een groot rendement.",
+    features: [
+      "Tot 20% hogere energieopbrengst",
+      "Veilige reiniging – geen schade",
+      "Osmosewater voor vlekkeloos resultaat",
+      "Periodiek onderhoud mogelijk",
+      "Ook op moeilijk bereikbare plaatsen"
+    ],
     image: "/images/zonnepanelen.jpg",
   },
   {
-    icon: Droplets, title: "Dakgootreiniging", subtitle: "Voorkom waterschade",
-    description: "Voorkom verstoppingen en waterschade met regelmatige dakgootreiniging. Wij verwijderen bladeren, mos en ander vuil.",
-    extendedDescription: "Verstopte dakgoten zijn een van de meest voorkomende oorzaken van waterschade aan woningen en bedrijfspanden. Bladeren, mos en ander vuil verzamelen zich in de goten, waardoor regenwater niet goed kan wegstromen. Dit leidt tot overstromende goten, lekkages, vochtproblemen en zelfs schade aan de fundering. Onze grondige dakgootreiniging verwijdert al het vuil en controleert tegelijkertijd de staat van uw goten en afvoeren. We kunnen ook eventuele kleine reparaties uitvoeren of u adviseren over noodzakelijk onderhoud. Een schone dakgoot beschermt uw pand tegen kostbare waterschade.",
-    features: ["Verstoppingen voorkomen", "Waterschade preventie", "Grondige reiniging", "Inspectie inbegrepen", "Ook voor platte daken"],
+    icon: Droplets, 
+    title: "Dakgoot reinigen", 
+    subtitle: "Voorkom waterschade",
+    description: "Verstopte dakgoten zijn een van de grootste oorzaken van waterschade. Wij maken ze schoon en voorkomen dure reparaties.",
+    extendedDescription: "Water dat niet kan wegstromen, zoekt altijd een weg naar binnen. Verstopte dakgoten leiden tot lekkages, vochtplekken, schimmel en zelfs funderingsschade. De kosten van herstel kunnen oplopen tot duizenden euro's. Regelmatig onderhoud is daarom geen luxe, maar een noodzaak. Wij verwijderen bladeren, mos en ander vuil uit uw dakgoten en controleren meteen de staat van uw afvoeren. Kleine problemen lossen we direct op of we adviseren u over de volgende stap. Zo beschermt u uw pand tegen kostbare waterschade.",
+    features: [
+      "Verstoppingen voorkomen – droog en veilig",
+      "Beschermt tegen lekkages en vochtschade",
+      "Grondige reiniging en inspectie",
+      "Ook voor platte daken en pannen",
+      "Altijd een duidelijk advies"
+    ],
     image: "/images/dakgootreiniging.jpg",
   },
 ];
@@ -64,13 +96,18 @@ export default function SchoonmaakdienstenPage() {
     <>
       <Navigation />
       <main>
-        {/* Hero */}
+        {/* Hero - SEO: zoekwoorden in H1 en eerste alinea */}
         <section className="pt-32 pb-16 bg-gradient-to-br from-[#1a3a52] to-[#2c4a66]">
           <div className="max-w-7xl mx-auto px-4 text-center text-white">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">Schoonmaakbedrijf Nijkerk</h1>
-            <p className="text-xl text-white/90 mb-4">Professioneel & Betrouwbaar</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+              Schoonmaakbedrijf Nijkerk – al uw reinigingsdiensten
+            </h1>
+            <p className="text-xl text-white/90 mb-4">
+              Ramen laten wassen, gevelreiniging, zonnepanelen reinigen en meer
+            </p>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              D.T.G. Cleaning verzorgt professionele schoonmaakdiensten, glasbewassing en gevelreiniging.
+              D.T.G. Cleaning is uw betrouwbare partner voor professionele reiniging in Nijkerk en omgeving. 
+              <strong> Vrijblijvende offerte – u betaalt pas na uitvoering.</strong>
             </p>
           </div>
         </section>
@@ -80,23 +117,27 @@ export default function SchoonmaakdienstenPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-                Professioneel schoonmaakbedrijf in Nijkerk
+                Professionele reiniging in Nijkerk – waarom wij?
               </h2>
               <div className="w-20 h-1 bg-green-500 mx-auto"></div>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+                Uw pand verdient de beste zorg. Wij zorgen voor stralende resultaten – zonder gedoe en zonder verrassingen.
+              </p>
             </div>
 
             <div className="prose prose-lg text-gray-600 mx-auto space-y-6">
               <p>
-                <strong>D.T.G. Cleaning</strong> staat al jarenlang bekend als het betrouwbare schoonmaakbedrijf in <strong>Nijkerk en heel Gelderland</strong>. 
-                Of u nu een <strong>bedrijf, VvE, instelling of particulier</strong> bent, wij bieden maatwerkoplossingen die aansluiten bij uw specifieke wensen en budget. 
-                Van eenmalige glasbewassing tot structurele contracten met SLA, alles is mogelijk.
+                Of u nu een <strong>bedrijf</strong> bent dat representatief wil overkomen, een <strong>VvE</strong> die het pand goed wil onderhouden, 
+                of een <strong>particulier</strong> die weer helder zicht wil – wij bieden de oplossing. 
+                Van eenmalige glasbewassing tot <strong>vaste onderhoudscontracten</strong> met vaste planning. U bepaalt, wij voeren uit.
               </p>
 
-              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Waarom kiezen voor een professioneel schoonmaakbedrijf?</h3>
+              <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">Waarom regelmatig reinigen loont</h3>
               <p>
-                Veel mensen onderschatten het belang van professionele reiniging. Niet alleen ziet het er beter uit, maar het draagt ook bij aan een gezonder binnenklimaat 
-                en verlengt de levensduur van uw gevel, ramen en zonnepanelen. Bij D.T.G. Cleaning gebruiken we geavanceerde technieken zoals <strong>osmosewater</strong> 
-                voor streeploos glas en <strong>telewash-systemen</strong> voor reiniging op hoogte tot 13,5 meter. Zo bereiken we waar anderen stoppen.
+                Veel mensen denken pas aan reiniging als het echt nodig is. Maar regelmatig onderhoud bespaart u op de lange termijn juist geld. 
+                Vuil dat zich ophoopt op ramen, gevels en zonnepanelen tast het oppervlak aan. 
+                Bij D.T.G. Cleaning gebruiken we <strong>osmosewater</strong> – een milieuvriendelijke techniek die geen strepen of vlekken achterlaat. 
+                En dankzij onze <strong>telewash-systemen</strong> bereiken we moeiteloos de hoogste plekken, zonder dat u een steiger hoeft te huren.
               </p>
 
               <div className="grid md:grid-cols-3 gap-6 mt-8">
@@ -104,22 +145,22 @@ export default function SchoonmaakdienstenPage() {
                   <div className="w-12 h-12 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-3">
                     <Check className="w-6 h-6 text-white" />
                   </div>
-                  <h4 className="font-bold text-[#1a3a52] mb-2">Kwaliteit gegarandeerd</h4>
-                  <p className="text-gray-600 text-sm">Streeploos resultaat met osmosewater-techniek</p>
+                  <h4 className="font-bold text-[#1a3a52] mb-2">Streeploos resultaat</h4>
+                  <p className="text-gray-600 text-sm">Met osmosewater – geen vlekken, geen chemicaliën</p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-5 text-center">
                   <div className="w-12 h-12 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-3">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-[#1a3a52] mb-2">Vaste planning</h4>
-                  <p className="text-gray-600 text-sm">Vaste dag, vaste glazenwasser, geen verrassingen</p>
+                  <p className="text-gray-600 text-sm">Vaste dag, vaste glazenwasser – geen gedoe</p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-5 text-center">
                   <div className="w-12 h-12 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-3">
                     <ThumbsUp className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-[#1a3a52] mb-2">100% Tevredenheid</h4>
-                  <p className="text-gray-600 text-sm">Werk volgens afspraak, altijd aanspreekbaar</p>
+                  <p className="text-gray-600 text-sm">Wij staan altijd voor u klaar – ook na de klus</p>
                 </div>
               </div>
             </div>
@@ -138,7 +179,7 @@ export default function SchoonmaakdienstenPage() {
           </div>
         </section>
 
-        {/* Diensten secties */}
+        {/* Diensten secties - Nu klantgericht geschreven */}
         {diensten.map((d, i) => (
           <section key={i} className={`py-20 ${i % 2 === 1 ? "bg-gray-50" : "bg-white"}`}>
             <div className="max-w-7xl mx-auto px-4">
@@ -168,8 +209,8 @@ export default function SchoonmaakdienstenPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-6 py-3 font-semibold hover:bg-[#2c4a66]">
-                    Offerte aanvragen <ArrowRight className="w-5 h-5 ml-2" />
+                  <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-6 py-3 font-semibold hover:bg-[#2c4a66] transition-colors">
+                    Vrijblijvend offerte aanvragen <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
               </div>
@@ -177,44 +218,46 @@ export default function SchoonmaakdienstenPage() {
           </section>
         ))}
 
-        {/* Osmosewater uitleg sectie */}
+        {/* Osmosewater uitleg sectie - Voordelen voor de klant */}
         <section className="py-16 bg-gray-100">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <div className="bg-white rounded-2xl py-8 px-6 md:py-10 md:px-10 shadow-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a3a52] rounded-full mb-6">
                 <Droplets className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a3a52] mb-4">Wat is osmosewater en waarom is het beter?</h3>
+              <h3 className="text-2xl font-bold text-[#1a3a52] mb-4">
+                Wat betekent osmosewater voor u?
+              </h3>
               <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-                Osmosewater is 100% gedemineraliseerd water zonder enige toegevoegde chemicaliën. Het wordt gezuiverd via een 
-                omgekeerde osmose filter, waardoor alle mineralen, kalk en onzuiverheden worden verwijderd. Het resultaat is water 
-                dat geen vlekken of strepen achterlaat, perfect voor glasbewassing. Bovendien is het volledig milieuvriendelijk 
-                en veilig voor planten, dieren en uw gevel.
+                Osmosewater is 100% zuiver water – zonder mineralen, kalk of chemicaliën. 
+                Het resultaat? <strong>Geen strepen, geen vlekken, geen kalkaanslag.</strong> 
+                Uw ramen blijven langer schoon en het is volledig veilig voor mens, dier en plant. 
+                Geen agressieve middelen, alleen een perfect resultaat.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
                 <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span className="text-sm text-gray-600">Streeploos resultaat</span>
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">Streeploos resultaat – gegarandeerd</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span className="text-sm text-gray-600">Geen chemicaliën</span>
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">Geen chemicaliën – veilig voor u en uw gezin</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span className="text-sm text-gray-600">Milieuvriendelijk</span>
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">Milieuvriendelijk – beter voor de natuur</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span className="text-sm text-gray-600">Langer schoon</span>
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">Langer schoon – bespaart u tijd en geld</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span className="text-sm text-gray-600">Veilig voor alle oppervlakken</span>
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">Veilig voor alle oppervlakken – geen schade</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span className="text-sm text-gray-600">Geen kalkaanslag</span>
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-gray-600">Geen kalkaanslag – ramen blijven stralen</span>
                 </div>
               </div>
             </div>
@@ -226,9 +269,11 @@ export default function SchoonmaakdienstenPage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">WAAROM D.T.G. CLEANING</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Bedrijven én particulieren<br />vertrouwen op onze aanpak</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Waarom bedrijven en particulieren <br />voor ons kiezen
+              </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                D.T.G. Cleaning is hét schoonmaakbedrijf in Nijkerk en omgeving voor bedrijven, VvE&apos;s en particulieren die kiezen voor kwaliteit en betrouwbaarheid.
+                D.T.G. Cleaning is hét schoonmaakbedrijf in Nijkerk en omgeving voor wie kiest voor kwaliteit, betrouwbaarheid en een stralend resultaat.
               </p>
             </div>
             
@@ -237,8 +282,10 @@ export default function SchoonmaakdienstenPage() {
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Sparkles className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Streeploos resultaat</h3>
-                <p className="text-gray-600 mb-4">Osmose-techniek voor 100% streeploos en chemievrij glas. Perfect voor representatieve bedrijfspanden en kantoren.</p>
+                <h3 className="text-xl font-bold mb-3">Streeploos resultaat – zonder gedoe</h3>
+                <p className="text-gray-600 mb-4">
+                  Geen strepen, geen vlekken, geen chemicaliën. Alleen kristalhelder glas dat er wekenlang perfect uitziet.
+                </p>
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
@@ -246,8 +293,10 @@ export default function SchoonmaakdienstenPage() {
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Shield className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Veilig & efficiënt op hoogte</h3>
-                <p className="text-gray-600 mb-4">Telewash-systemen tot 13,5 meter hoogte. Geen steiger of hoogwerker. Minimale verstoring van uw werkzaamheden.</p>
+                <h3 className="text-xl font-bold mb-3">Ook de hoogste ramen – veilig bereikt</h3>
+                <p className="text-gray-600 mb-4">
+                  Geen steiger of hoogwerker nodig. Ons telewash-systeem bereikt tot 13,5 meter hoogte – snel, veilig en zonder overlast.
+                </p>
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
@@ -255,8 +304,10 @@ export default function SchoonmaakdienstenPage() {
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Calendar className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Vaste planning & SLA</h3>
-                <p className="text-gray-600 mb-4">Vaste glazenwasser, vaste dag en Service Level Agreement op maat. U weet waar u aan toe bent, wij garanderen continuïteit.</p>
+                <h3 className="text-xl font-bold mb-3">Vaste planning – geen verrassingen</h3>
+                <p className="text-gray-600 mb-4">
+                  Vaste dag, vaste glazenwasser. Geen gedoe, geen omkijken. U weet waar u aan toe bent.
+                </p>
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
@@ -264,8 +315,10 @@ export default function SchoonmaakdienstenPage() {
                 <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mb-6">
                   <Award className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Volledig verzekerd</h3>
-                <p className="text-gray-600 mb-4">Aansprakelijkheidsverzekerd en gecertificeerd. Uw pand en uw medewerkers zijn altijd gedekt.</p>
+                <h3 className="text-xl font-bold mb-3">Volledig verzekerd – voor uw gemoedsrust</h3>
+                <p className="text-gray-600 mb-4">
+                  Mocht er onverhoopt iets gebeuren, dan staat u niet voor de kosten. Uw pand is bij ons in veilige handen.
+                </p>
                 <GreenCheckLabel label="Zakelijk" />
               </div>
 
@@ -273,14 +326,22 @@ export default function SchoonmaakdienstenPage() {
                 <div className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center mb-6">
                   <Home className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Flexibel & betaalbaar voor thuis</h3>
-                <p className="text-gray-600 mb-4">Schonere ramen voor jouw woning, met een vast aanspreekpunt. Flexibele planning en betaalbare prijzen.</p>
+                <h3 className="text-xl font-bold mb-3">Flexibel en betaalbaar – ook voor thuis</h3>
+                <p className="text-gray-600 mb-4">
+                  Geen gedoe met ingewikkelde contracten. Wij plannen op uw gewenste dag en tijd – ook voor particulieren.
+                </p>
                 <GreenCheckLabel label="Ook voor particulieren" />
               </div>
             </div>
+
+            {/* CTA binnen de sectie */}
+            <div className="text-center mt-12">
+              <Link href="/contact" className="inline-flex items-center bg-[#1a3a52] text-white rounded-full px-8 py-4 font-semibold hover:bg-[#2c4a66] transition-colors">
+                <Mail className="w-5 h-5 mr-2" /> Vrijblijvend offerte aanvragen <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </section>
-
         
       </main>
       <Footer />
