@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { MapPin, Check, Phone, Mail, ArrowRight, Sparkles, Shield, Calendar, Leaf, Clock, ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
