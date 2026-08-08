@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { 
   Phone, Check, MapPin, Clock, Mail, Sparkles, Building2, Sun, Droplets, 
-  Shield, Calendar, Users, Home, ArrowRight, MessageCircle, Trees, ChevronDown
+  Shield, Calendar, Users, Home, ArrowRight, Trees, ChevronDown
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -126,12 +126,12 @@ export default function GlazenwasserPutten() {
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-50 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-[#1a3a52]">15+</div>
-                    <div className="text-sm text-gray-600">Tevreden klanten in Putten</div>
+                    <div className="text-2xl font-bold text-[#1a3a52]">8 km</div>
+                    <div className="text-sm text-gray-600">Geen reiskosten</div>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-[#1a3a52]">8 km</div>
-                    <div className="text-sm text-gray-600">Afstand – geen reiskosten</div>
+                    <div className="text-2xl font-bold text-[#1a3a52]">✓</div>
+                    <div className="text-sm text-gray-600">Vaste glazenwasser</div>
                   </div>
                 </div>
 
@@ -156,21 +156,6 @@ export default function GlazenwasserPutten() {
                     <div className="flex items-center"><GreenCheck /><span className="ml-2">Gerven</span></div>
                     <div className="flex items-center"><GreenCheck /><span className="ml-2">Halvinkhuizen</span></div>
                     <div className="flex items-center"><GreenCheck /><span className="ml-2">Steenenkamer</span></div>
-                  </div>
-                </div>
-
-                <div className="bg-[#1a3a52]/5 rounded-2xl p-6 border border-[#1a3a52]/10">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-[#1a3a52] rounded-full flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[#1a3a52]">Wat klanten in Putten zeggen:</p>
-                      <p className="text-sm text-gray-600 italic">
-                        "Dominique komt al jaren bij ons in Krachtighuizen. Altijd stipt, altijd schoon. Een aanrader!"
-                      </p>
-                      <p className="text-xs text-gray-500 mt-1">— Familie Jansen, Krachtighuizen</p>
-                    </div>
                   </div>
                 </div>
 
@@ -304,7 +289,7 @@ export default function GlazenwasserPutten() {
           </div>
         </section>
 
-        {/* ✅ NIEUWE FAQ - Specifiek voor Putten (klantgericht en aansprekend) */}
+        {/* ✅ NIEUWE FAQ - Specifiek voor Putten */}
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
