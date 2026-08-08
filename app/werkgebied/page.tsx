@@ -15,43 +15,43 @@ const GreenCheck = () => (
   </div>
 );
 
-// ✅ JUISTE FAQ - Exact zoals op de contactpagina
+// ✅ Dit is de JUISTE FAQ van de contactpagina (100% identiek)
 const faqs = [
-  { 
-    question: "Bij welk weer kan glasbewassing niet doorgaan?", 
-    answer: "Bij extreme weersomstandigheden zoals zware regenval, stormachtige wind (windkracht 6 of hoger) of onweer werken wij niet. Uw veiligheid en een perfect resultaat gaan altijd voorop." 
+  {
+    question: "Bij welk weer kan glasbewassing niet doorgaan?",
+    answer: "Bij extreme weersomstandigheden zoals zware regenval, stormachtige wind (windkracht 6 of hoger) of onweer werken wij niet. Uw veiligheid en een perfect resultaat gaan altijd voorop."
   },
-  { 
-    question: "Wat doet vorst met glasbewassing?", 
-    answer: "Bij temperaturen onder de -2°C werken wij niet. De schoonmaakmiddelen bevriezen op het glas en ladders worden glad. Uw veiligheid en een perfect resultaat gaan voor." 
+  {
+    question: "Wat doet vorst met glasbewassing?",
+    answer: "Bij temperaturen onder de -2°C werken wij niet. De schoonmaakmiddelen bevriezen op het glas en ladders worden glad. Uw veiligheid en een perfect resultaat gaan voor."
   },
-  { 
-    question: "Hoe vaak moet ik mijn ramen laten wassen?", 
-    answer: "Voor woningen adviseren wij 4 tot 6 keer per jaar. Voor bedrijfspanden is dat elke 4 tot 8 weken – afhankelijk van de ligging en vervuiling. Met een vast contract bent u verzekerd van een vaste planning en bespaart u tot 20%." 
+  {
+    question: "Hoe vaak moet ik mijn ramen laten wassen?",
+    answer: "Voor woningen adviseren wij 4 tot 6 keer per jaar. Voor bedrijfspanden is dat elke 4 tot 8 weken – afhankelijk van de ligging en vervuiling. Met een vast contract bent u verzekerd van een vaste planning en bespaart u tot 20%."
   },
-  { 
-    question: "Werkt u ook in het weekend?", 
-    answer: "Nee, in het weekend zijn wij gesloten. Voor spoed kunt u ons uiteraard wel bereiken via telefoon of e-mail – wij reageren binnen 24 uur." 
+  {
+    question: "Werkt u ook in het weekend?",
+    answer: "Nee, in het weekend zijn wij gesloten. Voor spoed kunt u ons uiteraard wel bereiken via telefoon of e-mail – wij reageren binnen 24 uur."
   },
-  { 
-    question: "Hoe kan ik een offerte aanvragen?", 
-    answer: "Via het contactformulier op deze pagina, per e-mail of telefonisch. Wij komen graag vrijblijvend bij u langs voor een offerte op maat – geheel zonder verplichtingen." 
+  {
+    question: "Hoe kan ik een offerte aanvragen?",
+    answer: "Via het contactformulier op deze pagina, per e-mail of telefonisch. Wij komen graag vrijblijvend bij u langs voor een offerte op maat – geheel zonder verplichtingen."
   },
-  { 
-    question: "Wat zijn uw betaalvoorwaarden?", 
-    answer: "Wij factureren altijd achteraf. Voor eenmalige projecten en losse bestellingen ontvangt u een factuur met 14 dagen betaaltermijn. Voor vaste onderhoudscontracten volgt maandelijks een factuur, eveneens met 14 dagen betaaltermijn. U betaalt pas als u tevreden bent." 
+  {
+    question: "Wat zijn uw betaalvoorwaarden?",
+    answer: "Wij factureren altijd achteraf. Voor eenmalige projecten en losse bestellingen ontvangt u een factuur met 14 dagen betaaltermijn. Voor vaste onderhoudscontracten volgt maandelijks een factuur, eveneens met 14 dagen betaaltermijn. U betaalt pas als u tevreden bent."
   },
-  { 
-    question: "Heeft u een aansprakelijkheidsverzekering?", 
-    answer: "Jazeker, wij zijn volledig verzekerd voor bedrijfsaansprakelijkheid en beroepsaansprakelijkheid. Mocht er onverhoopt iets beschadigd raken, dan staat u niet voor de kosten. Uw pand is bij ons in veilige handen." 
+  {
+    question: "Heeft u een aansprakelijkheidsverzekering?",
+    answer: "Jazeker, wij zijn volledig verzekerd voor bedrijfsaansprakelijkheid en beroepsaansprakelijkheid. Mocht er onverhoopt iets beschadigd raken, dan staat u niet voor de kosten. Uw pand is bij ons in veilige handen."
   },
-  { 
-    question: "Gebruikt u milieuverantwoorde schoonmaakmiddelen?", 
-    answer: "Ja, wij werken uitsluitend met biologisch afbreekbare en milieuvriendelijke schoonmaakmiddelen. Geen agressieve chemicaliën – veilig voor mens, dier, plant én het milieu. Bovendien is het resultaat streeploos en blijft het langer mooi." 
+  {
+    question: "Gebruikt u milieuverantwoorde schoonmaakmiddelen?",
+    answer: "Ja, wij werken uitsluitend met biologisch afbreekbare en milieuvriendelijke schoonmaakmiddelen. Geen agressieve chemicaliën – veilig voor mens, dier, plant én het milieu. Bovendien is het resultaat streeploos en blijft het langer mooi."
   },
-  { 
-    question: "Hoe lang van tevoren moet ik een afspraak plannen?", 
-    answer: "Voor losse projecten adviseren wij minimaal 1 tot 2 weken van tevoren. Wilt u zeker zijn van een vaste dag? Sluit dan een onderhoudscontract af – dan ligt uw planning voor het hele jaar vast. Voor spoed of advies kunt u altijd bellen, appen of het contactformulier invullen." 
+  {
+    question: "Hoe lang van tevoren moet ik een afspraak plannen?",
+    answer: "Voor losse projecten adviseren wij minimaal 1 tot 2 weken van tevoren. Wilt u zeker zijn van een vaste dag? Sluit dan een onderhoudscontract af – dan ligt uw planning voor het hele jaar vast. Voor spoed of advies kunt u altijd bellen, appen of het contactformulier invullen."
   },
 ];
 
@@ -61,50 +61,50 @@ export default function WerkgebiedPage() {
   const toggleFAQ = (index: number) => setOpenFAQ(openFAQ === index ? null : index);
 
   const steden = [
-    { 
-      name: "Nijkerk", 
-      slug: "nijkerk", 
-      distance: "0 km", 
+    {
+      name: "Nijkerk",
+      slug: "nijkerk",
+      distance: "0 km",
       description: "Uw glazenwasser in Nijkerk – al jaren actief met vaste routes en tevreden klanten.",
       image: "/images/nijkerk.jpg",
       highlights: ["Vaste planning", "Snelle reactie", "Streeploos resultaat"]
     },
-    { 
-      name: "Putten", 
-      slug: "putten", 
-      distance: "8 km", 
+    {
+      name: "Putten",
+      slug: "putten",
+      distance: "8 km",
       description: "Actief in heel Putten – van Krachtighuizen tot Diermen. Wekelijks routes voor woningen en bedrijven.",
       image: "/images/putten.jpg",
       highlights: ["Wekelijkse routes", "Ook bedrijfspanden", "Vaste glazenwasser"]
     },
-    { 
-      name: "Harderwijk", 
-      slug: "harderwijk", 
-      distance: "15 km", 
+    {
+      name: "Harderwijk",
+      slug: "harderwijk",
+      distance: "15 km",
       description: "Grote stad, persoonlijke service. Actief in centrum, Stadsdennen, Frankrijk en omliggende wijken.",
       image: "/images/harderwijk.jpg",
       highlights: ["Geen wachttijd", "Ook op hoogte", "Milieuvriendelijk"]
     },
-    { 
-      name: "Barneveld", 
-      slug: "barneveld", 
-      distance: "12 km", 
+    {
+      name: "Barneveld",
+      slug: "barneveld",
+      distance: "12 km",
       description: "Groeiend werkgebied. Wekelijks routes richting centrum, Veller en industrieterreinen.",
       image: "/images/barneveld.jpg",
       highlights: ["Flexibele planning", "Ook bedrijven", "Vaste prijzen"]
     },
-    { 
-      name: "Ermelo", 
-      slug: "ermelo", 
-      distance: "10 km", 
+    {
+      name: "Ermelo",
+      slug: "ermelo",
+      distance: "10 km",
       description: "Actief in heel Ermelo – van Horst tot Tonsel. Regelmatige routes voor particulieren en VvE's.",
       image: "/images/ermelo.jpg",
       highlights: ["Vaste klantenkring", "Ook VvE's", "Streeploos glas"]
     },
-    { 
-      name: "Voorthuizen", 
-      slug: "voorthuizen", 
-      distance: "9 km", 
+    {
+      name: "Voorthuizen",
+      slug: "voorthuizen",
+      distance: "9 km",
       description: "Dorp tussen Nijkerk en Barneveld. Wekelijks routes langs Gerverscop en omliggende wijken.",
       image: "/images/voorthuizen.jpg",
       highlights: ["Persoonlijke service", "Betaalbaar", "Geen gedoe"]
@@ -115,32 +115,32 @@ export default function WerkgebiedPage() {
     <>
       <Navigation />
       <main>
-        {/* Hero - SEO: zoekwoorden in H1 */}
+        {/* Hero */}
         <section className="pt-32 pb-16 bg-gradient-to-br from-[#1a3a52] to-[#2c4a66]">
           <div className="max-w-7xl mx-auto px-4 text-center text-white">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
               Glazenwasser in Nijkerk en omgeving – ook bij u in de buurt
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              D.T.G. Cleaning is dé glazenwasser in <strong>Nijkerk, Putten, Harderwijk, Barneveld, Ermelo en Voorthuizen</strong>. 
+              D.T.G. Cleaning is dé glazenwasser in <strong>Nijkerk, Putten, Harderwijk, Barneveld, Ermelo en Voorthuizen</strong>.
               Professionele glasbewassing, gevelreiniging en zonnepanelen reiniging – altijd in uw regio.
             </p>
           </div>
         </section>
 
-        {/* Introductie - klantgericht */}
+        {/* Introductie */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <div className="prose prose-lg text-gray-600 mx-auto">
               <p className="lead">
-                <strong>D.T.G. Cleaning</strong> is al jarenlang uw betrouwbare glazenwasser in <strong>Nijkerk</strong> 
-                en de omliggende plaatsen. Of u nu in <strong>Putten, Harderwijk, Barneveld, Ermelo of Voorthuizen</strong> woont – 
+                <strong>D.T.G. Cleaning</strong> is al jarenlang uw betrouwbare glazenwasser in <strong>Nijkerk</strong>
+                en de omliggende plaatsen. Of u nu in <strong>Putten, Harderwijk, Barneveld, Ermelo of Voorthuizen</strong> woont –
                 wij zorgen voor <strong>streeploos schone ramen</strong> zonder gedoe.
               </p>
               <p>
-                Wat ons onderscheidt? Een <strong>vaste glazenwasser</strong> die u kent en die weet wat hij doet. 
-                Geen wisselende gezichten, geen gedoe. Wij gebruiken <strong>osmosewater</strong> – een milieuvriendelijke 
-                techniek die zorgt voor <strong>geen strepen, geen vlekken en geen chemicaliën</strong>. 
+                Wat ons onderscheidt? Een <strong>vaste glazenwasser</strong> die u kent en die weet wat hij doet.
+                Geen wisselende gezichten, geen gedoe. Wij gebruiken <strong>osmosewater</strong> – een milieuvriendelijke
+                techniek die zorgt voor <strong>geen strepen, geen vlekken en geen chemicaliën</strong>.
                 En dankzij onze telewash-systemen bereiken we ook moeiteloos de hoogste ramen.
               </p>
               <p className="font-semibold text-[#1a3a52]">
@@ -150,7 +150,7 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* Grid van steden - verbeterd met highlights */}
+        {/* Grid van steden */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -163,8 +163,8 @@ export default function WerkgebiedPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {steden.map((stad) => (
-                <Link 
-                  key={stad.slug} 
+                <Link
+                  key={stad.slug}
                   href={`/werkgebied/${stad.slug}`}
                   className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all group border border-gray-100 hover:border-[#1a3a52]/20"
                 >
@@ -195,7 +195,7 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* Waarom D.T.G. Cleaning in de regio - meer klantgericht */}
+        {/* Waarom D.T.G. Cleaning */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -264,13 +264,13 @@ export default function WerkgebiedPage() {
               Geen wachttijd – ook voor spoed
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Of u nu een eenmalige afspraak wilt of een vast contract – wij plannen snel en flexibel. 
+              Of u nu een eenmalige afspraak wilt of een vast contract – wij plannen snel en flexibel.
               Ook voor spoed kunt u ons altijd bellen.
             </p>
           </div>
         </section>
 
-        {/* ✅ JUISTE FAQ - Exact zoals op de contactpagina */}
+        {/* ✅ FAQ - Nu met de JUISTE, vernieuwde antwoorden */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
@@ -288,14 +288,14 @@ export default function WerkgebiedPage() {
             <div className="space-y-3">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <button 
-                    onClick={() => toggleFAQ(index)} 
+                  <button
+                    onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
                   >
                     <span className="font-medium text-gray-900 text-sm md:text-base">{faq.question}</span>
-                    <ChevronDown 
-                      className={`w-5 h-5 transition-transform flex-shrink-0 ml-4 ${openFAQ === index ? "rotate-180" : ""}`} 
-                      style={{ color: "#0e304d" }} 
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform flex-shrink-0 ml-4 ${openFAQ === index ? "rotate-180" : ""}`}
+                      style={{ color: "#0e304d" }}
                     />
                   </button>
                   {openFAQ === index && (
@@ -309,10 +309,10 @@ export default function WerkgebiedPage() {
           </div>
         </section>
 
-        {/* ✅ AANGEPASTE CTA - Compacte banner met duidelijke witruimte */}
+        {/* ✅ CTA - Banner is nu kleiner en heeft witruimte ertussen */}
         <section className="pt-8 pb-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-[#1a3a52] rounded-3xl p-6 md:p-10 text-center shadow-xl">
+            <div className="bg-[#1a3a52] rounded-2xl p-6 md:p-8 text-center shadow-lg">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
                 Ook glazenwasser bij u in de buurt?
               </h2>
@@ -321,14 +321,14 @@ export default function WerkgebiedPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-3">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
                 >
                   <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
                 </Link>
-                <a 
-                  href="tel:0634683019" 
+                <a
+                  href="tel:0634683019"
                   className="border-2 border-white text-white rounded-full px-6 py-3 font-semibold hover:bg-white/10 transition-colors flex items-center justify-center text-sm"
                 >
                   <Phone className="w-4 h-4 mr-2" /> 06-34683019
