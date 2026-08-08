@@ -8,12 +8,42 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, ChevronDown, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 const faqs = [
-  { question: "Bij welk weer kan glasbewassing niet doorgaan?", answer: "Glasbewassing kan niet doorgaan bij extreme weersomstandigheden zoals zware regenval, stormachtige wind (windkracht 6 of hoger), of onweer. Veiligheid staat altijd voorop." },
-  { question: "Wat doet vorst met glasbewassing?", answer: "Bij temperaturen onder de -2°C werk ik niet meer. De schoonmaakmiddelen bevriezen op het glas en ladders worden glad." },
-  { question: "Hoe vaak moet ik mijn ramen laten wassen?", answer: "Voor woningen 4 tot 6 keer per jaar. Voor bedrijfspanden elke 4 tot 8 weken, afhankelijk van de locatie." },
-  { question: "Werkt u ook in het weekend?", answer: "Nee, in het weekend zijn wij gesloten." },
-  { question: "Hoe kan ik een offerte aanvragen?", answer: "Via het contactformulier, e-mail of telefoon. Ik kom graag vrijblijvend bij u langs." },
-  { question: "Wat zijn uw betaalvoorwaarden?", answer: "Wij factureren altijd achteraf. Voor eenmalige projecten en losse bestellingen ontvangt u een factuur met 14 dagen betaaltermijn. Voor vaste onderhoudscontracten volgt maandelijks een factuur, eveneens met 14 dagen betaaltermijn." },
+  { 
+    question: "Bij welk weer kan glasbewassing niet doorgaan?", 
+    answer: "Glasbewassing kan niet doorgaan bij extreme weersomstandigheden zoals zware regenval, stormachtige wind (windkracht 6 of hoger), of onweer. Veiligheid staat altijd voorop." 
+  },
+  { 
+    question: "Wat doet vorst met glasbewassing?", 
+    answer: "Bij temperaturen onder de -2°C werken wij niet meer. De schoonmaakmiddelen bevriezen op het glas en ladders worden glad. Uw veiligheid en een perfect resultaat gaan voor." 
+  },
+  { 
+    question: "Hoe vaak moet ik mijn ramen laten wassen?", 
+    answer: "Voor woningen adviseren wij 4 tot 6 keer per jaar. Voor bedrijfspanden is dat elke 4 tot 8 weken, afhankelijk van de locatie en vervuiling." 
+  },
+  { 
+    question: "Werkt u ook in het weekend?", 
+    answer: "Nee, in het weekend zijn wij gesloten. Voor spoed kunt u ons uiteraard wel bereiken via telefoon of e-mail." 
+  },
+  { 
+    question: "Hoe kan ik een offerte aanvragen?", 
+    answer: "Via het contactformulier, e-mail of telefoon. Wij komen graag vrijblijvend bij u langs voor een op maat gemaakt advies." 
+  },
+  { 
+    question: "Wat zijn uw betaalvoorwaarden?", 
+    answer: "Wij factureren altijd achteraf. Voor eenmalige projecten en losse bestellingen ontvangt u een factuur met 14 dagen betaaltermijn. Voor vaste onderhoudscontracten volgt maandelijks een factuur, eveneens met 14 dagen betaaltermijn." 
+  },
+  { 
+    question: "Heeft u een aansprakelijkheidsverzekering?", 
+    answer: "Jazeker, wij zijn volledig verzekerd voor bedrijfsaansprakelijkheid en beroepsaansprakelijkheid. Mocht er onverhoopt iets beschadigd raken, dan staat u niet voor de kosten. Uw glas is bij ons in veilige handen." 
+  },
+  { 
+    question: "Gebruikt u milieuverantwoorde schoonmaakmiddelen?", 
+    answer: "Ja, wij werken uitsluitend met biologisch afbreekbare en milieuvriendelijke schoonmaakmiddelen. Deze zijn veilig voor mens, dier en plant, en bovendien vele malen duurzamer dan agressieve chemicaliën." 
+  },
+  { 
+    question: "Hoe lang van tevoren moet ik een afspraak plannen?", 
+    answer: "Voor losse projecten adviseren wij minimaal 1 tot 2 weken van tevoren te plannen. Wilt u zeker zijn van een vaste dag? Sluit dan een onderhoudscontract af – dan ligt uw planning voor het hele jaar vast en bent u verzekerd van regelmatig onderhoud. Voor spoed of advies kunt u altijd bellen, appen of ons contactformulier invullen." 
+  },
 ];
 
 export default function ContactPage() {
@@ -106,11 +136,21 @@ export default function ContactPage() {
               <div className="space-y-3">
                 {faqs.map((faq, index) => (
                   <div key={index} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
-                    <button onClick={() => toggleFAQ(index)} className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors">
+                    <button 
+                      onClick={() => toggleFAQ(index)} 
+                      className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
+                    >
                       <span className="font-medium text-gray-900">{faq.question}</span>
-                      <ChevronDown className={`w-5 h-5 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} style={{ color: "#0e304d" }} />
+                      <ChevronDown 
+                        className={`w-5 h-5 transition-transform flex-shrink-0 ml-4 ${openFAQ === index ? "rotate-180" : ""}`} 
+                        style={{ color: "#0e304d" }} 
+                      />
                     </button>
-                    {openFAQ === index && <div className="px-4 pb-4 text-gray-600 text-sm leading-relaxed">{faq.answer}</div>}
+                    {openFAQ === index && (
+                      <div className="px-4 pb-4 text-gray-600 text-sm leading-relaxed">
+                        {faq.answer}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -138,23 +178,59 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Naam <span className="text-red-500">*</span></label>
-                <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} placeholder="Uw naam" />
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  value={formData.name} 
+                  onChange={handleChange} 
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" 
+                  style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                  placeholder="Uw naam" 
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail <span className="text-red-500">*</span></label>
-                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} placeholder="uw@email.nl" />
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" 
+                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                    placeholder="uw@email.nl" 
+                  />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefoon</label>
-                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} placeholder="06-12345678" />
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" 
+                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                    placeholder="06-12345678" 
+                  />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Dienst</label>
-                <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white" style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}>
+                <select 
+                  id="service" 
+                  name="service" 
+                  value={formData.service} 
+                  onChange={handleChange} 
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white" 
+                  style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
+                >
                   <option value="">Selecteer een dienst</option>
                   <option value="glasbewassing">Glasbewassing</option>
                   <option value="gevelreiniging">Gevelreiniging</option>
@@ -167,10 +243,25 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Bericht <span className="text-red-500">*</span></label>
-                <textarea id="message" name="message" required rows={5} value={formData.message} onChange={handleChange} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all resize-none" style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} placeholder="Vertel kort wat u nodig heeft..." />
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  required 
+                  rows={5} 
+                  value={formData.message} 
+                  onChange={handleChange} 
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all resize-none" 
+                  style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                  placeholder="Vertel kort wat u nodig heeft..." 
+                />
               </div>
 
-              <button type="submit" disabled={status === "loading"} className="w-full text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2" style={{ backgroundColor: "#0e304d" }}>
+              <button 
+                type="submit" 
+                disabled={status === "loading"} 
+                className="w-full text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2" 
+                style={{ backgroundColor: "#0e304d" }}
+              >
                 {status === "loading" ? <><Loader2 className="w-4 h-4 animate-spin" />Versturen...</> : "Verstuur bericht"}
               </button>
             </form>
