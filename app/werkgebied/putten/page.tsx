@@ -119,7 +119,7 @@ export default function GlazenwasserPutten() {
                 </p>
                 <p className="text-gray-600 mb-6">
                   Wat ons onderscheidt? Een <strong>vaste glazenwasser</strong> die u kent. 
-                  Geen wisselende gezichten, geen gedoe. En met onze <strong>osmosewater-techniek</strong> 
+                  Geen wisselende gezichten, geen gedoe. En met onze <strong>osmosewater-techniek </strong> 
                   krijgt u gegarandeerd een streeploos resultaat zonder chemicaliën. 
                   <strong> Perfect voor de groene omgeving van Putten.</strong>
                 </p>
