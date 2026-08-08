@@ -344,8 +344,8 @@ export default function GlazenwasserBarneveld() {
           </div>
         </section>
 
-        {/* ✅ AANGEPASTE CTA - Compact met witruimte */}
-        <section className="pt-8 pb-16 bg-gray-50">
+        {/* ✅ AANGEPASTE CTA - Compact met witruimte, lichte achtergrond */}
+        <section className="pt-8 pb-16 bg-gray-50 border-t border-gray-200">
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-[#1a3a52] rounded-2xl p-6 md:p-8 text-center shadow-lg">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
