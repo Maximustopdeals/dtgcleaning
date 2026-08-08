@@ -1,5 +1,9 @@
 "use client";
 
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import BackToTop from "@/components/BackToTop";
+
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, ChevronDown, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
@@ -54,6 +58,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Hero */}
       <section className="text-white py-16 md:py-24" style={{ backgroundColor: "#0e304d" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact</h1>
@@ -63,6 +68,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Contact Grid */}
       <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info + FAQ */}
@@ -171,6 +177,10 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
+      <WhatsAppButton />
+      <BackToTop />
     </div>
   );
 }
