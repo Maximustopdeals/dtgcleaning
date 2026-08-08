@@ -120,13 +120,13 @@ export default function GlazenwasserPutten() {
                 <p className="text-gray-600 mb-6">
                   Wat ons onderscheidt? Een <strong>vaste glazenwasser</strong> die u kent. 
                   Geen wisselende gezichten, geen gedoe. En met onze <strong>osmosewater-techniek</strong> 
-                  krijgt u gegarandeerd een streeploos resultaat – zonder chemicaliën. 
+                  krijgt u gegarandeerd een streeploos resultaat zonder chemicaliën. 
                   <strong> Perfect voor de groene omgeving van Putten.</strong>
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-gray-50 rounded-xl p-4 text-center">
-                    <div className="text-2xl font-bold text-[#1a3a52]">50+</div>
+                    <div className="text-2xl font-bold text-[#1a3a52]">15+</div>
                     <div className="text-sm text-gray-600">Tevreden klanten in Putten</div>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center">
