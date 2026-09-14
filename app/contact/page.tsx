@@ -89,7 +89,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero - SEO: zoekwoorden in H1 */}
-      <section className="text-white py-16 md:py-24" style={{ backgroundColor: "#0e304d" }}>
+      <section className="text-white py-16 md:py-24" style={{ backgroundColor: "#1a3a52" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Contact met D.T.G. Cleaning – glazenwasser in Nijkerk
@@ -107,7 +107,7 @@ export default function ContactPage() {
           {/* Contact Info + FAQ */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold mb-6" style={{ color: "#0e304d" }}>
+              <h2 className="text-2xl font-bold mb-6" style={{ color: "#1a3a52" }}>
                 Neem direct contact op
               </h2>
               <p className="text-gray-600 mb-6">
@@ -116,10 +116,10 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <a 
                   href="tel:+31634683019" 
-                  className="flex items-center gap-3 text-gray-700 hover:text-[#0e304d] transition-colors group"
+                  className="flex items-center gap-3 text-gray-700 hover:text-[#1a3a52] transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-[#0e304d]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#0e304d]/20 transition-colors">
-                    <Phone className="w-5 h-5" style={{ color: "#0e304d" }} />
+                  <div className="w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#1a3a52]/20 transition-colors">
+                    <Phone className="w-5 h-5" style={{ color: "#1a3a52" }} />
                   </div>
                   <div>
                     <span className="text-sm text-gray-500">Bel ons direct</span>
@@ -128,10 +128,10 @@ export default function ContactPage() {
                 </a>
                 <a 
                   href="mailto:info@dtgcleaning.nl" 
-                  className="flex items-center gap-3 text-gray-700 hover:text-[#0e304d] transition-colors group"
+                  className="flex items-center gap-3 text-gray-700 hover:text-[#1a3a52] transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-[#0e304d]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#0e304d]/20 transition-colors">
-                    <Mail className="w-5 h-5" style={{ color: "#0e304d" }} />
+                  <div className="w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#1a3a52]/20 transition-colors">
+                    <Mail className="w-5 h-5" style={{ color: "#1a3a52" }} />
                   </div>
                   <div>
                     <span className="text-sm text-gray-500">Stuur een e-mail</span>
@@ -139,8 +139,8 @@ export default function ContactPage() {
                   </div>
                 </a>
                 <div className="flex items-center gap-3 text-gray-700 group">
-                  <div className="w-10 h-10 bg-[#0e304d]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5" style={{ color: "#0e304d" }} />
+                  <div className="w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5" style={{ color: "#1a3a52" }} />
                   </div>
                   <div>
                     <span className="text-sm text-gray-500">Werkgebied</span>
@@ -148,8 +148,8 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3 text-gray-700 group">
-                  <div className="w-10 h-10 bg-[#0e304d]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5" style={{ color: "#0e304d" }} />
+                  <div className="w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5" style={{ color: "#1a3a52" }} />
                   </div>
                   <div>
                     <span className="text-sm text-gray-500">Openingstijden</span>
@@ -161,8 +161,8 @@ export default function ContactPage() {
 
             {/* Werkgebied uitgebreid */}
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-semibold mb-3 flex items-center gap-2" style={{ color: "#0e304d" }}>
-                <MapPin className="w-5 h-5" style={{ color: "#0e304d" }} />
+              <h3 className="font-semibold mb-3 flex items-center gap-2" style={{ color: "#1a3a52" }}>
+                <MapPin className="w-5 h-5" style={{ color: "#1a3a52" }} />
                 Ook actief in deze plaatsen
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -190,7 +190,7 @@ export default function ContactPage() {
 
             {/* FAQ */}
             <div>
-              <h2 className="text-2xl font-bold mb-6" style={{ color: "#0e304d" }}>
+              <h2 className="text-2xl font-bold mb-6" style={{ color: "#1a3a52" }}>
                 Veelgestelde vragen
               </h2>
               <p className="text-gray-600 mb-4 text-sm">
@@ -206,7 +206,7 @@ export default function ContactPage() {
                       <span className="font-medium text-gray-900 text-sm md:text-base">{faq.question}</span>
                       <ChevronDown 
                         className={`w-5 h-5 transition-transform flex-shrink-0 ml-4 ${openFAQ === index ? "rotate-180" : ""}`} 
-                        style={{ color: "#0e304d" }} 
+                        style={{ color: "#1a3a52" }} 
                       />
                     </button>
                     {openFAQ === index && (
@@ -223,7 +223,7 @@ export default function ContactPage() {
           {/* Formulier */}
           <div>
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 sticky top-24">
-              <h2 className="text-2xl font-bold mb-2" style={{ color: "#0e304d" }}>
+              <h2 className="text-2xl font-bold mb-2" style={{ color: "#1a3a52" }}>
                 Vrijblijvende offerte aanvragen
               </h2>
               <p className="text-gray-600 text-sm mb-6">
@@ -266,7 +266,7 @@ export default function ContactPage() {
                     value={formData.name} 
                     onChange={handleChange} 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" 
-                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                    style={{ "--tw-ring-color": "#1a3a52" } as React.CSSProperties} 
                     placeholder="Uw naam" 
                   />
                 </div>
@@ -284,7 +284,7 @@ export default function ContactPage() {
                       value={formData.email} 
                       onChange={handleChange} 
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" 
-                      style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                      style={{ "--tw-ring-color": "#1a3a52" } as React.CSSProperties} 
                       placeholder="uw@email.nl" 
                     />
                   </div>
@@ -299,7 +299,7 @@ export default function ContactPage() {
                       value={formData.phone} 
                       onChange={handleChange} 
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all" 
-                      style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                      style={{ "--tw-ring-color": "#1a3a52" } as React.CSSProperties} 
                       placeholder="06-12345678" 
                     />
                   </div>
@@ -315,7 +315,7 @@ export default function ContactPage() {
                     value={formData.service} 
                     onChange={handleChange} 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white" 
-                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties}
+                    style={{ "--tw-ring-color": "#1a3a52" } as React.CSSProperties}
                   >
                     <option value="">Selecteer een dienst</option>
                     <option value="glasbewassing">Glasbewassing</option>
@@ -339,7 +339,7 @@ export default function ContactPage() {
                     value={formData.message} 
                     onChange={handleChange} 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all resize-none" 
-                    style={{ "--tw-ring-color": "#0e304d" } as React.CSSProperties} 
+                    style={{ "--tw-ring-color": "#1a3a52" } as React.CSSProperties} 
                     placeholder="Vertel kort wat u nodig heeft, zoals: 'Ik ben op zoek naar een glazenwasser voor mijn woning in Nijkerk.'" 
                   />
                 </div>
@@ -355,7 +355,7 @@ export default function ContactPage() {
                   type="submit" 
                   disabled={status === "loading"} 
                   className="w-full text-white font-semibold py-4 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2" 
-                  style={{ backgroundColor: "#0e304d" }}
+                  style={{ backgroundColor: "#1a3a52" }}
                 >
                   {status === "loading" ? (
                     <><Loader2 className="w-4 h-4 animate-spin" /> Versturen...</>
@@ -367,7 +367,7 @@ export default function ContactPage() {
 
               <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between text-sm">
                 <span className="text-gray-500">Of bel direct:</span>
-                <a href="tel:0634683019" className="font-semibold text-[#0e304d] hover:underline">
+                <a href="tel:0634683019" className="font-semibold text-[#1a3a52] hover:underline">
                   06-34683019
                 </a>
               </div>
@@ -380,9 +380,9 @@ export default function ContactPage() {
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <div className="flex justify-center mb-4">
-            <MessageCircle className="w-12 h-12 text-[#0e304d] opacity-20" />
+            <MessageCircle className="w-12 h-12 text-[#1a3a52] opacity-20" />
           </div>
-          <h2 className="text-2xl font-bold text-[#0e304d] mb-2">
+          <h2 className="text-2xl font-bold text-[#1a3a52] mb-2">
             Wij helpen u graag verder
           </h2>
           <p className="text-gray-600">
