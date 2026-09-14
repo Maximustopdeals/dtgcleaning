@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Check, Droplets, Building2, Sun, Home as HomeIcon, TrendingDown, Award, UserCheck, Leaf, Settings, Mail, MapPin, HelpCircle, ArrowRight } from "lucide-react";
@@ -16,57 +13,39 @@ const GreenCheck = () => (
   </div>
 );
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "D.T.G. Cleaning",
+  "image": "https://dtgcleaning.nl/images/bedrijfspand-1920.webp",
+  "telephone": "+31 6 34683019",
+  "email": "info@dtgcleaning.nl",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nijkerk",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.2233,
+    "longitude": 5.4868
+  },
+  "url": "https://dtgcleaning.nl",
+  "priceRange": "€",
+  "openingHours": "Mo-Fr 07:00-18:00",
+  "sameAs": [
+    "https://www.facebook.com/dtgcleaning",
+    "https://www.instagram.com/dtgcleaning"
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Nijkerk"
+  }
+};
+
 export default function Home() {
-  // Scroll-reveal animatie: elementen fade-in bij scrollen
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-    );
-
-    const elements = document.querySelectorAll(".reveal");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   // JSON-LD structured data voor Google
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "D.T.G. Cleaning",
-    "image": "https://dtgcleaning.nl/images/bedrijfspand-1920.webp",
-    "telephone": "+31 6 34683019",
-    "email": "info@dtgcleaning.nl",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Nijkerk",
-      "addressRegion": "Gelderland",
-      "addressCountry": "NL"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 52.2233,
-      "longitude": 5.4868
-    },
-    "url": "https://dtgcleaning.nl",
-    "priceRange": "€",
-    "openingHours": "Mo-Fr 07:00-18:00",
-    "sameAs": [
-      "https://www.facebook.com/dtgcleaning",
-      "https://www.instagram.com/dtgcleaning"
-    ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Nijkerk"
-    }
-  };
 
   return (
     <>
@@ -119,7 +98,7 @@ export default function Home() {
         </section>
 
         {/* Extra content sectie - SEO: beantwoordt vraag "waarom glasbewassing?" */}
-        <section className="py-16 bg-white reveal">
+        <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
@@ -185,7 +164,7 @@ export default function Home() {
         </section>
 
         {/* Waarom - SEO: sociale bewijsvoering */}
-        <section className="py-20 bg-gray-50 reveal">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -219,8 +198,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Ons Werk - foto gebruikt .png zoals in uw repository */}
-        <section className="py-20 bg-white reveal">
+        {/* Ons Werk - bedrijfspandfoto */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -246,10 +225,9 @@ export default function Home() {
                 <Image
                   src="/images/bedrijfspand-1920.webp"
                   alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
-                  width={748}
-                  height={748}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  width={1920}
+                  height={1080}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto"
                 />
               </div>
@@ -258,7 +236,7 @@ export default function Home() {
         </section>
 
         {/* Vaste Contracten */}
-        <section className="py-20 bg-white reveal">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">VASTE CONTRACTEN</span>
@@ -296,7 +274,7 @@ export default function Home() {
         </section>
 
         {/* CTA Structureel */}
-        <section className="py-20 bg-gray-50 reveal">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8">
               <Mail className="w-8 h-8 text-white" />
@@ -315,7 +293,7 @@ export default function Home() {
         </section>
 
         {/* Werkgebied */}
-        <section className="py-20 bg-white reveal">
+        <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <div className="text-center mb-12">
               <span className="inline-block bg-gray-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">WERKGEBIED</span>
