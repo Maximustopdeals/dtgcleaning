@@ -77,24 +77,9 @@ export default function Home() {
       />
       <Navigation />
       <main>
-        {/* Hero met foto-achtergrond - GEOPTIMALISEERD */}
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-          {/* Geoptimaliseerde achtergrond foto via Next.js Image */}
-          <Image
-            src="/images/bedrijfspand.webp"
-            alt="Streeploze ramen met wolkenreflectie door D.T.G. Cleaning"
-            fill
-            priority
-            sizes="100vw"
-            quality={80}
-            className="object-cover object-center"
-          />
-          {/* Gradient overlay: links donker (tekst), rechts transparant (glas zichtbaar) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a3a52]/95 via-[#1a3a52]/80 to-[#1a3a52]/30" />
-          {/* Extra donkere onderkant voor leesbaarheid op mobiel */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a52]/60 via-transparent to-transparent" />
-
-          <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28 w-full">
+        {/* Hero - snelle gradient (geen foto) */}
+        <section className="relative min-h-screen flex items-center hero-gradient pt-20">
+          <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-28">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
@@ -261,8 +246,8 @@ export default function Home() {
                 <Image
                   src="/images/bedrijfspand.webp"
                   alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
-                  width={768}
-                  height={576}
+                  width={748}
+                  height={748}
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="w-full h-auto"
