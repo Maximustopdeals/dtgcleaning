@@ -41,7 +41,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "D.T.G. Cleaning",
-    "https://dtgcleaning.nl/images/bedrijfspand-1920.webp",
+    "image": "https://dtgcleaning.nl/images/bedrijfspand-1920.webp",
     "telephone": "+31 6 34683019",
     "email": "info@dtgcleaning.nl",
     "address": {
