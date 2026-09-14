@@ -55,35 +55,49 @@ export default function Home() {
       />
       <Navigation />
       <main>
-        {/* Hero - SEO: zoekwoorden in H1 en eerste alinea */}
-        <section className="relative min-h-screen flex items-center hero-gradient pt-20">
-          <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-28">
+                {/* Hero met foto-achtergrond */}
+        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+          {/* Achtergrond foto */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/hero-ramen.jpg')" }}
+          />
+          {/* Gradient overlay: links donker (tekst), rechts transparant (glas zichtbaar) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a3a52]/95 via-[#1a3a52]/80 to-[#1a3a52]/30" />
+          {/* Extra donkere onderkant voor leesbaarheid op mobiel */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a52]/60 via-transparent to-transparent" />
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-28 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Glazenwasser Nijkerk – Uw ramen streeploos schoon</h1>
-                <p className="text-xl text-white/90 mb-4">Professionele glasbewassing in Nijkerk en omgeving</p>
-                <p className="text-lg text-white/80 mb-8">
-                  Op zoek naar een betrouwbare glazenwasser in Nijkerk? Wij zorgen voor stralend schone ramen, 
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
+                  Glazenwasser Nijkerk – Uw ramen streeploos schoon
+                </h1>
+                <p className="text-xl text-white/90 mb-4 drop-shadow-md">
+                  Professionele glasbewassing in Nijkerk en omgeving
+                </p>
+                <p className="text-lg text-white/80 mb-8 drop-shadow-md">
+                  Op zoek naar een betrouwbare glazenwasser in Nijkerk? Wij zorgen voor stralend schone ramen,
                   gevels en zonnepanelen. <strong>Vrijblijvend offerte</strong> – u betaalt pas na uitvoering.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors">
+                  <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors shadow-lg">
                     <Check className="w-5 h-5 mr-2" /> Gratis offerte aanvragen
                   </Link>
-                  <a href="tel:0634683019" className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors">
+                  <a href="tel:0634683019" className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors backdrop-blur-sm">
                     <Phone className="w-5 h-5 mr-2" /> 06-34683019
                   </a>
                 </div>
               </div>
-              <div className="hidden lg:block glass-effect rounded-3xl p-8">
-                <h3 className="text-xl font-semibold text-white mb-6">Waarom klanten voor ons kiezen</h3>
+              <div className="hidden lg:block glass-effect rounded-3xl p-8 shadow-2xl">
+                <h3 className="text-xl font-semibold text-white mb-6 drop-shadow-md">Waarom klanten voor ons kiezen</h3>
                 <div className="space-y-4">
                   {["Vaste glazenwasser – altijd hetzelfde gezicht", "Streeploos resultaat gegarandeerd", "Volledig verzekerd voor uw gemoedsrust"].map((item, i) => (
                     <div key={i} className="flex items-center">
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0 shadow-md">
                         <Check className="w-3 h-3 text-white" />
                       </div>
-                      <p className="text-white font-semibold">{item}</p>
+                      <p className="text-white font-semibold drop-shadow-md">{item}</p>
                     </div>
                   ))}
                 </div>
