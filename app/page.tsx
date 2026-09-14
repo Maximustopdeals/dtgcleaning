@@ -41,7 +41,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "D.T.G. Cleaning",
-    "image": "https://dtgcleaning.nl/images/image.png",
+    "https://dtgcleaning.nl/images/bedrijfspand-1920.webp",
     "telephone": "+31 6 34683019",
     "email": "info@dtgcleaning.nl",
     "address": {
@@ -244,7 +244,7 @@ export default function Home() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/bedrijfspand.png"
+                  src="/images/bedrijfspand-1920.webp"
                   alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
                   width={748}
                   height={748}
