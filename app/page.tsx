@@ -259,7 +259,7 @@ export default function Home() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/bedrijfspand.webp"
+                  src="/images/bedrijfspand.png"
                   alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
                   width={768}
                   height={576}
