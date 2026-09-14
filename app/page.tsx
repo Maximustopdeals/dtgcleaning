@@ -81,7 +81,7 @@ export default function Home() {
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
           {/* Geoptimaliseerde achtergrond foto via Next.js Image */}
           <Image
-            src="/images/bedrijfspand.png"
+            src="/images/bedrijfspand.webp"
             alt="Streeploze ramen met wolkenreflectie door D.T.G. Cleaning"
             fill
             priority
@@ -259,7 +259,7 @@ export default function Home() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/bedrijfspand.png"
+                  src="/images/bedrijfspand.webp"
                   alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
                   width={768}
                   height={576}
