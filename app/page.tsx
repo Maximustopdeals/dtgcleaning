@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Check, Droplets, Building2, Sun, Home as HomeIcon, TrendingDown, Award, UserCheck, Leaf, Settings, Mail, MapPin, HelpCircle, ArrowRight } from "lucide-react";
@@ -14,6 +17,25 @@ const GreenCheck = () => (
 );
 
 export default function Home() {
+  // Scroll-reveal animatie: elementen fade-in bij scrollen
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const elements = document.querySelectorAll(".reveal");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   // JSON-LD structured data voor Google
   const jsonLd = {
     "@context": "https://schema.org",
@@ -55,7 +77,7 @@ export default function Home() {
       />
       <Navigation />
       <main>
-                {/* Hero met foto-achtergrond */}
+        {/* Hero met foto-achtergrond */}
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
           {/* Achtergrond foto */}
           <div
@@ -107,7 +129,7 @@ export default function Home() {
         </section>
 
         {/* Extra content sectie - SEO: beantwoordt vraag "waarom glasbewassing?" */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white reveal">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
@@ -173,7 +195,7 @@ export default function Home() {
         </section>
 
         {/* Waarom - SEO: sociale bewijsvoering */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 reveal">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -208,7 +230,7 @@ export default function Home() {
         </section>
 
         {/* Ons Werk - GEOPTIMALISEERDE AFBEELDING */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white reveal">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -246,7 +268,7 @@ export default function Home() {
         </section>
 
         {/* Vaste Contracten */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white reveal">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">VASTE CONTRACTEN</span>
@@ -284,7 +306,7 @@ export default function Home() {
         </section>
 
         {/* CTA Structureel */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 reveal">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8">
               <Mail className="w-8 h-8 text-white" />
@@ -303,7 +325,7 @@ export default function Home() {
         </section>
 
         {/* Werkgebied */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white reveal">
           <div className="max-w-5xl mx-auto px-4">
             <div className="text-center mb-12">
               <span className="inline-block bg-gray-100 rounded-full px-4 py-2 text-sm font-semibold mb-4">WERKGEBIED</span>
@@ -341,7 +363,29 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Spacer zodat de footer niet achter de sticky bar verdwijnt op mobiel */}
+        <div className="h-20 lg:hidden" />
       </main>
+
+      {/* Sticky Mobiele CTA Bar — alleen zichtbaar op mobiel */}
+      <div className="mobile-sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 lg:hidden">
+        <div className="flex items-center justify-center gap-3 px-4 py-3">
+          <a 
+            href="tel:0634683019" 
+            className="flex-1 bg-green-500 hover:bg-green-600 text-white rounded-full py-3 px-4 font-semibold flex items-center justify-center transition-colors text-sm shadow-md"
+          >
+            <Phone className="w-4 h-4 mr-2" /> Bel direct
+          </a>
+          <Link 
+            href="/contact" 
+            className="flex-1 bg-[#1a3a52] hover:bg-[#2c4a66] text-white rounded-full py-3 px-4 font-semibold flex items-center justify-center transition-colors text-sm shadow-md"
+          >
+            Offerte aanvragen
+          </Link>
+        </div>
+      </div>
+
       <Footer />
       <WhatsAppButton />
       <BackToTop />
