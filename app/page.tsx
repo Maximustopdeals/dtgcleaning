@@ -77,12 +77,17 @@ export default function Home() {
       />
       <Navigation />
       <main>
-        {/* Hero met foto-achtergrond */}
+        {/* Hero met foto-achtergrond - GEOPTIMALISEERD */}
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-          {/* Achtergrond foto */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero-ramen.jpg')" }}
+          {/* Geoptimaliseerde achtergrond foto via Next.js Image */}
+          <Image
+            src="/images/bedrijfspand.png"
+            alt="Streeploze ramen met wolkenreflectie door D.T.G. Cleaning"
+            fill
+            priority
+            sizes="100vw"
+            quality={80}
+            className="object-cover object-center"
           />
           {/* Gradient overlay: links donker (tekst), rechts transparant (glas zichtbaar) */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a3a52]/95 via-[#1a3a52]/80 to-[#1a3a52]/30" />
