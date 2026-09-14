@@ -219,7 +219,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Ons Werk - GEOPTIMALISEERDE AFBEELDING */}
+        {/* Ons Werk - foto gebruikt .png zoals in uw repository */}
         <section className="py-20 bg-white reveal">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -244,7 +244,7 @@ export default function Home() {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/bedrijfspand.webp"
+                  src="/images/bedrijfspand.png"
                   alt="Glasbewassing Nijkerk – D.T.G. Cleaning aan het werk"
                   width={748}
                   height={748}
