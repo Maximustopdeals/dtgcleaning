@@ -55,7 +55,7 @@ export default function Home() {
       <Navigation />
       <main>
         {/* Hero — met achtergrondfoto, geoptimaliseerd voor LCP */}
-        <section className="relative hero-gradient pt-32 pb-20 overflow-hidden">
+        <section className="relative pt-32 pb-20 overflow-hidden">
           {/* Achtergrondfoto — priority voor snelle LCP */}
           <Image
             src="/images/hero-ramen.webp"
@@ -65,11 +65,11 @@ export default function Home() {
             fetchPriority="high"
             sizes="100vw"
             quality={70}
-            className="object-cover object-center -z-10"
+            className="object-cover object-center"
           />
           {/* Donkere overlay voor leesbaarheid tekst */}
           <div
-            className="absolute inset-0 bg-[#1a3a52]/70 -z-10"
+            className="absolute inset-0 bg-[#1a3a52]/70"
             aria-hidden="true"
           />
 
