@@ -45,8 +45,6 @@ const jsonLd = {
 };
 
 export default function Home() {
-  // JSON-LD structured data voor Google
-
   return (
     <>
       {/* JSON-LD structured data voor Google */}
@@ -56,9 +54,25 @@ export default function Home() {
       />
       <Navigation />
       <main>
-        {/* Hero - snelle gradient (geen foto) */}
-        <section className="relative min-h-screen flex items-center hero-gradient pt-20">
-          <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-28">
+        {/* Hero — met achtergrondfoto, geoptimaliseerd voor LCP */}
+        <section className="relative hero-gradient pt-32 pb-20 overflow-hidden">
+          {/* Achtergrondfoto — priority voor snelle LCP */}
+          <Image
+            src="/images/hero-gebouw.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            quality={75}
+            className="object-cover object-center -z-10"
+          />
+          {/* Donkere overlay voor leesbaarheid tekst */}
+          <div
+            className="absolute inset-0 bg-[#1a3a52]/70 -z-10"
+            aria-hidden="true"
+          />
+
+          <div className="relative max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
@@ -97,7 +111,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Extra content sectie - SEO: beantwoordt vraag "waarom glasbewassing?" */}
+        {/* Extra content sectie - SEO */}
         <section className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -163,7 +177,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Waarom - SEO: sociale bewijsvoering */}
+        {/* Waarom */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
@@ -198,7 +212,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Ons Werk - bedrijfspandfoto */}
+        {/* Ons Werk — lazy loading voor deze afbeelding */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -228,6 +242,8 @@ export default function Home() {
                   width={1920}
                   height={1080}
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={75}
+                  loading="lazy"
                   className="w-full h-auto"
                 />
               </div>
@@ -332,11 +348,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Spacer zodat de footer niet achter de sticky bar verdwijnt op mobiel */}
+        {/* Spacer voor mobiele sticky bar */}
         <div className="h-20 lg:hidden" />
       </main>
 
-      {/* Sticky Mobiele CTA Bar — alleen zichtbaar op mobiel */}
+      {/* Sticky Mobiele CTA Bar */}
       <div className="mobile-sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 lg:hidden">
         <div className="flex items-center justify-center gap-3 px-4 py-3">
           <a 
