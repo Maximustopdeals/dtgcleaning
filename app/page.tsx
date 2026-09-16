@@ -58,12 +58,13 @@ export default function Home() {
         <section className="relative hero-gradient pt-32 pb-20 overflow-hidden">
           {/* Achtergrondfoto — priority voor snelle LCP */}
           <Image
-            src="/images/hero-gebouw.jpg"
+            src="/images/hero-ramen.webp"
             alt=""
             fill
             priority
+            fetchPriority="high"
             sizes="100vw"
-            quality={75}
+            quality={70}
             className="object-cover object-center -z-10"
           />
           {/* Donkere overlay voor leesbaarheid tekst */}
