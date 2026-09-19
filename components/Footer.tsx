@@ -60,15 +60,20 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-white/80">
-              <li className="flex items-center">
-                <MapPin className="w-5 h-5 mr-3" /> Nijkerk & Putten
+              {/* AANGEPAST: Vestigingsplaats en werkgebied gescheiden */}
+              <li className="flex items-start">
+                <MapPin className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="font-medium">Gevestigd in Putten</p>
+                  <p className="text-sm">Werkgebied: Nijkerk, Putten en omstreken</p>
+                </div>
               </li>
               <li className="flex items-center">
-                <Mail className="w-5 h-5 mr-3" />
+                <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
                 <a href="mailto:info@dtgcleaning.nl">info@dtgcleaning.nl</a>
               </li>
               <li className="flex items-center">
-                <Phone className="w-5 h-5 mr-3" />
+                <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
                 <a href="tel:+31634683019">+31 6 34683019</a>
               </li>
             </ul>
@@ -81,8 +86,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           {/* Linkjes (algemene voorwaarden, privacy, disclaimer) - gecentreerd op mobiel, uitgelijnd op desktop */}
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-4">
+            {/* LET OP: Deze links verwijzen nog naar de oude WordPress omgeving. 
+                Upload de PDF's naar /public/ en verander de href naar bijv. "/algemene-voorwaarden.pdf" */}
             <a
-              href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Algemene-Voorwaarden.pdf"
+              href="/algemene-voorwaarden.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/60 hover:text-white text-sm transition-colors"
@@ -90,7 +97,7 @@ export default function Footer() {
               Algemene voorwaarden
             </a>
             <a
-              href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Privacy-Verklaring.pdf"
+              href="/privacy-verklaring.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/60 hover:text-white text-sm transition-colors"
@@ -98,7 +105,7 @@ export default function Footer() {
               Privacy verklaring
             </a>
             <a
-              href="https://www.dtgcleaning.nl/wp-content/uploads/2026/03/Disclaimer.pdf"
+              href="/disclaimer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/60 hover:text-white text-sm transition-colors"
