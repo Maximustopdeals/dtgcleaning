@@ -9,7 +9,7 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkoppjdk";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, service, message } = body;
+    const { name, email, phone, service, referral, message } = body;
 
     // Validatie
     if (!name || !email || !message) {
@@ -39,6 +39,7 @@ export async function POST(request: Request) {
         email,
         phone: phone || "Niet opgegeven",
         service: service || "Niet opgegeven",
+        referral: referral || "Niet opgegeven",
         message,
         _subject: `Nieuwe aanvraag van ${name} via dtgcleaning.nl`,
         _replyto: email,
