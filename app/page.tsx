@@ -297,40 +297,67 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Vaste Contracten */}
-        <section className="py-20 bg-white">
+        {/* Vaste Contracten — High End 3 + 2 Layout */}
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
-              <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">VASTE CONTRACTEN</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Waarom een glasbewassingscontract loont</h2>
+              <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">
+                VASTE CONTRACTEN
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Waarom een glasbewassingscontract loont
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Vaste afspraken = vaste kwaliteit, lagere kosten en geen omkijken meer.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+            {/* High End Grid: 3 kolommen op desktop, 2 op tablet, 1 op mobiel */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {[
-                { icon: TrendingDown, title: "Tot 20% kostenbesparing", desc: "Vaste contracten zijn voordeliger dan losse afspraken." },
-                { icon: Award, title: "Altijd representatief", desc: "Schone ramen zijn het visitekaartje van uw bedrijf." },
-                { icon: UserCheck, title: "Vaste glazenwasser", desc: "Altijd hetzelfde gezicht en dezelfde kwaliteit." },
-                { icon: Leaf, title: "Milieuvriendelijk", desc: "Wij wassen alleen met osmosewater – geen chemicaliën." },
+                { 
+                  icon: TrendingDown, 
+                  title: "Tot 20% kostenbesparing", 
+                  desc: "Vaste contracten zijn voordeliger dan losse afspraken." 
+                },
+                { 
+                  icon: Award, 
+                  title: "Altijd representatief", 
+                  desc: "Schone ramen zijn het visitekaartje van uw bedrijf." 
+                },
+                { 
+                  icon: UserCheck, 
+                  title: "Vaste glazenwasser", 
+                  desc: "Altijd hetzelfde gezicht en dezelfde kwaliteit." 
+                },
+                { 
+                  icon: Leaf, 
+                  title: "Milieuvriendelijk", 
+                  desc: "Wij wassen alleen met osmosewater – geen chemicaliën." 
+                },
+                { 
+                  icon: Settings, 
+                  title: "Flexibel & op maat", 
+                  desc: "Ieder bedrijf is uniek. Wij stemmen de frequentie en diensten af op uw wensen." 
+                },
               ].map((v, i) => (
-                <div key={i} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
-                    <v.icon className="w-6 h-6 text-white" />
+                <div 
+                  key={i} 
+                  className={`group bg-white rounded-3xl p-8 border border-gray-100 hover:border-green-500/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${
+                    i === 4 ? "lg:col-start-2" : ""
+                  }`}
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#1a3a52] to-[#2c4a66] rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <v.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{v.title}</h3>
-                  <p className="text-gray-600 text-sm">{v.desc}</p>
+                  <h3 className="text-xl font-bold text-[#1a3a52] mb-3 group-hover:text-green-600 transition-colors duration-300">
+                    {v.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed flex-grow">
+                    {v.desc}
+                  </p>
                 </div>
               ))}
-            </div>
-            <div className="flex justify-center">
-              <div className="bg-gray-50 rounded-2xl p-6 max-w-sm hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-[#1a3a52] rounded-xl flex items-center justify-center mb-4">
-                  <Settings className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold mb-2">Flexibel & op maat</h3>
-                <p className="text-gray-600 text-sm">Ieder bedrijf is uniek. Wij stemmen de frequentie en diensten af op uw wensen.</p>
-              </div>
             </div>
           </div>
         </section>
