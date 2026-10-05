@@ -1,6 +1,22 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Check, Droplets, Building2, Sun, Home as HomeIcon, TrendingDown, Award, UserCheck, Leaf, Settings, Mail, MapPin, HelpCircle, ArrowRight } from "lucide-react";
+import { 
+  Phone, 
+  Check, 
+  Droplets, 
+  Building2, 
+  Sun, 
+  Home as HomeIcon, 
+  TrendingDown, 
+  Award, 
+  UserCheck, 
+  Leaf, 
+  Settings, 
+  Mail, 
+  MapPin, 
+  HelpCircle, 
+  ArrowRight 
+} from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -13,10 +29,12 @@ const GreenCheck = () => (
   </div>
 );
 
+// Uitgebreide JSON-LD structured data voor LocalBusiness
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "D.T.G. Cleaning",
+  "description": "Professionele glasbewassing en zonnepanelen reiniging in Nijkerk en omgeving.",
   "image": "https://dtgcleaning.nl/images/bedrijfspand-1920.webp",
   "telephone": "+31 6 34683019",
   "email": "info@dtgcleaning.nl",
@@ -38,9 +56,33 @@ const jsonLd = {
     "https://www.facebook.com/dtgcleaning",
     "https://www.instagram.com/dtgcleaning"
   ],
-  "areaServed": {
-    "@type": "City",
-    "name": "Nijkerk"
+  "areaServed": [
+    { "@type": "City", "name": "Nijkerk" },
+    { "@type": "City", "name": "Putten" },
+    { "@type": "City", "name": "Ermelo" },
+    { "@type": "City", "name": "Harderwijk" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Diensten",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Glasbewassing",
+          "description": "Streeploze glasbewassing met osmosewater voor particulieren en bedrijven."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Zonnepanelen reinigen",
+          "description": "Professionele reiniging van zonnepanelen voor maximaal rendement."
+        }
+      }
+    ]
   }
 };
 
@@ -56,7 +98,6 @@ export default function Home() {
       <main>
         {/* Hero — met achtergrondfoto, geoptimaliseerd voor LCP */}
         <section className="relative pt-32 pb-20 overflow-hidden">
-          {/* Achtergrondfoto — priority voor snelle LCP */}
           <Image
             src="/images/hero-ramen.webp"
             alt=""
@@ -67,7 +108,6 @@ export default function Home() {
             quality={70}
             className="object-cover object-center"
           />
-          {/* Donkere overlay voor leesbaarheid tekst */}
           <div
             className="absolute inset-0 bg-[#1a3a52]/70"
             aria-hidden="true"
@@ -83,8 +123,8 @@ export default function Home() {
                   Professionele glasbewassing in Nijkerk en omgeving
                 </p>
                 <p className="text-lg text-white/80 mb-8 drop-shadow-md">
-                  Op zoek naar een betrouwbare glazenwasser in Nijkerk? Wij zorgen voor stralend schone ramen,
-                  gevels en zonnepanelen. <strong>Vrijblijvend offerte</strong> – u betaalt pas na uitvoering.
+                  Op zoek naar een betrouwbare glazenwasser in Nijkerk? Wij zorgen voor stralend schone ramen
+                  en zonnepanelen. <strong>Vrijblijvend offerte</strong> – u betaalt pas na uitvoering.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact" className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold flex items-center justify-center transition-colors shadow-lg">
@@ -124,7 +164,7 @@ export default function Home() {
 
             <div className="prose prose-lg text-gray-600 mx-auto space-y-6">
               <p>
-                <strong>D.T.G. Cleaning</strong> is uw specialist voor <strong>glasbewassing in Nijkerk, Putten, Harderwijk en omgeving</strong>. 
+                <strong>D.T.G. Cleaning</strong> is uw specialist voor <strong>glasbewassing in Nijkerk, Putten, Ermelo en Harderwijk</strong>. 
                 Of u nu <strong>ramen laten wassen</strong> voor uw woning of bedrijfspand – wij zorgen voor een <strong>streeploos resultaat</strong>.
               </p>
 
@@ -142,7 +182,7 @@ export default function Home() {
                   <h4 className="font-bold text-[#1a3a52] mb-2">🏢 Bedrijven & VvE's</h4>
                   <p className="text-gray-600 text-sm">
                     Een representatieve uitstraling is essentieel. Wij bieden <strong>vaste onderhoudscontracten</strong> 
-                    met vaste planning. Uw ramen en gevels zijn altijd in topconditie – zonder dat u eromkijkt.
+                    met vaste planning. Uw ramen zijn altijd in topconditie – zonder dat u eromkijkt.
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-5">
@@ -219,15 +259,20 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="inline-block bg-gray-100 rounded-full px-4 py-2 text-sm font-semibold mb-6">ONS WERK</span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Van glasbewassing tot gevelreiniging in Nijkerk</h2>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Van glasbewassing tot zonnepanelen reinigen in Nijkerk</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Of u nu uw <strong>ramen wilt laten wassen</strong>, uw gevel wilt reinigen of uw zonnepanelen wilt laten onderhouden – 
+                  Of u nu uw <strong>ramen wilt laten wassen</strong> of uw <strong>zonnepanelen wilt laten onderhouden</strong> – 
                   wij bieden het allemaal.
                 </p>
                 <ul className="space-y-4 mb-10">
-                  {["Glasbewassing met osmosewater – streeploos en chemievrij", "Gevelreiniging op hoogte – ook met hoogwerker", "Zonnepanelen reinigen – voor maximaal rendement", "Dakgootreiniging – tegen waterschade"].map((item, i) => (
-                  <li key={i} className="flex items-center">
-                    <GreenCheck />
+                  {[
+                    "Glasbewassing met osmosewater – streeploos en chemievrij", 
+                    "Zonnepanelen reinigen – voor maximaal rendement",
+                    "Professionele glasbewassing voor bedrijven en VvE's",
+                    "Regelmatig onderhoud voor particulieren"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center">
+                      <GreenCheck />
                       <span className="text-gray-700 ml-3">{item}</span>
                     </li>
                   ))}
@@ -327,7 +372,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold">Onze regio</h3>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {["Nijkerk", "Putten", "Ermelo", "Harderwijk", "Barneveld", "Voorthuizen", "Leusden", "Amersfoort"].map((loc, i) => (
+                {["Nijkerk", "Putten", "Ermelo", "Harderwijk"].map((loc, i) => (
                   <div key={i} className="flex items-center">
                     <GreenCheck />
                     <span className="text-gray-700 ml-2">{loc}</span>
