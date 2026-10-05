@@ -88,6 +88,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     service: "",
+    referral: "",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
@@ -128,6 +129,7 @@ export default function ContactPage() {
           email: "",
           phone: "",
           service: "",
+          referral: "",
           message: "",
         });
       } else {
@@ -194,7 +196,9 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" style={{ color: "#1a3a52" }} />
                   </div>
                   <div>
-                    <span className="text-sm text-gray-500">Bel ons direct</span>
+                    <span className="text-sm text-gray-500">
+                      Bel ons direct
+                    </span>
                     <p className="font-semibold">06-34683019</p>
                   </div>
                 </a>
@@ -458,6 +462,36 @@ export default function ContactPage() {
                     <option value="zonnepanelen">
                       Zonnepanelen reiniging
                     </option>
+                    <option value="overig">Overig</option>
+                  </select>
+                </div>
+
+                {/* NIEUW VELD: Hoe heeft u ons gevonden? */}
+                <div>
+                  <label
+                    htmlFor="referral"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Hoe heeft u ons gevonden?{" "}
+                    <span className="text-gray-400 text-xs">(optioneel)</span>
+                  </label>
+                  <select
+                    id="referral"
+                    name="referral"
+                    value={formData.referral}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white"
+                    style={
+                      { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
+                    }
+                  >
+                    <option value="">Selecteer een optie</option>
+                    <option value="google">Via Google</option>
+                    <option value="mond-tot-mond">
+                      Via familie, vrienden of kennissen
+                    </option>
+                    <option value="buren">Via buren in de straat</option>
+                    <option value="herhaalklant">Ik ben al klant</option>
                     <option value="overig">Overig</option>
                   </select>
                 </div>
