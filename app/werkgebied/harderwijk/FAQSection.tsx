@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Komt u ook in de binnenstad van Harderwijk?",
+    question: "Komt u ook in het centrum en de historische panden?",
     answer:
-      "Ja, absoluut! De binnenstad is een van onze kerngebieden. We zijn gespecialiseerd in het reinigen van panden in historische binnensteden, inclusief monumentale gebouwen.",
+      "Ja, absoluut! Wij zijn actief in heel Harderwijk, inclusief de historische binnenstad. We zijn gespecialiseerd in het reinigen van monumentale gebouwen met zachte methoden die uw pand niet beschadigen.",
   },
   {
     question: "Wat kost glasbewassing in Harderwijk?",
@@ -18,11 +18,6 @@ const faqs = [
     question: "Heeft u ervaring met monumentale panden?",
     answer:
       "Ja, wij hebben ruime ervaring met het reinigen van monumentale en historische panden. Wij werken met zachte methoden die de kwetsbare gevels en ramen niet beschadigen.",
-  },
-  {
-    question: "Werkt u ook aan de Waterfront en bij de haven?",
-    answer:
-      "Jazeker! Wij zijn actief in heel Harderwijk, inclusief de Waterfront, havengebied en alle wijken. De zoute lucht vraagt om extra aandacht voor uw ramen – daar hebben wij ervaring mee.",
   },
   {
     question: "Gebruikt u chemicaliën voor glasbewassing?",
