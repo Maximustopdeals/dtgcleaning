@@ -75,7 +75,7 @@ const jsonLd = {
   priceRange: "€€",
   openingHours: "Mo-Fr 07:00-18:00",
   areaServed: "Barneveld en omgeving",
-  url: "https://dtgcleaning.nl/werkgebied/barneveld",
+  url: "https://dtgcleaning.nl/werkgebied/barneveld/",
 };
 
 export default function GlazenwasserBarneveld() {
@@ -107,19 +107,13 @@ export default function GlazenwasserBarneveld() {
             <strong className="text-white">
               betrouwbare glazenwasser in Barneveld
             </strong>
-            ? D.T.G. Cleaning is actief in heel de gemeente – van de{" "}
-            <strong className="text-white">historische binnenstad</strong> tot
-            de{" "}
-            <strong className="text-white">
-              industrieterreinen Harselaar en Veller
-            </strong>{" "}
-            en de{" "}
-            <strong className="text-white">agrarische buitengebieden</strong>.
-            Geen reiskosten, wel een stralend resultaat.
+            ? D.T.G. Cleaning is actief in de hele gemeente Barneveld – voor
+            particuliere woningen, bedrijven en agrarische ondernemers. Geen
+            reiskosten, wel een stralend resultaat.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Link
-              href="/contact"
+              href="/contact/"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold transition-all flex items-center justify-center shadow-lg"
             >
               <Mail className="w-5 h-5 mr-2" /> Vrijblijvende offerte
@@ -176,8 +170,7 @@ export default function GlazenwasserBarneveld() {
               <div className="bg-orange-50 border-l-4 border-orange-500 rounded-r-xl p-4">
                 <p className="text-gray-700 text-sm">
                   <strong>🏭 Goed om te weten:</strong> Geen reiskosten binnen
-                  Barneveld. Speciale tarieven voor bedrijven op Harselaar en
-                  Veller.
+                  Barneveld. Speciale tarieven voor bedrijven.
                 </p>
               </div>
             </div>
@@ -186,40 +179,28 @@ export default function GlazenwasserBarneveld() {
                 <h3 className="font-bold text-[#1a3a52] mb-3 flex items-center">
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Barneveld
                 </h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div className="flex items-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  Wij zijn actief in de hele gemeente Barneveld – in de
+                  dorpskern, de woonwijken en het buitengebied.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Centrum</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Particuliere woningen en appartementen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Harselaar</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Bedrijven en kantoren</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Veller</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Agrarische bedrijven en boerderijen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">De Glind</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Kootwijkerbroek</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Stroe</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Zwartebroek</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Terschuur</span>
-                  </div>
-                </div>
+                    <span className="ml-2">VvE&apos;s en instellingen</span>
+                  </li>
+                </ul>
               </div>
 
               <div className="bg-[#1a3a52]/5 rounded-2xl p-6 border border-[#1a3a52]/10">
@@ -232,8 +213,8 @@ export default function GlazenwasserBarneveld() {
                       Specialist in bedrijfspanden
                     </p>
                     <p className="text-sm text-gray-600">
-                      Ervaring met grote panden op Harselaar en Veller. Ook
-                      showrooms, kantoren en industriële gebouwen.
+                      Ervaring met grote panden, showrooms, kantoren en
+                      industriële gebouwen.
                     </p>
                   </div>
                 </div>
@@ -312,7 +293,7 @@ export default function GlazenwasserBarneveld() {
 
           <div className="text-center mt-8">
             <Link
-              href="/schoonmaakdiensten"
+              href="/schoonmaakdiensten/"
               className="inline-flex items-center text-[#1a3a52] font-semibold hover:underline"
             >
               Bekijk alle diensten{" "}
@@ -340,7 +321,7 @@ export default function GlazenwasserBarneveld() {
               {
                 icon: Calendar,
                 title: "Vaste planning",
-                desc: "U weet precies wanneer wij komen – wekelijks langs in Barneveld.",
+                desc: "U weet precies wanneer wij komen – vaste routes in Barneveld.",
               },
               {
                 icon: Users,
@@ -389,10 +370,9 @@ export default function GlazenwasserBarneveld() {
                   Telescoopbewassing – ook uw hoge ramen zonder steiger
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  In Barneveld hebben veel panden hoge ramen – vooral
-                  bedrijfspanden op Harselaar en Veller, maar ook historische
-                  panden in de binnenstad. Normaal gesproken hebt u dan een dure
-                  steiger of hoogwerker nodig. Met onze{" "}
+                  In Barneveld hebben veel panden hoge ramen – vooral grote
+                  bedrijfspanden en karakteristieke woningen. Normaal gesproken
+                  hebt u dan een dure steiger of hoogwerker nodig. Met onze{" "}
                   <strong>telescoopbewassing</strong> kunnen wij tot{" "}
                   <strong>13,5 meter hoogte</strong> werken – zonder extra
                   kosten.
@@ -440,7 +420,7 @@ export default function GlazenwasserBarneveld() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
