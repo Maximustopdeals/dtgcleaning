@@ -119,7 +119,7 @@ export default function WerkgebiedPage() {
       <section className="pt-32 pb-16 bg-gradient-to-br from-[#1a3a52] to-[#2c4a66]">
         <div className="max-w-7xl mx-auto px-4 text-center text-white">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-            Glazenwasser in Nijkerk en omgeving – ook bij u in de buurt
+            Glazenwasser in Nijkerk en omgeving, ook bij u in de buurt
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
             D.T.G. Cleaning is dé glazenwasser in{" "}
@@ -127,7 +127,7 @@ export default function WerkgebiedPage() {
               Nijkerk, Putten, Harderwijk, Barneveld, Ermelo en Voorthuizen
             </strong>
             . Professionele glasbewassing, gevelreiniging en zonnepanelen
-            reiniging – altijd in uw regio.
+            reiniging. Altijd in uw regio.
           </p>
         </div>
       </section>
@@ -149,7 +149,7 @@ export default function WerkgebiedPage() {
             <p>
               Wat ons onderscheidt? Een <strong>vaste glazenwasser</strong> die
               u kent en die weet wat hij doet. Geen wisselende gezichten, geen
-              gedoe. Wij gebruiken <strong>osmosewater</strong> – een
+              gedoe. Wij gebruiken <strong>osmosewater</strong> een
               milieuvriendelijke techniek die zorgt voor{" "}
               <strong>geen strepen, geen vlekken en geen chemicaliën</strong>.
               En dankzij onze telewash-systemen bereiken we ook moeiteloos de
@@ -264,7 +264,7 @@ export default function WerkgebiedPage() {
               <h3 className="text-lg font-bold mb-2">Veilig & verzekerd</h3>
               <p className="text-gray-600 text-sm">
                 Volledig aansprakelijkheidsverzekerd. Uw pand is in veilige
-                handen – zonder zorgen.
+                handen zonder zorgen.
               </p>
             </div>
 
@@ -274,7 +274,7 @@ export default function WerkgebiedPage() {
               </div>
               <h3 className="text-lg font-bold mb-2">Milieuvriendelijk</h3>
               <p className="text-gray-600 text-sm">
-                Geen agressieve chemicaliën – alleen osmosewater. Veilig voor u,
+                Geen agressieve chemicaliën alleen osmosewater. Veilig voor u,
                 uw gezin en het milieu.
               </p>
             </div>
@@ -289,10 +289,10 @@ export default function WerkgebiedPage() {
             <Clock className="w-12 h-12 text-[#1a3a52] opacity-30" />
           </div>
           <h3 className="text-2xl font-bold text-[#1a3a52] mb-3">
-            Geen wachttijd – ook voor spoed
+            Geen wachttijd, ook voor spoed
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Of u nu een eenmalige afspraak wilt of een vast contract – wij
+            Of u nu een eenmalige afspraak wilt of een vast contract. Wij
             plannen snel en flexibel. Ook voor spoed kunt u ons altijd bellen.
           </p>
         </div>
@@ -309,7 +309,7 @@ export default function WerkgebiedPage() {
               Ook glazenwasser bij u in de buurt?
             </h2>
             <p className="text-white/80 text-sm mb-5">
-              Vraag vrijblijvend een offerte aan – wij komen graag langs voor
+              Vraag vrijblijvend een offerte aan. Wij komen graag langs voor
               een kennismaking.
             </p>
 
