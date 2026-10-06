@@ -75,7 +75,7 @@ const jsonLd = {
   priceRange: "€€",
   openingHours: "Mo-Fr 07:00-18:00",
   areaServed: "Voorthuizen en omgeving",
-  url: "https://dtgcleaning.nl/werkgebied/voorthuizen",
+  url: "https://dtgcleaning.nl/werkgebied/voorthuizen/",
 };
 
 export default function GlazenwasserVoorthuizen() {
@@ -106,16 +106,13 @@ export default function GlazenwasserVoorthuizen() {
             <strong className="text-white">
               betrouwbare glazenwasser in Voorthuizen
             </strong>
-            ? D.T.G. Cleaning is dé specialist voor de recreatiesector – van{" "}
-            <strong className="text-white">campings</strong> en{" "}
-            <strong className="text-white">vakantieparken</strong> tot{" "}
-            <strong className="text-white">woningen</strong> en{" "}
-            <strong className="text-white">bedrijven</strong>. Geen reiskosten,
-            wel minimale overlast voor uw gasten.
+            ? D.T.G. Cleaning is dé specialist voor de recreatiesector – van
+            campings en vakantieparken tot woningen en bedrijven. Geen
+            reiskosten, wel minimale overlast voor uw gasten.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Link
-              href="/contact"
+              href="/contact/"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold transition-all flex items-center justify-center shadow-lg"
             >
               <Mail className="w-5 h-5 mr-2" /> Vrijblijvende offerte
@@ -186,40 +183,28 @@ export default function GlazenwasserVoorthuizen() {
                 <h3 className="font-bold text-[#1a3a52] mb-3 flex items-center">
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Voorthuizen
                 </h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div className="flex items-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  Wij zijn actief in de hele gemeente Voorthuizen – in de
+                  dorpskern, de woonwijken en op de recreatieparken.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Centrum</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Particuliere woningen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Gerverscop</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Recreatieparken en campings</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Zeumeren</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Bungalows en vakantiewoningen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">De Beek</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">&apos;t Kranenveld</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Bijsteren</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Appelaar</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Maatlanden</span>
-                  </div>
-                </div>
+                    <span className="ml-2">Bedrijven en VvE&apos;s</span>
+                  </li>
+                </ul>
               </div>
 
               <div className="bg-[#1a3a52]/5 rounded-2xl p-6 border border-[#1a3a52]/10">
@@ -312,7 +297,7 @@ export default function GlazenwasserVoorthuizen() {
 
           <div className="text-center mt-8">
             <Link
-              href="/schoonmaakdiensten"
+              href="/schoonmaakdiensten/"
               className="inline-flex items-center text-[#1a3a52] font-semibold hover:underline"
             >
               Bekijk alle diensten <ArrowRight className="w-4 h-4 ml-2" />
@@ -339,7 +324,7 @@ export default function GlazenwasserVoorthuizen() {
               {
                 icon: Calendar,
                 title: "Vaste planning",
-                desc: "U weet precies wanneer wij komen – wekelijks langs in Voorthuizen.",
+                desc: "U weet precies wanneer wij komen – vaste routes in Voorthuizen.",
               },
               {
                 icon: Users,
@@ -474,7 +459,7 @@ export default function GlazenwasserVoorthuizen() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
