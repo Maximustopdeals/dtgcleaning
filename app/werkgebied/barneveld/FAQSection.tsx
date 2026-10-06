@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Komt u ook naar de industrieterreinen Harselaar en Veller?",
+    question: "Komt u ook in de buitengebieden en dorpen?",
     answer:
-      "Absoluut! Dit zijn belangrijke gebieden voor ons. Wij hebben veel ervaring met het reinigen van grote bedrijfspanden, showrooms en kantoren op beide terreinen.",
+      "Ja, wij zijn actief in de hele gemeente Barneveld – in de dorpskern, de woonwijken en het buitengebied. Neem gerust contact op om te bespreken wat de mogelijkheden zijn.",
   },
   {
     question: "Wat kost glasbewassing voor een bedrijfspand in Barneveld?",
@@ -18,11 +18,6 @@ const faqs = [
     question: "Werkt u ook voor agrarische bedrijven in Barneveld?",
     answer:
       "Jazeker! De agrarische sector is belangrijk in Barneveld. Wij reinigen schuren, loodsen, stallen en ook de woningen van agrarische ondernemers.",
-  },
-  {
-    question: "Komt u ook in de buitengebieden en dorpen?",
-    answer:
-      "Ja, wij zijn actief in heel de gemeente Barneveld, inclusief Kootwijkerbroek, Stroe, Zwartebroek, Terschuur, Voorthuizen (deels) en Achterveld.",
   },
   {
     question: "Gebruikt u chemicaliën voor glasbewassing?",
