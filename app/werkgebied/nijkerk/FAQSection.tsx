@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Komt u ook in mijn wijk in Nijkerk?",
     answer:
-      "Ja! Wij zijn actief in alle wijken van Nijkerk: centrum, Doornsteeg, Paasbos, Arkervaart, Corlaer, Kruishaar en meer. Geen reiskosten binnen Nijkerk.",
+      "Ja, wij zijn actief in de hele gemeente Nijkerk – in alle wijken en in het buitengebied. Geen reiskosten binnen Nijkerk.",
   },
 ];
 
