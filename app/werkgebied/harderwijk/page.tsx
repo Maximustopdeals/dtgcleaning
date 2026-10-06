@@ -13,7 +13,6 @@ import {
   Calendar,
   Users,
   ArrowRight,
-  Trees,
   Anchor,
 } from "lucide-react";
 import Footer from "@/components/Footer";
@@ -75,7 +74,7 @@ const jsonLd = {
   priceRange: "€€",
   openingHours: "Mo-Fr 07:00-18:00",
   areaServed: "Harderwijk en omgeving",
-  url: "https://dtgcleaning.nl/werkgebied/harderwijk",
+  url: "https://dtgcleaning.nl/werkgebied/harderwijk/",
 };
 
 export default function GlazenwasserHarderwijk() {
@@ -105,13 +104,12 @@ export default function GlazenwasserHarderwijk() {
               betrouwbare glazenwasser in Harderwijk
             </strong>
             ? D.T.G. Cleaning is al jaren actief in deze bruisende Hanzestad –
-            van de <strong className="text-white">historische binnenstad</strong>{" "}
-            tot aan het <strong className="text-white">Waterfront</strong>. Geen
-            reiskosten, wel een stralend resultaat.
+            van historische panden tot moderne bedrijfspanden. Geen reiskosten,
+            wel een stralend resultaat.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Link
-              href="/contact"
+              href="/contact/"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold transition-all flex items-center justify-center shadow-lg"
             >
               <Mail className="w-5 h-5 mr-2" /> Vrijblijvende offerte
@@ -169,8 +167,8 @@ export default function GlazenwasserHarderwijk() {
               <div className="bg-blue-50 border-l-4 border-[#1a3a52] rounded-r-xl p-4">
                 <p className="text-gray-700 text-sm">
                   <strong>⚓ Goed om te weten:</strong> Geen reiskosten binnen
-                  Harderwijk. Ook voor de historische binnenstad en het
-                  Waterfront.
+                  Harderwijk. Ook voor historische panden en monumentale
+                  gebouwen.
                 </p>
               </div>
             </div>
@@ -179,40 +177,24 @@ export default function GlazenwasserHarderwijk() {
                 <h3 className="font-bold text-[#1a3a52] mb-3 flex items-center">
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Harderwijk
                 </h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div className="flex items-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  Wij zijn actief in de hele gemeente Harderwijk – in de
+                  binnenstad, de woonwijken en de nieuwere buurten.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Binnenstad</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Particuliere woningen en appartementen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Stadsdennen</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Historische en monumentale panden</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Frankrijk</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Stadsweiden</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Waterfront</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Harderwijkerbos</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Zeebuurt</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Drielanden</span>
-                  </div>
-                </div>
+                    <span className="ml-2">Bedrijven en VvE&apos;s</span>
+                  </li>
+                </ul>
               </div>
 
               <div className="bg-[#1a3a52]/5 rounded-2xl p-6 border border-[#1a3a52]/10">
@@ -225,22 +207,10 @@ export default function GlazenwasserHarderwijk() {
                       Specialist in historische panden
                     </p>
                     <p className="text-sm text-gray-600">
-                      Ervaring met monumentale gebouwen in de binnenstad. Zachte
+                      Ervaring met monumentale gebouwen. Zachte
                       reinigingsmethoden die uw pand niet beschadigen.
                     </p>
                   </div>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 rounded-xl p-4 border border-blue-200 flex items-center gap-3">
-                <Trees className="w-8 h-8 text-blue-600 flex-shrink-0" />
-                <div>
-                  <p className="text-sm font-semibold text-blue-800">
-                    Ook voor panden aan het water
-                  </p>
-                  <p className="text-xs text-blue-700">
-                    Specialistische aanpak voor zoute lucht en kustklimaat
-                  </p>
                 </div>
               </div>
             </div>
@@ -255,9 +225,8 @@ export default function GlazenwasserHarderwijk() {
               Onze diensten in Harderwijk – voor elk pand
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Of u nu een woning in de historische binnenstad, een pand aan het
-              Waterfront of een bedrijf heeft – wij bieden de oplossing.
-              Hieronder een overzicht.
+              Of u nu een woning, historisch pand of een bedrijf heeft – wij
+              bieden de oplossing. Hieronder een overzicht.
             </p>
           </div>
 
@@ -284,7 +253,7 @@ export default function GlazenwasserHarderwijk() {
               {
                 icon: Droplets,
                 title: "Dakgoten",
-                desc: "Voorkom waterschade – extra controle voor kustgebied",
+                desc: "Voorkom waterschade – ook voor oude panden",
                 color: "from-cyan-500 to-cyan-600",
               },
             ].map((d, i) => (
@@ -305,7 +274,7 @@ export default function GlazenwasserHarderwijk() {
 
           <div className="text-center mt-8">
             <Link
-              href="/schoonmaakdiensten"
+              href="/schoonmaakdiensten/"
               className="inline-flex items-center text-[#1a3a52] font-semibold hover:underline"
             >
               Bekijk alle diensten <ArrowRight className="w-4 h-4 ml-2" />
@@ -427,7 +396,7 @@ export default function GlazenwasserHarderwijk() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
