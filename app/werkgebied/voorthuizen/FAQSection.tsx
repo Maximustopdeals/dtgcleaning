@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Komt u ook naar de recreatieparken in Voorthuizen?",
     answer:
-      "Absoluut! Dit is een van onze specialismen. Wij werken regelmatig voor campings, vakantieparken en recreatiebedrijven in Voorthuizen, waaronder Zeumeren, Gerverscop en andere parken.",
+      "Absoluut! Dit is een van onze specialismen. Wij werken regelmatig voor campings, vakantieparken en recreatiebedrijven in Voorthuizen en omgeving.",
   },
   {
     question: "Wat kost glasbewassing voor een camping of vakantiepark?",
