@@ -144,7 +144,7 @@ export default function GlazenwasserNijkerk() {
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
                 gezichten, geen gedoe. En met onze{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
-                streeploos resultaat – zonder chemicaliën.
+                streeploos resultaat zonder chemicaliën.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -155,7 +155,7 @@ export default function GlazenwasserNijkerk() {
                   </div>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-bold text-[#1a3a52]">10+</div>
+                  <div className="text-2xl font-bold text-[#1a3a52]">6+</div>
                   <div className="text-sm text-gray-600">
                     Jaar ervaring in de regio
                   </div>
