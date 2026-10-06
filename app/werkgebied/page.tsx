@@ -55,12 +55,6 @@ const GreenCheck = () => (
   </div>
 );
 
-/* ✅ AANGEPAST: algemene beschrijvingen zonder discutabele buurtschappen
-   - Geen "Krachtighuizen, Diermen" (Putten) — te onbekend
-   - Geen "Stadsdennen, Frankrijk" (Harderwijk) — wijknamen discutabel
-   - Geen "Veller en industrieterreinen" (Barneveld) — niet allemaal wijken
-   - Geen "Horst tot Tonsel" (Ermelo) — buurtschappen
-   - Geen "Gerverscop" (Voorthuizen) — ligt in Woerden ❌ */
 const steden = [
   {
     name: "Nijkerk",
