@@ -74,7 +74,7 @@ const jsonLd = {
   priceRange: "€€",
   openingHours: "Mo-Fr 07:00-18:00",
   areaServed: "Nijkerk en omgeving",
-  url: "https://dtgcleaning.nl/werkgebied/nijkerk",
+  url: "https://dtgcleaning.nl/werkgebied/nijkerk/",
 };
 
 export default function GlazenwasserNijkerk() {
@@ -108,7 +108,7 @@ export default function GlazenwasserNijkerk() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Link
-              href="/contact"
+              href="/contact/"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold transition-all flex items-center justify-center shadow-lg"
             >
               <Mail className="w-5 h-5 mr-2" /> Vrijblijvende offerte
@@ -144,7 +144,7 @@ export default function GlazenwasserNijkerk() {
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
                 gezichten, geen gedoe. En met onze{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
-                streeploos resultaat zonder chemicaliën.
+                streeploos resultaat – zonder chemicaliën.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -155,7 +155,7 @@ export default function GlazenwasserNijkerk() {
                   </div>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-bold text-[#1a3a52]">6+</div>
+                  <div className="text-2xl font-bold text-[#1a3a52]">10+</div>
                   <div className="text-sm text-gray-600">
                     Jaar ervaring in de regio
                   </div>
@@ -173,43 +173,26 @@ export default function GlazenwasserNijkerk() {
             <div className="space-y-4">
               <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                 <h3 className="font-bold text-[#1a3a52] mb-3 flex items-center">
-                  <MapPin className="w-5 h-5 mr-2" /> Actief in alle wijken van
-                  Nijkerk
+                  <MapPin className="w-5 h-5 mr-2" /> Actief in heel Nijkerk
                 </h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div className="flex items-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  Wij zijn actief in de hele gemeente Nijkerk – in alle wijken
+                  en in het buitengebied.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Centrum</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Particuliere woningen en appartementen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Doornsteeg</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Bedrijven en kantoren</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Paasbos</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Arkervaart</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Corlaer</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Kruishaar</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Nijkerkerveen</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Holk</span>
-                  </div>
-                </div>
+                    <span className="ml-2">VvE&apos;s en instellingen</span>
+                  </li>
+                </ul>
               </div>
 
               <div className="bg-[#1a3a52]/5 rounded-2xl p-6 border border-[#1a3a52]/10">
@@ -293,7 +276,7 @@ export default function GlazenwasserNijkerk() {
 
           <div className="text-center mt-8">
             <Link
-              href="/schoonmaakdiensten"
+              href="/schoonmaakdiensten/"
               className="inline-flex items-center text-[#1a3a52] font-semibold hover:underline"
             >
               Bekijk alle diensten <ArrowRight className="w-4 h-4 ml-2" />
@@ -413,7 +396,7 @@ export default function GlazenwasserNijkerk() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
