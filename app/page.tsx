@@ -94,9 +94,8 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navigation />
-      <main>
-        {/* Hero — met achtergrondfoto, geoptimaliseerd voor LCP */}
+      <main>...</main>
+      {/* Hero — met achtergrondfoto, geoptimaliseerd voor LCP */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <Image
             src="/images/hero-ramen.webp"
