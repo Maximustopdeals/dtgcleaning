@@ -75,7 +75,7 @@ const jsonLd = {
   priceRange: "€€",
   openingHours: "Mo-Fr 07:00-18:00",
   areaServed: "Ermelo en omgeving",
-  url: "https://dtgcleaning.nl/werkgebied/ermelo",
+  url: "https://dtgcleaning.nl/werkgebied/ermelo/",
 };
 
 export default function GlazenwasserErmelo() {
@@ -86,7 +86,6 @@ export default function GlazenwasserErmelo() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-[#1a3a52] to-[#2c4a66]">
         <div className="max-w-7xl mx-auto px-4 text-center text-white">
           <div className="inline-block bg-white/10 rounded-full px-4 py-1 text-sm font-medium mb-4">
@@ -106,15 +105,13 @@ export default function GlazenwasserErmelo() {
             <strong className="text-white">
               betrouwbare glazenwasser in Ermelo
             </strong>
-            ? D.T.G. Cleaning is actief in deze prachtige bosgemeente – van de{" "}
-            <strong className="text-white">dorpskern</strong> tot de{" "}
-            <strong className="text-white">bosranden</strong> en{" "}
-            <strong className="text-white">recreatiegebieden</strong>.
-            Milieuvriendelijk, betrouwbaar en zonder reiskosten.
+            ? D.T.G. Cleaning is actief in deze prachtige bosgemeente – van de
+            dorpskern tot de bosranden en recreatiegebieden. Milieuvriendelijk,
+            betrouwbaar en zonder reiskosten.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Link
-              href="/contact"
+              href="/contact/"
               className="bg-green-500 hover:bg-green-600 text-white rounded-full px-8 py-4 font-semibold transition-all flex items-center justify-center shadow-lg"
             >
               <Mail className="w-5 h-5 mr-2" /> Vrijblijvende offerte
@@ -129,7 +126,6 @@ export default function GlazenwasserErmelo() {
         </div>
       </section>
 
-      {/* Waarom Ermelo */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -151,8 +147,8 @@ export default function GlazenwasserErmelo() {
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
                 gezichten, geen gedoe. En met onze{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
-                streeploos resultaat – <strong>zonder schade aan de natuur</strong>{" "}
-                rondom Ermelo.
+                streeploos resultaat –{" "}
+                <strong>zonder schade aan de natuur</strong> rondom Ermelo.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -180,40 +176,28 @@ export default function GlazenwasserErmelo() {
                 <h3 className="font-bold text-[#1a3a52] mb-3 flex items-center">
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Ermelo
                 </h3>
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div className="flex items-center">
+                <p className="text-sm text-gray-600 mb-4">
+                  Wij zijn actief in de hele gemeente Ermelo – van de dorpskern
+                  tot de bosrijke buitengebieden en recreatiegebieden.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Centrum</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Particuliere woningen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Horst</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Bosrandwoningen en landelijke panden</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Tonsel</span>
-                  </div>
-                  <div className="flex items-center">
+                    <span className="ml-2">Recreatiewoningen</span>
+                  </li>
+                  <li className="flex items-center">
                     <GreenCheck />
-                    <span className="ml-2">Veldwijk</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Stakenberg</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Ermelosche Heide</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Telgt</span>
-                  </div>
-                  <div className="flex items-center">
-                    <GreenCheck />
-                    <span className="ml-2">Leuvenum</span>
-                  </div>
-                </div>
+                    <span className="ml-2">Bedrijven en VvE&apos;s</span>
+                  </li>
+                </ul>
               </div>
 
               <div className="bg-[#1a3a52]/5 rounded-2xl p-6 border border-[#1a3a52]/10">
@@ -249,7 +233,6 @@ export default function GlazenwasserErmelo() {
         </div>
       </section>
 
-      {/* Diensten */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -307,7 +290,7 @@ export default function GlazenwasserErmelo() {
 
           <div className="text-center mt-8">
             <Link
-              href="/schoonmaakdiensten"
+              href="/schoonmaakdiensten/"
               className="inline-flex items-center text-[#1a3a52] font-semibold hover:underline"
             >
               Bekijk alle diensten <ArrowRight className="w-4 h-4 ml-2" />
@@ -316,7 +299,6 @@ export default function GlazenwasserErmelo() {
         </div>
       </section>
 
-      {/* Waarom vaste glazenwasser */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -334,7 +316,7 @@ export default function GlazenwasserErmelo() {
               {
                 icon: Calendar,
                 title: "Vaste planning",
-                desc: "U weet precies wanneer wij komen – wekelijks langs in Ermelo.",
+                desc: "U weet precies wanneer wij komen – vaste routes in Ermelo.",
               },
               {
                 icon: Users,
@@ -370,7 +352,6 @@ export default function GlazenwasserErmelo() {
         </div>
       </section>
 
-      {/* Telescoopbewassing */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="bg-white rounded-3xl p-8 shadow-md border border-gray-100">
@@ -384,10 +365,10 @@ export default function GlazenwasserErmelo() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   In Ermelo hebben veel panden hoge ramen – zeker de
-                  karakteristieke bosrandwoningen en vrijstaande panden.
-                  Normaal gesproken hebt u dan een dure steiger of hoogwerker
-                  nodig. Met onze <strong>telescoopbewassing</strong> kunnen wij
-                  tot <strong>13,5 meter hoogte</strong> werken – zonder extra
+                  karakteristieke bosrandwoningen en vrijstaande panden. Normaal
+                  gesproken hebt u dan een dure steiger of hoogwerker nodig. Met
+                  onze <strong>telescoopbewassing</strong> kunnen wij tot{" "}
+                  <strong>13,5 meter hoogte</strong> werken – zonder extra
                   kosten.
                 </p>
                 <p className="text-gray-600">
@@ -417,7 +398,6 @@ export default function GlazenwasserErmelo() {
         </div>
       </section>
 
-      {/* Duurzaamheid */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center border border-green-100">
@@ -457,10 +437,8 @@ export default function GlazenwasserErmelo() {
         </div>
       </section>
 
-      {/* FAQ */}
       <FAQSection />
 
-      {/* CTA */}
       <section className="pt-8 pb-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-[#1a3a52] rounded-2xl p-6 md:p-8 text-center shadow-lg">
@@ -473,7 +451,7 @@ export default function GlazenwasserErmelo() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="bg-white text-[#1a3a52] rounded-full px-6 py-3 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" /> Vrijblijvend offerte aanvragen
