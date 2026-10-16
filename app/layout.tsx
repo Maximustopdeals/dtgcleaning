@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
-/* ✅ NIEUW: viewport export (verplicht in Next.js 15+) */
+/* ✅ Viewport export (verplicht in Next.js 15+) */
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -13,17 +13,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://dtgcleaning.nl"),
 
-  /* ✅ AANGEPAST: title van 70 → 50 tekens, kernzoekterm vooraan */
+  /* Titel: kernzoekterm vooraan, max 60 tekens */
   title: {
     default: "Glazenwasser Nijkerk & Putten | D.T.G. Cleaning",
     template: "%s | D.T.G. Cleaning",
   },
 
-  /* ✅ AANGEPAST: description van 159 → 145 tekens */
+  /* Description: max 160 tekens */
   description:
     "Glazenwasser in Nijkerk en Putten nodig? Professionele glasbewassing met osmosewater. Streeploos schoon, vaste planning. Bel 06-34683019.",
-
-  /* ✅ VERWIJDERD: keywords (Google negeert dit al jaren) */
 
   alternates: {
     canonical: "/",
@@ -37,7 +35,6 @@ export const metadata: Metadata = {
     siteName: "D.T.G. Cleaning",
     images: [
       {
-        /* ✅ AANGEPAST: absolute URL */
         url: "https://dtgcleaning.nl/images/og-image.jpg",
         width: 1200,
         height: 630,
@@ -84,7 +81,7 @@ export default function RootLayout({
         {/* Hoofdcontent */}
         <main>{children}</main>
 
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager — laadt alle analytics-tags (inclusief GA4) */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -97,23 +94,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-07JRRQ6PBH"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="ga-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-07JRRQ6PBH');`,
-          }}
-        />
-
-        {/* noscript fallback voor GTM */}
+        {/* Noscript fallback voor GTM */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WVKPZTJ3"
