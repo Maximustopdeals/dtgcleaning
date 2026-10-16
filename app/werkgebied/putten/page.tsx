@@ -106,9 +106,9 @@ export default function GlazenwasserPutten() {
             <strong className="text-white">
               betrouwbare glazenwasser in Putten
             </strong>
-            ? D.T.G. Cleaning komt al jaren bij tientallen klanten over de vloer
-            – van de dorpskern tot in het buitengebied. Geen gedoe, geen strepen
-            – alleen stralend resultaat.
+            ? D.T.G. Cleaning komt al jaren bij tientallen klanten over de vloer.
+            Van de dorpskern tot in het buitengebied. Geen gedoe, geen strepen,
+            alleen stralend resultaat.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
             <Link
