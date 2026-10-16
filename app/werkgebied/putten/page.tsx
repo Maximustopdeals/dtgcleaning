@@ -106,7 +106,7 @@ export default function GlazenwasserPutten() {
             <strong className="text-white">
               betrouwbare glazenwasser in Putten
             </strong>
-            ? D.T.G. Cleaning komt al jaren bij honderden klanten over de vloer
+            ? D.T.G. Cleaning komt al jaren bij tientallen klanten over de vloer
             – van de dorpskern tot in het buitengebied. Geen gedoe, geen strepen
             – alleen stralend resultaat.
           </p>
@@ -149,7 +149,7 @@ export default function GlazenwasserPutten() {
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
                 gezichten, geen gedoe. En met onze{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
-                streeploos resultaat – zonder chemicaliën. Ideaal voor de
+                streeploos resultaat zonder chemicaliën. Ideaal voor de
                 bosrijke omgeving van Putten.
               </p>
 
@@ -182,7 +182,7 @@ export default function GlazenwasserPutten() {
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Putten
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Wij zijn actief in de hele gemeente Putten – in de dorpskern,
+                  Wij zijn actief in de hele gemeente Putten. In de dorpskern,
                   de woonwijken en het buitengebied.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
@@ -242,7 +242,7 @@ export default function GlazenwasserPutten() {
               Onze diensten in Putten – voor elk pand
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Of u nu een woning, bedrijfspand, VvE of landelijk pand heeft –
+              Of u nu een woning, bedrijfspand, VvE of landelijk pand heeft,
               wij bieden de oplossing. Hieronder een overzicht van wat wij voor
               u kunnen doen in Putten.
             </p>
@@ -459,7 +459,7 @@ export default function GlazenwasserPutten() {
               Glazenwasser in Putten nodig?
             </h2>
             <p className="text-white/80 text-sm mb-5">
-              Vraag vrijblijvend een offerte aan – wij komen graag langs in
+              Vraag vrijblijvend een offerte aan. Wij komen graag langs in
               Putten of het buitengebied.
             </p>
 
