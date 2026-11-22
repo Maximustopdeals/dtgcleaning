@@ -1,3 +1,4 @@
+
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -67,7 +68,7 @@ export async function POST(req: Request) {
     const referral = getString(data.referral);
     const message = getString(data.message);
 
-    // Verplichte velden
+    // Verplichte velden controleren
     if (
       !name ||
       !email ||
@@ -83,7 +84,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // Maximale veldlengtes
+    // Maximale veldlengtes controleren
     if (
       name.length > 120 ||
       email.length > 254 ||
@@ -94,7 +95,9 @@ export async function POST(req: Request) {
       message.length > 3000
     ) {
       return NextResponse.json(
-        { error: "Een of meerdere velden bevatten te veel tekens." },
+        {
+          error: "Een of meerdere velden bevatten te veel tekens.",
+        },
         { status: 400 }
       );
     }
@@ -130,7 +133,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // Vindwijze is optioneel, maar moet bij invullen geldig zijn
+    // Vindwijze is optioneel, maar wordt gecontroleerd als deze is ingevuld
     if (
       referral &&
       !Object.prototype.hasOwnProperty.call(referralLabels, referral)
@@ -151,7 +154,9 @@ export async function POST(req: Request) {
       console.error("RESEND_API_KEY ontbreekt.");
 
       return NextResponse.json(
-        { error: "De e-mailservice is momenteel niet beschikbaar." },
+        {
+          error: "De e-mailservice is momenteel niet beschikbaar.",
+        },
         { status: 500 }
       );
     }
@@ -166,6 +171,7 @@ export async function POST(req: Request) {
       ? referralLabels[referral]
       : "Niet opgegeven";
 
+    // Alle gegevens veilig maken voor HTML
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
     const safePhone = escapeHtml(phone || "Niet opgegeven");
@@ -213,6 +219,7 @@ export async function POST(req: Request) {
       `Hoe heeft de klant ons gevonden?: ${referralLabel}`,
     ].join("\n");
 
+    // Voorkom nieuwe regels in het onderwerp
     const safeSubjectName = name.replace(/[\r\n]/g, " ");
 
     const { error } = await resend.emails.send({
@@ -240,26 +247,31 @@ export async function POST(req: Request) {
                   </p>
                 </td>
               </tr>
+
               <tr>
                 <td style="padding:26px 30px 12px;">
                   <h2 style="margin:0 0 16px;font-size:17px;color:#1a3a52;">
                     Gegevens van de klant
                   </h2>
+
                   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;font-size:14px;line-height:1.6;">
                     ${htmlRows}
                   </table>
                 </td>
               </tr>
+
               <tr>
                 <td style="padding:18px 30px 28px;">
                   <h2 style="margin:0 0 12px;font-size:17px;color:#1a3a52;">
                     Bericht / aanvullende informatie
                   </h2>
+
                   <div style="padding:16px;background-color:#f8fafc;border:1px solid #e5e7eb;border-radius:6px;font-size:14px;line-height:1.7;color:#374151;">
                     ${safeMessage}
                   </div>
                 </td>
               </tr>
+
               <tr>
                 <td style="padding:18px 30px;background-color:#f8fafc;border-top:1px solid #e5e7eb;font-size:12px;line-height:1.6;color:#6b7280;">
                   Dit bericht is automatisch verzonden via het contactformulier van
