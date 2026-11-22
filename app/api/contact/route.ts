@@ -1,5 +1,5 @@
 
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server"; 
 import { Resend } from "resend";
 import { randomUUID } from "crypto";
 
