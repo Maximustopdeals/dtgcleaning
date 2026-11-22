@@ -1,7 +1,5 @@
-
-import { NextResponse } from "next/server"; 
+import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -10,12 +8,31 @@ type ContactFormData = {
   name?: unknown;
   email?: unknown;
   phone?: unknown;
+  street?: unknown;
+  postalCode?: unknown;
+  city?: unknown;
   service?: unknown;
   referral?: unknown;
   message?: unknown;
 };
 
-// HTML-inhoud veilig maken
+const serviceLabels: Record<string, string> = {
+  glasbewassing: "Glasbewassing",
+  zonnepanelen: "Zonnepanelen reiniging",
+  overig: "Overig",
+};
+
+const referralLabels: Record<string, string> = {
+  google: "Via Google",
+  "mond-tot-mond": "Via familie, vrienden of kennissen",
+  buren: "Via buren in de straat",
+  herhaalklant: "Ik ben al klant",
+  overig: "Anders",
+};
+
+const getString = (value: unknown): string =>
+  typeof value === "string" ? value.trim() : "";
+
 const escapeHtml = (value: string): string =>
   value
     .replace(/&/g, "&amp;")
@@ -25,22 +42,11 @@ const escapeHtml = (value: string): string =>
     .replace(/'/g, "&#039;")
     .replace(/\r?\n/g, "<br />");
 
-// Optionele velden verwerken
-const getOptionalValue = (value: unknown): string =>
-  typeof value === "string" && value.trim()
-    ? value.trim()
-    : "Niet opgegeven";
-
 export async function POST(req: Request) {
   try {
-    // JSON-gegevens ophalen uit het contactformulier
     const body: unknown = await req.json();
 
-    if (
-      !body ||
-      typeof body !== "object" ||
-      Array.isArray(body)
-    ) {
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
       return NextResponse.json(
         { error: "Ongeldige formuliergegevens." },
         { status: 400 }
@@ -49,33 +55,91 @@ export async function POST(req: Request) {
 
     const data = body as ContactFormData;
 
-    const name =
-      typeof data.name === "string" ? data.name.trim() : "";
+    const name = getString(data.name);
+    const email = getString(data.email).toLowerCase();
+    const phone = getString(data.phone);
+    const street = getString(data.street);
+    const postalCode = getString(data.postalCode)
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    const city = getString(data.city);
+    const service = getString(data.service);
+    const referral = getString(data.referral);
+    const message = getString(data.message);
 
-    const email =
-      typeof data.email === "string" ? data.email.trim() : "";
-
-    const message =
-      typeof data.message === "string" ? data.message.trim() : "";
-
-    const phone = getOptionalValue(data.phone);
-    const service = getOptionalValue(data.service);
-    const referral = getOptionalValue(data.referral);
-
-    // Verplichte velden controleren
-    if (!name || !email || !message) {
+    // Verplichte velden
+    if (
+      !name ||
+      !email ||
+      !street ||
+      !postalCode ||
+      !city ||
+      !service ||
+      !message
+    ) {
       return NextResponse.json(
-        { error: "Naam, e-mail en bericht zijn verplicht." },
+        { error: "Vul alle verplichte velden in." },
         { status: 400 }
       );
     }
 
-    // E-mailadres valideren
+    // Maximale veldlengtes
+    if (
+      name.length > 120 ||
+      email.length > 254 ||
+      phone.length > 25 ||
+      street.length > 150 ||
+      postalCode.length > 6 ||
+      city.length > 100 ||
+      message.length > 3000
+    ) {
+      return NextResponse.json(
+        { error: "Een of meerdere velden bevatten te veel tekens." },
+        { status: 400 }
+      );
+    }
+
+    // E-mailadres controleren
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: "Voer een geldig e-mailadres in." },
+        { error: "Vul een geldig e-mailadres in." },
+        { status: 400 }
+      );
+    }
+
+    // Nederlandse postcode controleren
+    const postalCodeRegex = /^[1-9][0-9]{3}[A-Z]{2}$/;
+
+    if (!postalCodeRegex.test(postalCode)) {
+      return NextResponse.json(
+        {
+          error:
+            "Vul een geldige Nederlandse postcode in, bijvoorbeeld 1234 AB.",
+        },
+        { status: 400 }
+      );
+    }
+
+    // Geselecteerde dienst controleren
+    if (!Object.prototype.hasOwnProperty.call(serviceLabels, service)) {
+      return NextResponse.json(
+        { error: "Selecteer een geldige dienst." },
+        { status: 400 }
+      );
+    }
+
+    // Vindwijze is optioneel, maar moet bij invullen geldig zijn
+    if (
+      referral &&
+      !Object.prototype.hasOwnProperty.call(referralLabels, referral)
+    ) {
+      return NextResponse.json(
+        {
+          error:
+            "Selecteer een geldige optie bij hoe u ons gevonden heeft.",
+        },
         { status: 400 }
       );
     }
@@ -87,141 +151,142 @@ export async function POST(req: Request) {
       console.error("RESEND_API_KEY ontbreekt.");
 
       return NextResponse.json(
-        {
-          error:
-            "De e-mailservice is momenteel niet beschikbaar.",
-        },
+        { error: "De e-mailservice is momenteel niet beschikbaar." },
         { status: 500 }
       );
     }
 
-    // Resend pas initialiseren bij een daadwerkelijke aanvraag
     const resend = new Resend(apiKey);
 
-    // Gegevens veilig maken voor HTML
+    const formattedPostalCode =
+      `${postalCode.slice(0, 4)} ${postalCode.slice(4)}`;
+
+    const serviceLabel = serviceLabels[service];
+    const referralLabel = referral
+      ? referralLabels[referral]
+      : "Niet opgegeven";
+
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
-    const safePhone = escapeHtml(phone);
-    const safeService = escapeHtml(service);
-    const safeReferral = escapeHtml(referral);
+    const safePhone = escapeHtml(phone || "Niet opgegeven");
+    const safeStreet = escapeHtml(street);
+    const safePostalCode = escapeHtml(formattedPostalCode);
+    const safeCity = escapeHtml(city);
+    const safeService = escapeHtml(serviceLabel);
+    const safeReferral = escapeHtml(referralLabel);
     const safeMessage = escapeHtml(message);
 
-    // Onderwerp beveiligen tegen ongewenste regeleinden
+    const rows = [
+      ["Naam", safeName],
+      ["E-mailadres", safeEmail],
+      ["Telefoonnummer", safePhone],
+      ["Straat en huisnummer", safeStreet],
+      ["Postcode", safePostalCode],
+      ["Woonplaats", safeCity],
+      ["Gewenste dienst", safeService],
+      ["Hoe heeft de klant ons gevonden?", safeReferral],
+    ];
+
+    const htmlRows = rows
+      .map(
+        ([label, value]) => `
+          <tr>
+            <td style="padding:12px 14px;border-bottom:1px solid #e5e7eb;font-weight:600;color:#1a3a52;width:40%;vertical-align:top;">
+              ${label}
+            </td>
+            <td style="padding:12px 14px;border-bottom:1px solid #e5e7eb;color:#374151;vertical-align:top;">
+              ${value}
+            </td>
+          </tr>
+        `
+      )
+      .join("");
+
+    const textRows = [
+      `Naam: ${name}`,
+      `E-mailadres: ${email}`,
+      `Telefoonnummer: ${phone || "Niet opgegeven"}`,
+      `Straat en huisnummer: ${street}`,
+      `Postcode: ${formattedPostalCode}`,
+      `Woonplaats: ${city}`,
+      `Gewenste dienst: ${serviceLabel}`,
+      `Hoe heeft de klant ons gevonden?: ${referralLabel}`,
+    ].join("\n");
+
     const safeSubjectName = name.replace(/[\r\n]/g, " ");
 
-    // Resend e-mail versturen
-    const { error } = await resend.emails.send(
-      {
-        from: "DTG Cleaning <info@dtgcleaning.nl>",
-        to: ["info@dtgcleaning.nl"],
-        replyTo: email,
-        subject: `Nieuwe aanvraag via DTG Cleaning van ${safeSubjectName}`,
-
-        // HTML e-mail
-        html: `
-          <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; max-width: 600px; margin: 0 auto;">
-
-            <h2 style="color: #0e304d;">
-              Nieuwe contactaanvraag via DTG Cleaning
-            </h2>
-
-            <p>
-              Er is een nieuwe aanvraag ontvangen via het contactformulier.
-            </p>
-
-            <table style="width: 100%; border-collapse: collapse;">
-
+    const { error } = await resend.emails.send({
+      from: "DTG Cleaning <info@dtgcleaning.nl>",
+      to: ["info@dtgcleaning.nl"],
+      replyTo: email,
+      subject: `Nieuwe offerteaanvraag van ${safeSubjectName}`,
+      html: `
+        <!DOCTYPE html>
+        <html lang="nl">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Nieuwe offerteaanvraag</title>
+          </head>
+          <body style="margin:0;padding:32px 16px;background-color:#f3f4f6;font-family:Arial,Helvetica,sans-serif;color:#374151;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:680px;margin:0 auto;background-color:#ffffff;border-radius:10px;overflow:hidden;">
               <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  <strong>Naam</strong>
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  ${safeName}
+                <td style="padding:28px 30px;background-color:#1a3a52;color:#ffffff;">
+                  <h1 style="margin:0;font-size:22px;line-height:1.4;font-weight:700;">
+                    Nieuwe offerteaanvraag
+                  </h1>
+                  <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#e5edf3;">
+                    Er is een nieuwe aanvraag ontvangen via dtgcleaning.nl.
+                  </p>
                 </td>
               </tr>
-
               <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  <strong>E-mail</strong>
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  ${safeEmail}
+                <td style="padding:26px 30px 12px;">
+                  <h2 style="margin:0 0 16px;font-size:17px;color:#1a3a52;">
+                    Gegevens van de klant
+                  </h2>
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;font-size:14px;line-height:1.6;">
+                    ${htmlRows}
+                  </table>
                 </td>
               </tr>
-
               <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  <strong>Telefoon</strong>
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  ${safePhone}
+                <td style="padding:18px 30px 28px;">
+                  <h2 style="margin:0 0 12px;font-size:17px;color:#1a3a52;">
+                    Bericht / aanvullende informatie
+                  </h2>
+                  <div style="padding:16px;background-color:#f8fafc;border:1px solid #e5e7eb;border-radius:6px;font-size:14px;line-height:1.7;color:#374151;">
+                    ${safeMessage}
+                  </div>
                 </td>
               </tr>
-
               <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  <strong>Gewenste dienst</strong>
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  ${safeService}
+                <td style="padding:18px 30px;background-color:#f8fafc;border-top:1px solid #e5e7eb;font-size:12px;line-height:1.6;color:#6b7280;">
+                  Dit bericht is automatisch verzonden via het contactformulier van
+                  <strong>dtgcleaning.nl</strong>.
                 </td>
               </tr>
-
-              <tr>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  <strong>Hoe gevonden</strong>
-                </td>
-                <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                  ${safeReferral}
-                </td>
-              </tr>
-
             </table>
+          </body>
+        </html>
+      `,
+      text: `${textRows}
 
-            <h3 style="color: #0e304d; margin-top: 25px;">
-              Bericht
-            </h3>
-
-            <div style="background: #f5f7f9; padding: 15px; border-radius: 6px;">
-              ${safeMessage}
-            </div>
-
-            <hr style="border: none; border-top: 1px solid #eee; margin-top: 30px;" />
-
-            <p style="font-size: 12px; color: #888;">
-              Dit bericht is automatisch verzonden via het contactformulier van dtgcleaning.nl.
-            </p>
-
-          </div>
-        `,
-
-        // Platte tekstversie
-        text: `
-Nieuwe contactaanvraag via DTG Cleaning
-
-Naam: ${name}
-E-mail: ${email}
-Telefoon: ${phone}
-Gewenste dienst: ${service}
-Hoe gevonden: ${referral}
-
-Bericht:
+BERICHT / AANVULLENDE INFORMATIE
 ${message}
-        `,
 
-        // Unieke sleutel per verzending
-        headers: {
-          "Idempotency-Key": randomUUID(),
-        },
-      }
-    );
+---
+Deze aanvraag is verzonden via het contactformulier van dtgcleaning.nl.`,
+    });
 
-    // Resend foutafhandeling
     if (error) {
       console.error("Resend Error:", error);
 
       return NextResponse.json(
-        { error: "E-mail kon niet verzonden worden." },
+        {
+          error:
+            "Uw aanvraag kon niet worden verzonden. Probeer het later opnieuw of neem telefonisch contact op.",
+        },
         { status: 500 }
       );
     }
@@ -230,15 +295,18 @@ ${message}
       {
         success: true,
         message:
-          "Bedankt voor uw bericht! Ik neem binnen 24 uur contact met u op.",
+          "Uw offerteaanvraag is succesvol ontvangen. Wij nemen binnen 24 uur contact met u op.",
       },
       { status: 200 }
     );
-  } catch (err) {
-    console.error("Server Error:", err);
+  } catch (error) {
+    console.error("Contact API Error:", error);
 
     return NextResponse.json(
-      { error: "Er is een serverfout opgetreden." },
+      {
+        error:
+          "Er is een technische fout opgetreden. Probeer het later opnieuw.",
+      },
       { status: 500 }
     );
   }
