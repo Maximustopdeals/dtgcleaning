@@ -1,11 +1,10 @@
+
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-const resend = new Resend(process.env.RESEND_API_KEY || "");
 
 type ContactFormData = {
   name?: unknown;
@@ -16,6 +15,7 @@ type ContactFormData = {
   message?: unknown;
 };
 
+// HTML-inhoud veilig maken
 const escapeHtml = (value: string): string =>
   value
     .replace(/&/g, "&amp;")
@@ -25,6 +25,7 @@ const escapeHtml = (value: string): string =>
     .replace(/'/g, "&#039;")
     .replace(/\r?\n/g, "<br />");
 
+// Optionele velden verwerken
 const getOptionalValue = (value: unknown): string =>
   typeof value === "string" && value.trim()
     ? value.trim()
@@ -33,7 +34,20 @@ const getOptionalValue = (value: unknown): string =>
 export async function POST(req: Request) {
   try {
     // JSON-gegevens ophalen uit het contactformulier
-    const data = (await req.json()) as ContactFormData;
+    const body: unknown = await req.json();
+
+    if (
+      !body ||
+      typeof body !== "object" ||
+      Array.isArray(body)
+    ) {
+      return NextResponse.json(
+        { error: "Ongeldige formuliergegevens." },
+        { status: 400 }
+      );
+    }
+
+    const data = body as ContactFormData;
 
     const name =
       typeof data.name === "string" ? data.name.trim() : "";
@@ -66,15 +80,23 @@ export async function POST(req: Request) {
       );
     }
 
-    // Controle op ontbrekende Resend API-key
-    if (!process.env.RESEND_API_KEY) {
+    // Resend API-key controleren
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
       console.error("RESEND_API_KEY ontbreekt.");
 
       return NextResponse.json(
-        { error: "De e-mailservice is momenteel niet beschikbaar." },
+        {
+          error:
+            "De e-mailservice is momenteel niet beschikbaar.",
+        },
         { status: 500 }
       );
     }
+
+    // Resend pas initialiseren bij een daadwerkelijke aanvraag
+    const resend = new Resend(apiKey);
 
     // Gegevens veilig maken voor HTML
     const safeName = escapeHtml(name);
@@ -84,89 +106,97 @@ export async function POST(req: Request) {
     const safeReferral = escapeHtml(referral);
     const safeMessage = escapeHtml(message);
 
+    // Onderwerp beveiligen tegen ongewenste regeleinden
+    const safeSubjectName = name.replace(/[\r\n]/g, " ");
+
     // Resend e-mail versturen
-    const { error } = await resend.emails.send({
-      from: "DTG Cleaning <info@dtgcleaning.nl>",
-      to: ["info@dtgcleaning.nl"],
-      replyTo: email,
-      subject: `Nieuwe aanvraag via DTG Cleaning van ${name.replace(/[\r\n]/g, " ")}`,
+    const { error } = await resend.emails.send(
+      {
+        from: "DTG Cleaning <info@dtgcleaning.nl>",
+        to: ["info@dtgcleaning.nl"],
+        replyTo: email,
+        subject: `Nieuwe aanvraag via DTG Cleaning van ${safeSubjectName}`,
 
-      // HTML e-mail
-      html: `
-        <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+        // HTML e-mail
+        html: `
+          <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; max-width: 600px; margin: 0 auto;">
 
-          <h2 style="color: #0e304d;">
-            Nieuwe contactaanvraag via DTG Cleaning
-          </h2>
+            <h2 style="color: #0e304d;">
+              Nieuwe contactaanvraag via DTG Cleaning
+            </h2>
 
-          <p>Er is een nieuwe aanvraag ontvangen via het contactformulier.</p>
+            <p>
+              Er is een nieuwe aanvraag ontvangen via het contactformulier.
+            </p>
 
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                <strong>Naam</strong>
-              </td>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                ${safeName}
-              </td>
-            </tr>
+            <table style="width: 100%; border-collapse: collapse;">
 
-            <tr>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                <strong>E-mail</strong>
-              </td>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                ${safeEmail}
-              </td>
-            </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  <strong>Naam</strong>
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  ${safeName}
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                <strong>Telefoon</strong>
-              </td>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                ${safePhone}
-              </td>
-            </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  <strong>E-mail</strong>
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  ${safeEmail}
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                <strong>Gewenste dienst</strong>
-              </td>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                ${safeService}
-              </td>
-            </tr>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  <strong>Telefoon</strong>
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  ${safePhone}
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                <strong>Hoe gevonden</strong>
-              </td>
-              <td style="padding: 10px; border-bottom: 1px solid #eee;">
-                ${safeReferral}
-              </td>
-            </tr>
-          </table>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  <strong>Gewenste dienst</strong>
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  ${safeService}
+                </td>
+              </tr>
 
-          <h3 style="color: #0e304d; margin-top: 25px;">
-            Bericht
-          </h3>
+              <tr>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  <strong>Hoe gevonden</strong>
+                </td>
+                <td style="padding: 10px; border-bottom: 1px solid #eee;">
+                  ${safeReferral}
+                </td>
+              </tr>
 
-          <div style="background: #f5f7f9; padding: 15px; border-radius: 6px;">
-            ${safeMessage}
+            </table>
+
+            <h3 style="color: #0e304d; margin-top: 25px;">
+              Bericht
+            </h3>
+
+            <div style="background: #f5f7f9; padding: 15px; border-radius: 6px;">
+              ${safeMessage}
+            </div>
+
+            <hr style="border: none; border-top: 1px solid #eee; margin-top: 30px;" />
+
+            <p style="font-size: 12px; color: #888;">
+              Dit bericht is automatisch verzonden via het contactformulier van dtgcleaning.nl.
+            </p>
+
           </div>
+        `,
 
-          <hr style="border: none; border-top: 1px solid #eee; margin-top: 30px;" />
-
-          <p style="font-size: 12px; color: #888;">
-            Dit bericht is automatisch verzonden via het contactformulier van dtgcleaning.nl.
-          </p>
-
-        </div>
-      `,
-
-      // Platte tekstversie
-      text: `
+        // Platte tekstversie
+        text: `
 Nieuwe contactaanvraag via DTG Cleaning
 
 Naam: ${name}
@@ -177,13 +207,14 @@ Hoe gevonden: ${referral}
 
 Bericht:
 ${message}
-      `,
+        `,
 
-      // Unieke sleutel voor deze verzending
-      headers: {
-        "Idempotency-Key": randomUUID(),
-      },
-    });
+        // Unieke sleutel per verzending
+        headers: {
+          "Idempotency-Key": randomUUID(),
+        },
+      }
+    );
 
     // Resend foutafhandeling
     if (error) {
