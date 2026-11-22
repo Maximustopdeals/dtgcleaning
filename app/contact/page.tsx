@@ -81,19 +81,31 @@ const faqSchema = {
   })),
 };
 
+const initialFormData = {
+  name: "",
+  email: "",
+  phone: "",
+  street: "",
+  postalCode: "",
+  city: "",
+  service: "",
+  referral: "",
+  message: "",
+};
+
+const inputClassName =
+  "w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:border-transparent outline-none transition-all";
+
+const inputStyle = {
+  "--tw-ring-color": "#1a3a52",
+} as React.CSSProperties;
+
 export default function ContactPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    referral: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
-    "idle"
-  );
+  const [formData, setFormData] = useState(initialFormData);
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [statusMessage, setStatusMessage] = useState("");
 
   const toggleFAQ = (index: number) =>
@@ -104,18 +116,31 @@ export default function ContactPage() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+
+    if (status === "error") {
+      setStatus("idle");
+      setStatusMessage("");
+    }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (status === "loading") return;
+
     setStatus("loading");
     setStatusMessage("");
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
 
@@ -124,25 +149,18 @@ export default function ContactPage() {
       if (res.ok && data.success) {
         setStatus("success");
         setStatusMessage(data.message);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          referral: "",
-          message: "",
-        });
+        setFormData({ ...initialFormData });
       } else {
         setStatus("error");
         setStatusMessage(
           data.error ||
-            "Er is iets misgegaan. Probeer het nog eens of bel ons direct."
+            "Er is iets misgegaan. Controleer uw gegevens en probeer het opnieuw."
         );
       }
     } catch {
       setStatus("error");
       setStatusMessage(
-        "Er is een netwerkfout opgetreden. Bel ons gerust direct op 06-34683019."
+        "Er is een netwerkfout opgetreden. Probeer het later opnieuw of bel ons direct op 06-34683019."
       );
     }
   };
@@ -155,7 +173,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Hero - SEO: zoekwoorden in H1 */}
+      {/* Hero */}
       <section
         className="text-white py-16 md:py-24"
         style={{ backgroundColor: "#1a3a52" }}
@@ -187,6 +205,7 @@ export default function ContactPage() {
                 Belt u liever? Wij zijn bereikbaar tijdens kantooruren. Of stuur
                 een bericht – wij reageren snel.
               </p>
+
               <div className="space-y-4">
                 <a
                   href="tel:+31634683019"
@@ -202,6 +221,7 @@ export default function ContactPage() {
                     <p className="font-semibold">06-34683019</p>
                   </div>
                 </a>
+
                 <a
                   href="mailto:info@dtgcleaning.nl"
                   className="flex items-center gap-3 text-gray-700 hover:text-[#1a3a52] transition-colors group"
@@ -216,6 +236,7 @@ export default function ContactPage() {
                     <p className="font-semibold">info@dtgcleaning.nl</p>
                   </div>
                 </a>
+
                 <div className="flex items-center gap-3 text-gray-700 group">
                   <div className="w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5" style={{ color: "#1a3a52" }} />
@@ -228,6 +249,7 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
+
                 <div className="flex items-center gap-3 text-gray-700 group">
                   <div className="w-10 h-10 bg-[#1a3a52]/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5" style={{ color: "#1a3a52" }} />
@@ -251,6 +273,7 @@ export default function ContactPage() {
                 <MapPin className="w-5 h-5" style={{ color: "#1a3a52" }} />
                 Ons werkgebied
               </h3>
+
               <div className="flex flex-wrap gap-2">
                 {[
                   "Nijkerk",
@@ -268,6 +291,7 @@ export default function ContactPage() {
                   </span>
                 ))}
               </div>
+
               <p className="text-gray-500 text-sm mt-3">
                 Woont u in een andere plaats? Neem contact op – wij komen graag
                 in overleg.
@@ -300,6 +324,7 @@ export default function ContactPage() {
                 Antwoorden op de meest gestelde vragen over glasbewassing en
                 onze diensten.
               </p>
+
               <div className="space-y-3">
                 {faqs.map((faq, index) => (
                   <div
@@ -307,7 +332,9 @@ export default function ContactPage() {
                     className="bg-white rounded-xl border border-gray-100 overflow-hidden"
                   >
                     <button
+                      type="button"
                       onClick={() => toggleFAQ(index)}
+                      aria-expanded={openFAQ === index}
                       className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
                     >
                       <span className="font-medium text-gray-900 text-sm md:text-base">
@@ -320,6 +347,7 @@ export default function ContactPage() {
                         style={{ color: "#1a3a52" }}
                       />
                     </button>
+
                     {openFAQ === index && (
                       <div className="px-4 pb-4 text-gray-600 text-sm leading-relaxed">
                         {faq.answer}
@@ -340,13 +368,18 @@ export default function ContactPage() {
               >
                 Vrijblijvende offerte aanvragen
               </h2>
+
               <p className="text-gray-600 text-sm mb-6">
                 Vul het formulier in en wij nemen binnen 24 uur contact met u
                 op. Geen verplichtingen.
               </p>
 
               {status === "success" && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
+                <div
+                  className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3"
+                  role="status"
+                  aria-live="polite"
+                >
                   <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-green-800">
@@ -361,7 +394,11 @@ export default function ContactPage() {
               )}
 
               {status === "error" && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
+                <div
+                  className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3"
+                  role="alert"
+                  aria-live="assertive"
+                >
                   <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-red-800">
@@ -372,157 +409,275 @@ export default function ContactPage() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                aria-label="Vrijblijvende offerte aanvragen"
+              >
+                {/* Contactgegevens */}
+                <fieldset className="space-y-5">
+                  <legend
+                    className="text-base font-semibold mb-4"
+                    style={{ color: "#1a3a52" }}
                   >
-                    Naam <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all"
-                    style={
-                      { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
-                    }
-                    placeholder="Uw naam"
-                  />
-                </div>
+                    Uw contactgegevens
+                  </legend>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      E-mail <span className="text-red-500">*</span>
+                      Naam <span className="text-red-500">*</span>
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="text"
+                      id="name"
+                      name="name"
+                      autoComplete="name"
+                      maxLength={120}
                       required
-                      value={formData.email}
+                      value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all"
-                      style={
-                        { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
-                      }
-                      placeholder="uw@email.nl"
+                      className={inputClassName}
+                      style={inputStyle}
+                      placeholder="Uw naam"
                     />
                   </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        E-mailadres <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autoComplete="email"
+                        maxLength={254}
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={inputClassName}
+                        style={inputStyle}
+                        placeholder="uw@email.nl"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Telefoonnummer{" "}
+                        <span className="text-gray-400 text-xs">
+                          (optioneel)
+                        </span>
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        autoComplete="tel"
+                        maxLength={25}
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className={inputClassName}
+                        style={inputStyle}
+                        placeholder="06-12345678"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div className="border-t border-gray-100" />
+
+                {/* Locatie werkzaamheden */}
+                <fieldset className="space-y-5">
+                  <legend
+                    className="text-base font-semibold mb-4"
+                    style={{ color: "#1a3a52" }}
+                  >
+                    Locatie van de werkzaamheden
+                  </legend>
+
                   <div>
                     <label
-                      htmlFor="phone"
+                      htmlFor="street"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Telefoon{" "}
-                      <span className="text-gray-400 text-xs">(optioneel)</span>
+                      Straat en huisnummer{" "}
+                      <span className="text-red-500">*</span>
                     </label>
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
+                      type="text"
+                      id="street"
+                      name="street"
+                      autoComplete="street-address"
+                      maxLength={150}
+                      required
+                      value={formData.street}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all"
-                      style={
-                        { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
-                      }
-                      placeholder="06-12345678"
+                      className={inputClassName}
+                      style={inputStyle}
+                      placeholder="Bijvoorbeeld Dorpsstraat 12"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Welke dienst zoekt u?
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white"
-                    style={
-                      { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
-                    }
-                  >
-                    <option value="">Selecteer een dienst</option>
-                    <option value="glasbewassing">Glasbewassing</option>
-                    <option value="zonnepanelen">
-                      Zonnepanelen reiniging
-                    </option>
-                    <option value="overig">Overig</option>
-                  </select>
-                </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label
+                        htmlFor="postalCode"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Postcode <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="postalCode"
+                        name="postalCode"
+                        autoComplete="postal-code"
+                        maxLength={7}
+                        required
+                        value={formData.postalCode}
+                        onChange={handleChange}
+                        className={inputClassName}
+                        style={inputStyle}
+                        placeholder="1234 AB"
+                        aria-describedby="postalCodeHelp"
+                      />
+                      <p
+                        id="postalCodeHelp"
+                        className="mt-1 text-xs text-gray-500"
+                      >
+                        Bijvoorbeeld 1234 AB
+                      </p>
+                    </div>
 
-                {/* NIEUW VELD: Hoe heeft u ons gevonden? */}
-                <div>
-                  <label
-                    htmlFor="referral"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Hoe heeft u ons gevonden?{" "}
-                    <span className="text-gray-400 text-xs">(optioneel)</span>
-                  </label>
-                  <select
-                    id="referral"
-                    name="referral"
-                    value={formData.referral}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all bg-white"
-                    style={
-                      { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
-                    }
-                  >
-                    <option value="">Selecteer een optie</option>
-                    <option value="google">Via Google</option>
-                    <option value="mond-tot-mond">
-                      Via familie, vrienden of kennissen
-                    </option>
-                    <option value="buren">Via buren in de straat</option>
-                    <option value="herhaalklant">Ik ben al klant</option>
-                    <option value="overig">Overig</option>
-                  </select>
-                </div>
+                    <div>
+                      <label
+                        htmlFor="city"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Woonplaats <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        autoComplete="address-level2"
+                        maxLength={100}
+                        required
+                        value={formData.city}
+                        onChange={handleChange}
+                        className={inputClassName}
+                        style={inputStyle}
+                        placeholder="Bijvoorbeeld Nijkerk"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
+                <div className="border-t border-gray-100" />
+
+                {/* Aanvraag */}
+                <fieldset className="space-y-5">
+                  <legend
+                    className="text-base font-semibold mb-4"
+                    style={{ color: "#1a3a52" }}
                   >
-                    Bericht <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:border-transparent outline-none transition-all resize-none"
-                    style={
-                      { "--tw-ring-color": "#1a3a52" } as React.CSSProperties
-                    }
-                    placeholder="Vertel kort wat u nodig heeft, zoals: 'Ik ben op zoek naar een glazenwasser voor mijn woning in Nijkerk.'"
-                  />
-                </div>
+                    Uw aanvraag
+                  </legend>
+
+                  <div>
+                    <label
+                      htmlFor="service"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Welke dienst zoekt u?{" "}
+                      <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      required
+                      value={formData.service}
+                      onChange={handleChange}
+                      className={`${inputClassName} cursor-pointer`}
+                      style={inputStyle}
+                    >
+                      <option value="">Selecteer een dienst</option>
+                      <option value="glasbewassing">Glasbewassing</option>
+                      <option value="zonnepanelen">
+                        Zonnepanelen reiniging
+                      </option>
+                      <option value="overig">Overig</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="referral"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Hoe heeft u ons gevonden?{" "}
+                      <span className="text-gray-400 text-xs">
+                        (optioneel)
+                      </span>
+                    </label>
+                    <select
+                      id="referral"
+                      name="referral"
+                      value={formData.referral}
+                      onChange={handleChange}
+                      className={`${inputClassName} cursor-pointer`}
+                      style={inputStyle}
+                    >
+                      <option value="">Selecteer een optie</option>
+                      <option value="google">Via Google</option>
+                      <option value="mond-tot-mond">
+                        Via familie, vrienden of kennissen
+                      </option>
+                      <option value="buren">Via buren in de straat</option>
+                      <option value="herhaalklant">Ik ben al klant</option>
+                      <option value="overig">Anders</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Bericht <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      maxLength={3000}
+                      value={formData.message}
+                      onChange={handleChange}
+                      className={`${inputClassName} resize-y`}
+                      style={inputStyle}
+                      placeholder="Vertel kort wat u nodig heeft, bijvoorbeeld: Ik ben op zoek naar een glazenwasser voor mijn woning in Nijkerk."
+                    />
+                    <p className="mt-1 text-xs text-gray-500 text-right">
+                      {formData.message.length}/3000 tekens
+                    </p>
+                  </div>
+                </fieldset>
 
                 <div className="text-xs text-gray-500 flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                   <span>
-                    Uw gegevens worden vertrouwelijk behandeld en niet aan
-                    derden verstrekt.
+                    Uw gegevens worden vertrouwelijk behandeld en gebruikt om
+                    contact met u op te nemen over uw aanvraag.
                   </span>
                 </div>
 
@@ -534,12 +689,18 @@ export default function ContactPage() {
                 >
                   {status === "loading" ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin" /> Versturen...
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Aanvraag versturen...
                     </>
                   ) : (
                     "Vrijblijvend offerte aanvragen"
                   )}
                 </button>
+
+                <p className="text-xs text-gray-500 text-center">
+                  Velden met een * zijn verplicht. Uw aanvraag is geheel
+                  vrijblijvend.
+                </p>
               </form>
 
               <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between text-sm">
