@@ -134,7 +134,7 @@ export default function GlazenwasserBarneveld() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                WAAROM BARNEVELD VOOR ONS KIEZEN
+                WAAROM BARNEVELD VOOR MIJ KIEZEN
               </span>
               <h2 className="text-3xl font-bold text-[#1a3a52] mb-6">
                 Uw vaste glazenwasser in Barneveld
@@ -146,9 +146,9 @@ export default function GlazenwasserBarneveld() {
                 om kwaliteit, stiptheid en een persoonlijke aanpak.
               </p>
               <p className="text-gray-600 mb-6">
-                Wat ons onderscheidt? Een{" "}
+                Wat mij onderscheidt? Een{" "}
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
-                gezichten, geen gedoe. En met onze{" "}
+                gezichten, geen gedoe. En met mijn{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
                 streeploos resultaat zonder chemicaliën.{" "}
                 <strong>Perfect voor de groene gemeente Barneveld.</strong>
@@ -180,7 +180,7 @@ export default function GlazenwasserBarneveld() {
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Barneveld
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Wij zijn actief in de hele gemeente Barneveld – in de
+                  Ik ben actief in de hele gemeente Barneveld – in de
                   dorpskern, de woonwijken en het buitengebied.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
@@ -241,11 +241,11 @@ export default function GlazenwasserBarneveld() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#1a3a52] mb-4">
-              Onze diensten in Barneveld – voor elk pand
+              Mijn diensten in Barneveld – voor elk pand
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Of u nu een woning, bedrijfspand, agrarisch gebouw of instelling
-              heeft – wij bieden de oplossing. Hieronder een overzicht.
+              heeft – ik bied de oplossing. Hieronder een overzicht.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function GlazenwasserBarneveld() {
               {
                 icon: Calendar,
                 title: "Vaste planning",
-                desc: "U weet precies wanneer wij komen – vaste routes in Barneveld.",
+                desc: "U weet precies wanneer ik kom – vaste routes in Barneveld.",
               },
               {
                 icon: Users,
@@ -372,8 +372,8 @@ export default function GlazenwasserBarneveld() {
                 <p className="text-gray-600 mb-4">
                   In Barneveld hebben veel panden hoge ramen – vooral grote
                   bedrijfspanden en karakteristieke woningen. Normaal gesproken
-                  hebt u dan een dure steiger of hoogwerker nodig. Met onze{" "}
-                  <strong>telescoopbewassing</strong> kunnen wij tot{" "}
+                  hebt u dan een dure steiger of hoogwerker nodig. Met mijn{" "}
+                  <strong>telescoopbewassing</strong> kan ik tot{" "}
                   <strong>13,5 meter hoogte</strong> werken – zonder extra
                   kosten.
                 </p>
@@ -415,7 +415,7 @@ export default function GlazenwasserBarneveld() {
               Glazenwasser in Barneveld nodig?
             </h2>
             <p className="text-white/80 text-sm mb-5">
-              Vraag vrijblijvend een offerte aan – wij komen graag langs.
+              Vraag vrijblijvend een offerte aan – ik kom graag langs.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
