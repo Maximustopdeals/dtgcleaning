@@ -131,7 +131,7 @@ export default function GlazenwasserErmelo() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                WAAROM ERMELO VOOR ONS KIEZEN
+                WAAROM ERMELO VOOR MIJ KIEZEN
               </span>
               <h2 className="text-3xl font-bold text-[#1a3a52] mb-6">
                 Uw vaste glazenwasser in Ermelo
@@ -143,9 +143,9 @@ export default function GlazenwasserErmelo() {
                 bekend om kwaliteit, stiptheid en een persoonlijke aanpak.
               </p>
               <p className="text-gray-600 mb-6">
-                Wat ons onderscheidt? Een{" "}
+                Wat mij onderscheidt? Een{" "}
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
-                gezichten, geen gedoe. En met onze{" "}
+                gezichten, geen gedoe. En met mijn{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
                 streeploos resultaat –{" "}
                 <strong>zonder schade aan de natuur</strong> rondom Ermelo.
@@ -177,7 +177,7 @@ export default function GlazenwasserErmelo() {
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Ermelo
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Wij zijn actief in de hele gemeente Ermelo – van de dorpskern
+                  Ik ben actief in de hele gemeente Ermelo – van de dorpskern
                   tot de bosrijke buitengebieden en recreatiegebieden.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
@@ -237,11 +237,11 @@ export default function GlazenwasserErmelo() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#1a3a52] mb-4">
-              Onze diensten in Ermelo – voor elk pand
+              Mijn diensten in Ermelo – voor elk pand
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Of u nu een woning in het centrum, een bosrandwoning of een
-              recreatiepand heeft – wij bieden de oplossing. Hieronder een
+              recreatiepand heeft – ik bied de oplossing. Hieronder een
               overzicht.
             </p>
           </div>
@@ -316,7 +316,7 @@ export default function GlazenwasserErmelo() {
               {
                 icon: Calendar,
                 title: "Vaste planning",
-                desc: "U weet precies wanneer wij komen – vaste routes in Ermelo.",
+                desc: "U weet precies wanneer ik kom – vaste routes in Ermelo.",
               },
               {
                 icon: Users,
@@ -367,7 +367,7 @@ export default function GlazenwasserErmelo() {
                   In Ermelo hebben veel panden hoge ramen – zeker de
                   karakteristieke bosrandwoningen en vrijstaande panden. Normaal
                   gesproken hebt u dan een dure steiger of hoogwerker nodig. Met
-                  onze <strong>telescoopbewassing</strong> kunnen wij tot{" "}
+                  mijn <strong>telescoopbewassing</strong> kan ik tot{" "}
                   <strong>13,5 meter hoogte</strong> werken – zonder extra
                   kosten.
                 </p>
@@ -409,9 +409,9 @@ export default function GlazenwasserErmelo() {
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto mb-4">
               Ermelo staat bekend om haar inzet voor een groene en duurzame
-              leefomgeving. Met onze milieuvriendelijke{" "}
+              leefomgeving. Met mijn milieuvriendelijke{" "}
               <strong>osmosewater-techniek</strong> en{" "}
-              <strong>chemievrije reiniging</strong> dragen wij hier graag aan
+              <strong>chemievrije reiniging</strong> draag ik hier graag aan
               bij.
             </p>
             <p className="text-gray-600 max-w-3xl mx-auto">
@@ -446,7 +446,7 @@ export default function GlazenwasserErmelo() {
               Glazenwasser in Ermelo nodig?
             </h2>
             <p className="text-white/80 text-sm mb-5">
-              Vraag vrijblijvend een offerte aan – wij komen graag langs.
+              Vraag vrijblijvend een offerte aan – ik kom graag langs.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
