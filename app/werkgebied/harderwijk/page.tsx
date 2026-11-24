@@ -129,7 +129,7 @@ export default function GlazenwasserHarderwijk() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                WAAROM HARDERWIJK VOOR ONS KIEZEN
+                WAAROM HARDERWIJK VOOR MIJ KIEZEN
               </span>
               <h2 className="text-3xl font-bold text-[#1a3a52] mb-6">
                 Uw vaste glazenwasser in Harderwijk
@@ -141,9 +141,9 @@ export default function GlazenwasserHarderwijk() {
                 bekend om kwaliteit, stiptheid en een persoonlijke aanpak.
               </p>
               <p className="text-gray-600 mb-6">
-                Wat ons onderscheidt? Een{" "}
+                Wat mij onderscheidt? Een{" "}
                 <strong>vaste glazenwasser</strong> die u kent. Geen wisselende
-                gezichten, geen gedoe. En met onze{" "}
+                gezichten, geen gedoe. En met mijn{" "}
                 <strong>osmosewater-techniek</strong> krijgt u gegarandeerd een
                 streeploos resultaat zonder chemicaliën.{" "}
                 <strong>
@@ -178,7 +178,7 @@ export default function GlazenwasserHarderwijk() {
                   <MapPin className="w-5 h-5 mr-2" /> Actief in heel Harderwijk
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Wij zijn actief in de hele gemeente Harderwijk – in de
+                  Ik ben actief in de hele gemeente Harderwijk – in de
                   binnenstad, de woonwijken en de nieuwere buurten.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
@@ -222,11 +222,11 @@ export default function GlazenwasserHarderwijk() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#1a3a52] mb-4">
-              Onze diensten in Harderwijk – voor elk pand
+              Mijn diensten in Harderwijk – voor elk pand
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Of u nu een woning, historisch pand of een bedrijf heeft – wij
-              bieden de oplossing. Hieronder een overzicht.
+              Of u nu een woning, historisch pand of een bedrijf heeft – ik
+              bied de oplossing. Hieronder een overzicht.
             </p>
           </div>
 
@@ -300,7 +300,7 @@ export default function GlazenwasserHarderwijk() {
               {
                 icon: Calendar,
                 title: "Vaste planning",
-                desc: "U weet precies wanneer wij komen – vaste routes in Harderwijk.",
+                desc: "U weet precies wanneer ik kom – vaste routes in Harderwijk.",
               },
               {
                 icon: Users,
@@ -351,7 +351,7 @@ export default function GlazenwasserHarderwijk() {
                   In Harderwijk hebben veel panden hoge ramen – zeker de
                   karakteristieke monumentale gebouwen in de binnenstad. Normaal
                   gesproken hebt u dan een dure steiger of hoogwerker nodig. Met
-                  onze <strong>telescoopbewassing</strong> kunnen wij tot{" "}
+                  mijn <strong>telescoopbewassing</strong> kan ik tot{" "}
                   <strong>13,5 meter hoogte</strong> werken – zonder extra
                   kosten.
                 </p>
@@ -391,7 +391,7 @@ export default function GlazenwasserHarderwijk() {
               Glazenwasser in Harderwijk nodig?
             </h2>
             <p className="text-white/80 text-sm mb-5">
-              Vraag vrijblijvend een offerte aan – wij komen graag langs.
+              Vraag vrijblijvend een offerte aan – ik kom graag langs.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-3">
