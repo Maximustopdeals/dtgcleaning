@@ -210,4 +210,131 @@ export default function OverMijPage() {
             {values.map((v, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2
+                className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="w-14 h-14 bg-[#1a3a52]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <v.icon className="w-7 h-7 text-[#1a3a52]" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{v.title}</h3>
+                <p className="text-gray-600">{v.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Waarom D.T.G. Cleaning */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-[#1a3a52]/10 text-[#1a3a52] rounded-full px-4 py-2 text-sm font-semibold mb-4">
+              WAAROM D.T.G. CLEANING
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Waarom u voor mij kiest
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Vier redenen waarom klanten in Nijkerk en omgeving al jaren voor
+              mij kiezen.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Streeploos resultaat</h3>
+              <p className="text-gray-600 text-sm">
+                Osmosewater-techniek voor glas dat er dagenlang perfect
+                uitziet.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Veilig & verzekerd</h3>
+              <p className="text-gray-600 text-sm">
+                Volledig aansprakelijkheidsverzekerd. Uw pand is in veilige
+                handen.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Vaste kwaliteit</h3>
+              <p className="text-gray-600 text-sm">
+                Vaste glazenwasser, vaste dag. Geen verrassingen, wel resultaat.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-[#1a3a52] rounded-full flex items-center justify-center mx-auto mb-4">
+                <HandHeart className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Persoonlijke service</h3>
+              <p className="text-gray-600 text-sm">
+                Ik neem de tijd voor u. Geen haastwerk, maar aandacht voor
+                detail.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-[#1a3a52] rounded-3xl p-8 md:p-12 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              Klaar voor streeploos schone ramen?
+            </h2>
+            <p className="text-white/80 mb-6">
+              Neem vrijblijvend contact op – ik kom graag langs voor een
+              kennismaking.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <div className="inline-flex items-center bg-white/10 text-white rounded-full px-4 py-2 text-sm">
+                <GreenCheck />
+                <span className="ml-2">Persoonlijke service</span>
+              </div>
+              <div className="inline-flex items-center bg-white/10 text-white rounded-full px-4 py-2 text-sm">
+                <GreenCheck />
+                <span className="ml-2">Vrijblijvend kennismaken</span>
+              </div>
+              <div className="inline-flex items-center bg-white/10 text-white rounded-full px-4 py-2 text-sm">
+                <GreenCheck />
+                <span className="ml-2">Snelle reactie</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                href="/contact"
+                className="bg-white text-[#1a3a52] rounded-full px-8 py-4 font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" /> Vrijblijvend offerte aanvragen
+              </Link>
+              <a
+                href="tel:0634683019"
+                className="border-2 border-white text-white rounded-full px-8 py-4 font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
+              >
+                <Phone className="w-5 h-5 mr-2" /> 06-34683019
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer, WhatsApp, BackToTop */}
+      <Footer />
+      <WhatsAppButton />
+      <BackToTop />
+    </>
+  );
+}
