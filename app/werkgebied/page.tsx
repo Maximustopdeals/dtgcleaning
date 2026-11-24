@@ -143,16 +143,16 @@ export default function WerkgebiedPage() {
               <strong>
                 Putten, Harderwijk, Barneveld, Ermelo of Voorthuizen
               </strong>{" "}
-              woont – wij zorgen voor <strong>streeploos schone ramen</strong>{" "}
+              woont – ik zorg voor <strong>streeploos schone ramen</strong>{" "}
               zonder gedoe.
             </p>
             <p>
-              Wat ons onderscheidt? Een <strong>vaste glazenwasser</strong> die
+              Wat mij onderscheidt? Een <strong>vaste glazenwasser</strong> die
               u kent en die weet wat hij doet. Geen wisselende gezichten, geen
-              gedoe. Wij gebruiken <strong>osmosewater</strong> een
+              gedoe. Ik gebruik <strong>osmosewater</strong> een
               milieuvriendelijke techniek die zorgt voor{" "}
               <strong>geen strepen, geen vlekken en geen chemicaliën</strong>.
-              En dankzij onze telewash-systemen bereiken we ook moeiteloos de
+              En dankzij mijn telewash-systemen bereik ik ook moeiteloos de
               hoogste ramen.
             </p>
             <p className="font-semibold text-[#1a3a52]">
@@ -226,11 +226,11 @@ export default function WerkgebiedPage() {
               WAAROM D.T.G. CLEANING
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-              Waarom klanten in de regio voor ons kiezen
+              Waarom klanten in de regio voor mij kiezen
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Vier redenen waarom inwoners en bedrijven in Nijkerk en omgeving
-              al jaren voor ons kiezen.
+              al jaren voor mij kiezen.
             </p>
           </div>
 
@@ -292,8 +292,8 @@ export default function WerkgebiedPage() {
             Geen wachttijd, ook voor spoed
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Of u nu een eenmalige afspraak wilt of een vast contract. Wij
-            plannen snel en flexibel. Ook voor spoed kunt u ons altijd bellen.
+            Of u nu een eenmalige afspraak wilt of een vast contract. Ik
+            plan snel en flexibel. Ook voor spoed kunt u mij altijd bellen.
           </p>
         </div>
       </section>
@@ -309,7 +309,7 @@ export default function WerkgebiedPage() {
               Ook glazenwasser bij u in de buurt?
             </h2>
             <p className="text-white/80 text-sm mb-5">
-              Vraag vrijblijvend een offerte aan. Wij komen graag langs voor
+              Vraag vrijblijvend een offerte aan. Ik kom graag langs voor
               een kennismaking.
             </p>
 
