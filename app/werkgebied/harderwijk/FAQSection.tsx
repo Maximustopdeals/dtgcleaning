@@ -7,22 +7,22 @@ const faqs = [
   {
     question: "Komt u ook in het centrum en de historische panden?",
     answer:
-      "Ja, absoluut! Wij zijn actief in heel Harderwijk, inclusief de historische binnenstad. We zijn gespecialiseerd in het reinigen van monumentale gebouwen met zachte methoden die uw pand niet beschadigen.",
+      "Ja, absoluut! Ik ben actief in heel Harderwijk, inclusief de historische binnenstad. Ik ben gespecialiseerd in het reinigen van monumentale gebouwen met zachte methoden die uw pand niet beschadigen.",
   },
   {
     question: "Wat kost glasbewassing in Harderwijk?",
     answer:
-      "De kosten zijn afhankelijk van het aantal ramen en de moeilijkheidsgraad. Wij komen vrijblijvend bij u langs voor een offerte op maat. Wij rekenen geen extra reiskosten voor Harderwijk.",
+      "De kosten zijn afhankelijk van het aantal ramen en de moeilijkheidsgraad. Ik kom vrijblijvend bij u langs voor een offerte op maat. Ik reken geen extra reiskosten voor Harderwijk.",
   },
   {
     question: "Heeft u ervaring met monumentale panden?",
     answer:
-      "Ja, wij hebben ruime ervaring met het reinigen van monumentale en historische panden. Wij werken met zachte methoden die de kwetsbare gevels en ramen niet beschadigen.",
+      "Ja, ik heb ruime ervaring met het reinigen van monumentale en historische panden. Ik werk met zachte methoden die de kwetsbare gevels en ramen niet beschadigen.",
   },
   {
     question: "Gebruikt u chemicaliën voor glasbewassing?",
     answer:
-      "Nee, wij werken uitsluitend met osmosewater – 100% gedemineraliseerd water zonder chemicaliën. Dit is veilig voor uw planten, uw gezin en het milieu. Perfect voor de kwetsbare historische gebouwen in Harderwijk.",
+      "Nee, ik werk uitsluitend met osmosewater – 100% gedemineraliseerd water zonder chemicaliën. Dit is veilig voor uw planten, uw gezin en het milieu. Perfect voor de kwetsbare historische gebouwen in Harderwijk.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function FAQSection() {
             Vragen over glasbewassing in Harderwijk?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Antwoorden op de meest gestelde vragen over onze diensten in
+            Antwoorden op de meest gestelde vragen over mijn diensten in
             Harderwijk.
           </p>
         </div>
