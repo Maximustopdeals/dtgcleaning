@@ -86,9 +86,9 @@ const diensten = [
     title: "Ramen laten wassen",
     subtitle: "Voor bedrijven & particulieren",
     description:
-      "Streeploos schone ramen voor uw woning, kantoor of winkelpand. Wij bereiken ook de hoogste ramen – veilig en zonder steiger.",
+      "Streeploos schone ramen voor uw woning, kantoor of winkelpand. Ik bereik ook de hoogste ramen – veilig en zonder steiger.",
     extendedDescription:
-      "Schone ramen maken een wereld van verschil. Het laat zien dat u oog heeft voor detail en uw pand met trots presenteert. Wij gebruiken een geavanceerd telewash-systeem dat ook de ramen op de bovenste verdiepingen haalt. En het beste? Geen chemicaliën, geen strepen, geen kalkaanslag. Alleen kristalhelder glas dat er wekenlang perfect uitziet. Of u nu een winkelpand, kantoorgebouw of woonhuis heeft – wij zorgen voor een stralend resultaat dat direct opvalt.",
+      "Schone ramen maken een wereld van verschil. Het laat zien dat u oog heeft voor detail en uw pand met trots presenteert. Ik gebruik een geavanceerd telewash-systeem dat ook de ramen op de bovenste verdiepingen haalt. En het beste? Geen chemicaliën, geen strepen, geen kalkaanslag. Alleen kristalhelder glas dat er wekenlang perfect uitziet. Of u nu een winkelpand, kantoorgebouw of woonhuis heeft – ik zorg voor een stralend resultaat dat direct opvalt.",
     features: [
       "Ook ramen op hoogte – veilig bereikt",
       "Streeploos resultaat met osmosewater",
@@ -103,9 +103,9 @@ const diensten = [
     title: "Gevel reinigen",
     subtitle: "Voor elk pandtype",
     description:
-      "Uw gevel is het visitekaartje van uw pand. Wij verwijderen algen, mos, vuil en graffiti – uw pand ziet er weer als nieuw uit.",
+      "Uw gevel is het visitekaartje van uw pand. Ik verwijder algen, mos, vuil en graffiti – uw pand ziet er weer als nieuw uit.",
     extendedDescription:
-      "Een schone gevel doet meer dan u denkt. Het trekt klanten aan, verhoogt de waarde van uw pand en voorkomt dat vuil zich blijft ophopen. Na verloop van tijd verzamelen algen, mos en vuil zich op uw gevel – niet alleen lelijk, maar ook schadelijk voor het materiaal. Wij gebruiken de juiste techniek voor elk type gevel: zacht voor kwetsbare oppervlakken, krachtig voor harde materialen. Het resultaat? Een gevel die er weer uitziet als de dag dat hij werd opgeleverd. En met ons onderhoudscontract blijft hij ook zo.",
+      "Een schone gevel doet meer dan u denkt. Het trekt klanten aan, verhoogt de waarde van uw pand en voorkomt dat vuil zich blijft ophopen. Na verloop van tijd verzamelen algen, mos en vuil zich op uw gevel – niet alleen lelijk, maar ook schadelijk voor het materiaal. Ik gebruik de juiste techniek voor elk type gevel: zacht voor kwetsbare oppervlakken, krachtig voor harde materialen. Het resultaat? Een gevel die er weer uitziet als de dag dat hij werd opgeleverd. En met mijn onderhoudscontract blijft hij ook zo.",
     features: [
       "Algen, mos en vuil grondig verwijderd",
       "Graffiti vrij – ook lastige vlekken",
@@ -120,9 +120,9 @@ const diensten = [
     title: "Zonnepanelen reinigen",
     subtitle: "Voor maximaal rendement",
     description:
-      "Wist u dat vuile zonnepanelen tot 20% minder opleveren? Wij maken ze weer schoon, zodat u weer optimaal profiteert van uw investering.",
+      "Wist u dat vuile zonnepanelen tot 20% minder opleveren? Ik maak ze weer schoon, zodat u weer optimaal profiteert van uw investering.",
     extendedDescription:
-      "U heeft geïnvesteerd in zonnepanelen om te besparen op uw energierekening. Maar wanneer vuil, vogelpoep, bladeren en pollen zich ophopen, daalt de opbrengst. Soms wel met 20%. Dat is geld dat u misloopt. Wij reinigen uw zonnepanelen grondig met osmosewater en zachte borstels – zonder krassen of beschadigingen. U ziet het verschil direct op uw energierekening. Bovendien verlengt regelmatig onderhoud de levensduur van uw panelen. Een kleine investering met een groot rendement.",
+      "U heeft geïnvesteerd in zonnepanelen om te besparen op uw energierekening. Maar wanneer vuil, vogelpoep, bladeren en pollen zich ophopen, daalt de opbrengst. Soms wel met 20%. Dat is geld dat u misloopt. Ik reinig uw zonnepanelen grondig met osmosewater en zachte borstels – zonder krassen of beschadigingen. U ziet het verschil direct op uw energierekening. Bovendien verlengt regelmatig onderhoud de levensduur van uw panelen. Een kleine investering met een groot rendement.",
     features: [
       "Tot 20% hogere energieopbrengst",
       "Veilige reiniging – geen schade",
@@ -137,9 +137,9 @@ const diensten = [
     title: "Dakgoot reinigen",
     subtitle: "Voorkom waterschade",
     description:
-      "Verstopte dakgoten zijn een van de grootste oorzaken van waterschade. Wij maken ze schoon en voorkomen dure reparaties.",
+      "Verstopte dakgoten zijn een van de grootste oorzaken van waterschade. Ik maak ze schoon en voorkom dure reparaties.",
     extendedDescription:
-      "Water dat niet kan wegstromen, zoekt altijd een weg naar binnen. Verstopte dakgoten leiden tot lekkages, vochtplekken, schimmel en zelfs funderingsschade. De kosten van herstel kunnen oplopen tot duizenden euro's. Regelmatig onderhoud is daarom geen luxe, maar een noodzaak. Wij verwijderen bladeren, mos en ander vuil uit uw dakgoten en controleren meteen de staat van uw afvoeren. Kleine problemen lossen we direct op of we adviseren u over de volgende stap. Zo beschermt u uw pand tegen kostbare waterschade.",
+      "Water dat niet kan wegstromen, zoekt altijd een weg naar binnen. Verstopte dakgoten leiden tot lekkages, vochtplekken, schimmel en zelfs funderingsschade. De kosten van herstel kunnen oplopen tot duizenden euro's. Regelmatig onderhoud is daarom geen luxe, maar een noodzaak. Ik verwijder bladeren, mos en ander vuil uit uw dakgoten en controleer meteen de staat van uw afvoeren. Kleine problemen los ik direct op of ik adviseer u over de volgende stap. Zo beschermt u uw pand tegen kostbare waterschade.",
     features: [
       "Verstoppingen voorkomen – droog en veilig",
       "Beschermt tegen lekkages en vochtschade",
@@ -179,11 +179,11 @@ export default function SchoonmaakdienstenPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1a3a52] mb-4">
-              Professionele reiniging in Nijkerk – waarom wij?
+              Professionele reiniging in Nijkerk – waarom ik?
             </h2>
             <div className="w-20 h-1 bg-green-500 mx-auto"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-              Uw pand verdient de beste zorg. Wij zorgen voor stralende
+              Uw pand verdient de beste zorg. Ik zorg voor stralende
               resultaten – zonder gedoe en zonder verrassingen.
             </p>
           </div>
@@ -193,9 +193,9 @@ export default function SchoonmaakdienstenPage() {
               Of u nu een <strong>bedrijf</strong> bent dat representatief wil
               overkomen, een <strong>VvE</strong> die het pand goed wil
               onderhouden, of een <strong>particulier</strong> die weer helder
-              zicht wil – wij bieden de oplossing. Van eenmalige glasbewassing
+              zicht wil – ik bied de oplossing. Van eenmalige glasbewassing
               tot <strong>vaste onderhoudscontracten</strong> met vaste
-              planning. U bepaalt, wij voeren uit.
+              planning. U bepaalt, ik voer uit.
             </p>
 
             <h3 className="text-xl font-semibold text-[#1a3a52] mt-8">
@@ -205,10 +205,10 @@ export default function SchoonmaakdienstenPage() {
               Veel mensen denken pas aan reiniging als het echt nodig is. Maar
               regelmatig onderhoud bespaart u op de lange termijn juist geld.
               Vuil dat zich ophoopt op ramen, gevels en zonnepanelen tast het
-              oppervlak aan. Bij D.T.G. Cleaning gebruiken we{" "}
+              oppervlak aan. Bij D.T.G. Cleaning gebruik ik{" "}
               <strong>osmosewater</strong> – een milieuvriendelijke techniek die
-              geen strepen of vlekken achterlaat. En dankzij onze{" "}
-              <strong>telewash-systemen</strong> bereiken we moeiteloos de
+              geen strepen of vlekken achterlaat. En dankzij mijn{" "}
+              <strong>telewash-systemen</strong> bereik ik moeiteloos de
               hoogste plekken, zonder dat u een steiger hoeft te huren.
             </p>
 
@@ -243,7 +243,7 @@ export default function SchoonmaakdienstenPage() {
                   100% Tevredenheid
                 </h4>
                 <p className="text-gray-600 text-sm">
-                  Wij staan altijd voor u klaar – ook na de klus
+                  Ik sta altijd voor u klaar – ook na de klus
                 </p>
               </div>
             </div>
@@ -388,7 +388,7 @@ export default function SchoonmaakdienstenPage() {
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Waarom bedrijven en particulieren <br />
-              voor ons kiezen
+              voor mij kiezen
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               D.T.G. Cleaning is hét schoonmaakbedrijf in Nijkerk en omgeving
@@ -420,7 +420,7 @@ export default function SchoonmaakdienstenPage() {
                 Ook de hoogste ramen – veilig bereikt
               </h3>
               <p className="text-gray-600 mb-4">
-                Geen steiger of hoogwerker nodig. Ons telewash-systeem bereikt
+                Geen steiger of hoogwerker nodig. Mijn telewash-systeem bereikt
                 tot 13,5 meter hoogte – snel, veilig en zonder overlast.
               </p>
               <GreenCheckLabel label="Zakelijk" />
@@ -449,7 +449,7 @@ export default function SchoonmaakdienstenPage() {
               </h3>
               <p className="text-gray-600 mb-4">
                 Mocht er onverhoopt iets gebeuren, dan staat u niet voor de
-                kosten. Uw pand is bij ons in veilige handen.
+                kosten. Uw pand is bij mij in veilige handen.
               </p>
               <GreenCheckLabel label="Zakelijk" />
             </div>
@@ -462,7 +462,7 @@ export default function SchoonmaakdienstenPage() {
                 Flexibel en betaalbaar – ook voor thuis
               </h3>
               <p className="text-gray-600 mb-4">
-                Geen gedoe met ingewikkelde contracten. Wij plannen op uw
+                Geen gedoe met ingewikkelde contracten. Ik plan op uw
                 gewenste dag en tijd – ook voor particulieren.
               </p>
               <GreenCheckLabel label="Ook voor particulieren" />
