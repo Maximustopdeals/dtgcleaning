@@ -7,22 +7,22 @@ const faqs = [
   {
     question: "Komt u ook in de buitengebieden en dorpen?",
     answer:
-      "Ja, wij zijn actief in de hele gemeente Barneveld – in de dorpskern, de woonwijken en het buitengebied. Neem gerust contact op om te bespreken wat de mogelijkheden zijn.",
+      "Ja, ik ben actief in de hele gemeente Barneveld – in de dorpskern, de woonwijken en het buitengebied. Neem gerust contact op om te bespreken wat de mogelijkheden zijn.",
   },
   {
     question: "Wat kost glasbewassing voor een bedrijfspand in Barneveld?",
     answer:
-      "De kosten zijn afhankelijk van het aantal ramen, de hoogte en de frequentie. Wij bieden speciale tarieven voor bedrijven en geven vrijblijvend offerte op maat.",
+      "De kosten zijn afhankelijk van het aantal ramen, de hoogte en de frequentie. Ik bied speciale tarieven voor bedrijven en geef vrijblijvend een offerte op maat.",
   },
   {
     question: "Werkt u ook voor agrarische bedrijven in Barneveld?",
     answer:
-      "Jazeker! De agrarische sector is belangrijk in Barneveld. Wij reinigen schuren, loodsen, stallen en ook de woningen van agrarische ondernemers.",
+      "Jazeker! De agrarische sector is belangrijk in Barneveld. Ik reinig schuren, loodsen, stallen en ook de woningen van agrarische ondernemers.",
   },
   {
     question: "Gebruikt u chemicaliën voor glasbewassing?",
     answer:
-      "Nee, wij werken uitsluitend met osmosewater – 100% gedemineraliseerd water zonder chemicaliën. Dit is veilig voor uw planten, uw gezin en het milieu. Perfect voor de groene gemeente Barneveld.",
+      "Nee, ik werk uitsluitend met osmosewater – 100% gedemineraliseerd water zonder chemicaliën. Dit is veilig voor uw planten, uw gezin en het milieu. Perfect voor de groene gemeente Barneveld.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function FAQSection() {
             Vragen over glasbewassing in Barneveld?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Antwoorden op de meest gestelde vragen over onze diensten in
+            Antwoorden op de meest gestelde vragen over mijn diensten in
             Barneveld.
           </p>
         </div>
