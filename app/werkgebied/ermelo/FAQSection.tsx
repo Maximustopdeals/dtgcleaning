@@ -7,27 +7,27 @@ const faqs = [
   {
     question: "Komt u ook naar de bosrandgebieden van Ermelo?",
     answer:
-      "Absoluut! De bosrandgebieden zijn een belangrijk deel van ons werkgebied. Wij hebben ruime ervaring met het reinigen van woningen nabij het bos, waar speciale aandacht nodig is voor algengroei en mos.",
+      "Absoluut! De bosrandgebieden zijn een belangrijk deel van mijn werkgebied. Ik heb ruime ervaring met het reinigen van woningen nabij het bos, waar speciale aandacht nodig is voor algengroei en mos.",
   },
   {
     question: "Wat kost glasbewassing voor een vrijstaande woning in Ermelo?",
     answer:
-      "De kosten zijn afhankelijk van het aantal ramen, de moeilijkheidsgraad en de frequentie. Vraag vrijblijvend een offerte aan voor een exacte prijs. Wij rekenen geen extra reiskosten voor Ermelo.",
+      "De kosten zijn afhankelijk van het aantal ramen, de moeilijkheidsgraad en de frequentie. Vraag vrijblijvend een offerte aan voor een exacte prijs. Ik reken geen extra reiskosten voor Ermelo.",
   },
   {
     question: "Werkt u ook voor recreatiewoningen in de omgeving van Ermelo?",
     answer:
-      "Jazeker! Ook voor recreatiewoningen, vakantiehuizen en tweede woningen staan wij klaar. U kunt ons eenmalig inschakelen of een vast contract afsluiten voor periodiek onderhoud.",
+      "Jazeker! Ook voor recreatiewoningen, vakantiehuizen en tweede woningen sta ik klaar. U kunt mij eenmalig inschakelen of een vast contract afsluiten voor periodiek onderhoud.",
   },
   {
     question: "Heeft u ervaring met woningen aan de rand van het bos?",
     answer:
-      "Ja, dat is onze specialiteit! Woningen aan de bosrand hebben vaker last van mos, algen en vogelpoep. Wij weten precies hoe we deze uitdagingen aanpakken zonder uw pand te beschadigen.",
+      "Ja, dat is mijn specialiteit! Woningen aan de bosrand hebben vaker last van mos, algen en vogelpoep. Ik weet precies hoe ik deze uitdagingen aanpak zonder uw pand te beschadigen.",
   },
   {
     question: "Gebruikt u chemicaliën die schadelijk zijn voor de natuur?",
     answer:
-      "Nee, wij werken uitsluitend met osmosewater – 100% gedemineraliseerd water zonder chemicaliën. Dit is veilig voor uw planten, uw gezin en de prachtige natuur rondom Ermelo.",
+      "Nee, ik werk uitsluitend met osmosewater – 100% gedemineraliseerd water zonder chemicaliën. Dit is veilig voor uw planten, uw gezin en de prachtige natuur rondom Ermelo.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function FAQSection() {
             Vragen over glasbewassing in Ermelo?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Antwoorden op de meest gestelde vragen over onze diensten in Ermelo.
+            Antwoorden op de meest gestelde vragen over mijn diensten in Ermelo.
           </p>
         </div>
 
